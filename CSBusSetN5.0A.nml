@@ -1,0 +1,3822 @@
+grf {
+	grfid: "GFJ\01";
+	name: string(STR_GRF_NAME);
+	desc: string(STR_GRF_DESCRIPTION);
+	version: 0;
+	min_compatible_version: 0;
+    }
+// Templates 
+
+	template TMP_CS_BUSSET(y) {
+    [ 4  , 5 + y, 10, 28,  -5, -14]
+    [ 24 , 5 + y, 26, 28, -13, -16]
+    [ 54 , 5 + y, 36, 28, -18, -18]
+    [ 94 , 5 + y, 26, 28, -6, -14]
+    [ 124, 5 + y, 10, 28,  -5, -14]
+    [ 144, 5 + y, 26, 28, -13, -16]
+    [ 174, 5 + y, 36, 28, -18, -18]
+    [ 214, 5 + y, 26, 28, -6, -16]
+	}
+				 
+	template TMP_CS_BUSSET_ART(y) {
+		[ 2  , 3 + y, 10, 22,  -5, -11]
+		[ 16 , 3 + y, 21, 19, -9,  -11]
+		[ 41 , 3 + y, 26, 15, -13,  -7]
+		[ 71 , 3 + y, 21, 19, -10,  -8]
+		[ 96 , 3 + y, 10, 22,  -5, -11]
+		[ 110, 3 + y, 21, 19, -10,  -8]
+		[ 135, 3 + y, 26, 15, -13,  -7]
+		[ 165, 3 + y, 21, 19, -9,  -9]		 
+				 }
+	template TMP_CS_BUSSET_ARTb(y) {
+		[ 2  , 3 + y, 10, 22,  -5, -11]
+		[ 16 , 3 + y, 21, 19, -10,  -10]
+		[ 41 , 3 + y, 26, 15, -13,  -7]
+		[ 71 , 3 + y, 21, 19, -10, -10]
+		[ 96 , 3 + y, 10, 22,  -5, -11]
+		[ 110, 3 + y, 21, 19, -10,  -10]
+		[ 135, 3 + y, 26, 15, -13,  -7]
+		[ 165, 3 + y, 21, 19, -8,  -8]		 
+				 }
+				 
+	template TMP_CS_BUSSET_p_ART(y) {
+		[191, 3 + y, 38, 15, 0, 0]
+				 }	
+	template TMP_CS_BUSSET_p_ARTn(y) {
+		[244, 5 + y, 100, 14, -13, -5]
+				 }
+	template TMP_CS_BUSSET_p_ARTna(y) {
+		[190, 3 + y, 100, 14, -13, -5]
+				 }
+				 
+// Sprites
+  // Laurin & Klement MS, Skoda 540
+ 			spriteset(LaK540MS_purch, "gfx/LaK540MS.png") 	{ TMP_CS_BUSSET_p_ARTn(0)}
+			spriteset(LaK540MS_0, "gfx/LaK540MS.png") 		{ TMP_CS_BUSSET    (0) 	}
+			spriteset(LaK540MS_1, "gfx/LaK540MS.png") 		{ TMP_CS_BUSSET   (30) 	}
+			spriteset(LaK540MS_2, "gfx/LaK540MS.png") 		{ TMP_CS_BUSSET   (60) 	}
+			spriteset(LaK540MS_3, "gfx/LaK540MS.png") 		{ TMP_CS_BUSSET   (90) 	}
+
+  // Praga N primestsky
+ 			spriteset(PragaNR_purch, "gfx/PragaN_R.png") 	{ TMP_CS_BUSSET_p_ARTn(0)}
+			spriteset(PragaNR_0, "gfx/PragaN_R.png") 		{ TMP_CS_BUSSET    (0) 	}
+			spriteset(PragaNR_1, "gfx/PragaN_R.png") 		{ TMP_CS_BUSSET   (30) 	}
+			spriteset(PragaNR_2, "gfx/PragaN_R.png") 		{ TMP_CS_BUSSET   (60) 	}
+
+  // Praga N mestsky
+ 			spriteset(PragaNC_purch, "gfx/PragaN_C.png") 	{ TMP_CS_BUSSET_p_ARTn(0)}
+			spriteset(PragaNC_0, "gfx/PragaN_C.png") 		{ TMP_CS_BUSSET    (0) 	}
+			spriteset(PragaNC_1, "gfx/PragaN_C.png") 		{ TMP_CS_BUSSET   (30) 	}
+
+  // Skoda 505 primestsky
+ 			spriteset(Skoda505R_purch, "gfx/Skoda505_R.png") 	{ TMP_CS_BUSSET_p_ARTn(0)}
+			spriteset(Skoda505R_0, "gfx/Skoda505_R.png") 		{ TMP_CS_BUSSET    (0) 	}
+			spriteset(Skoda505R_1, "gfx/Skoda505_R.png") 		{ TMP_CS_BUSSET   (30) 	}
+			spriteset(Skoda505R_2, "gfx/Skoda505_R.png") 		{ TMP_CS_BUSSET   (60) 	}
+			spriteset(Skoda505R_3, "gfx/Skoda505_R.png") 		{ TMP_CS_BUSSET   (90) 	}
+
+  // Skoda 505 mestsky
+ 			spriteset(Skoda505C_purch, "gfx/Skoda505_C.png") 	{ TMP_CS_BUSSET_p_ARTn(0)}
+			spriteset(Skoda505C_0, "gfx/Skoda505_C.png") 		{ TMP_CS_BUSSET    (0) 	}
+			spriteset(Skoda505C_1, "gfx/Skoda505_C.png") 		{ TMP_CS_BUSSET   (30) 	}
+
+  // Tatra 13
+ 			spriteset(Tatra13_purch, "gfx/Tatra13.png") 	{ TMP_CS_BUSSET_p_ARTn(0)}
+			spriteset(Tatra13_0, "gfx/Tatra13.png") 		{ TMP_CS_BUSSET    (0) 	}	
+			spriteset(Tatra13_1, "gfx/Tatra13.png") 		{ TMP_CS_BUSSET    (30) 	}
+			spriteset(Tatra13_2, "gfx/Tatra13.png") 		{ TMP_CS_BUSSET    (60) 	}			
+
+  // Praga NO primestsky
+ 			spriteset(PragaNOR_purch, "gfx/PragaNO_R.png") 	{ TMP_CS_BUSSET_p_ARTn(0)}
+			spriteset(PragaNOR_0, "gfx/PragaNO_R.png") 		{ TMP_CS_BUSSET    (0) 	}
+			spriteset(PragaNOR_1, "gfx/PragaNO_R.png") 		{ TMP_CS_BUSSET   (30) 	}
+			spriteset(PragaNOR_2, "gfx/PragaNO_R.png") 		{ TMP_CS_BUSSET   (60) 	}
+			spriteset(PragaNOR_3, "gfx/PragaNO_R.png") 		{ TMP_CS_BUSSET   (90) 	}
+			
+  // Praga NO mestsky
+ 			spriteset(PragaNOC_purch, "gfx/PragaNO_C.png") 	{ TMP_CS_BUSSET_p_ARTn(0)}
+			spriteset(PragaNOC_0, "gfx/PragaNO_C.png") 		{ TMP_CS_BUSSET    (0) 	}
+			spriteset(PragaNOC_1, "gfx/PragaNO_C.png") 		{ TMP_CS_BUSSET   (30) 	}
+
+  // Tatra 23 primestsky
+ 			spriteset(Tatra23R_purch, "gfx/Tatra23_R.png") 	{ TMP_CS_BUSSET_p_ARTn(0)}
+			spriteset(Tatra23R_0, "gfx/Tatra23_R.png") 		{ TMP_CS_BUSSET    (0) 	}
+			spriteset(Tatra23R_1, "gfx/Tatra23_R.png") 		{ TMP_CS_BUSSET   (30) 	}
+
+  // Tatra 23 mestsky
+ 			spriteset(Tatra23C_purch, "gfx/Tatra23_C.png") 	{ TMP_CS_BUSSET_p_ARTn(0)}
+			spriteset(Tatra23C_0, "gfx/Tatra23_C.png") 		{ TMP_CS_BUSSET    (0) 	}
+			spriteset(Tatra23C_1, "gfx/Tatra23_C.png") 		{ TMP_CS_BUSSET   (30) 	}
+
+  // Tatra 24 primestsky
+ 			spriteset(Tatra24R_purch, "gfx/Tatra24_R.png") 	{ TMP_CS_BUSSET_p_ARTn(0)}
+			spriteset(Tatra24R_0, "gfx/Tatra24_R.png") 		{ TMP_CS_BUSSET    (0) 	}		
+			spriteset(Tatra24R_1, "gfx/Tatra24_R.png") 		{ TMP_CS_BUSSET   (30) 	}	
+			spriteset(Tatra24R_2, "gfx/Tatra24_R.png") 		{ TMP_CS_BUSSET   (60) 	}
+
+  // Tatra 24 mestsky
+ 			spriteset(Tatra24C_purch, "gfx/Tatra24_C.png") 	{ TMP_CS_BUSSET_p_ARTn(0)}
+			spriteset(Tatra24C_0, "gfx/Tatra24_C.png") 		{ TMP_CS_BUSSET    (0) 	}
+			spriteset(Tatra24C_1, "gfx/Tatra24_C.png") 		{ TMP_CS_BUSSET   (30) 	}			
+
+  // Tatra 2458 primestsky
+  			spriteset(Tatra2458R_purch, "gfx/Tatra2458_R.png") 	{ TMP_CS_BUSSET_p_ARTn(0)}
+			spriteset(Tatra2458R_0, "gfx/Tatra2458_R.png") 	{ TMP_CS_BUSSET    (0) 	}		
+			spriteset(Tatra2458R_1, "gfx/Tatra2458_R.png") 	{ TMP_CS_BUSSET   (30) 	}	
+			spriteset(Tatra2458R_2, "gfx/Tatra2458_R.png") 	{ TMP_CS_BUSSET   (60) 	}
+
+  // Tatra 2458 mestsky
+  			spriteset(Tatra2458C_purch, "gfx/Tatra2458_C.png") 	{ TMP_CS_BUSSET_p_ARTn(0)}
+  			spriteset(Tatra2467C_purch, "gfx/Tatra2458_C.png") 	{ TMP_CS_BUSSET_p_ARTn(30)}
+			spriteset(Tatra2458C_0, "gfx/Tatra2458_C.png") 	{ TMP_CS_BUSSET    (0) 	}
+			spriteset(Tatra2458C_1, "gfx/Tatra2458_C.png") 	{ TMP_CS_BUSSET   (30) 	}	
+			spriteset(Tatra2491C_2, "gfx/Tatra2458_C.png") 	{ TMP_CS_BUSSET   (60) 	}
+			spriteset(Tatra2491C_3, "gfx/Tatra2458_C.png") 	{ TMP_CS_BUSSET   (90) 	}			
+  // Walter PN
+  // Skoda 304
+  // Skoda 506
+  
+  // Praga RN
+ 			spriteset(PragaRNR_purch, "gfx/PragaRND.png") 	{ TMP_CS_BUSSET_p_ARTn(0)}
+			spriteset(PragaRNR_0, "gfx/PragaRND.png") 			{ TMP_CS_BUSSET    (0) 	}
+			spriteset(PragaRNR_1, "gfx/PragaRND.png") 			{ TMP_CS_BUSSET   (30) 	}
+			spriteset(PragaRNR_2, "gfx/PragaRND.png") 			{ TMP_CS_BUSSET   (60) 	}
+			spriteset(PragaRNR_3, "gfx/PragaRND.png") 			{ TMP_CS_BUSSET   (90) 	}
+			spriteset(PragaRNR_4, "gfx/PragaRND.png") 			{ TMP_CS_BUSSET  (150) 	}
+
+  // Skoda 404D
+			spriteset(Skoda404D_purch, "gfx/Skoda404D.png") 	{ TMP_CS_BUSSET_p_ARTn(0)}
+			spriteset(Skoda404D_0, "gfx/Skoda404D.png") 		{ TMP_CS_BUSSET    (0) 	}			
+			spriteset(Skoda404D_1, "gfx/Skoda404D.png") 		{ TMP_CS_BUSSET   (30) 	}
+			
+  // Skoda 606D primestsky
+			spriteset(Skoda606DR_purch, "gfx/Skoda606D.png") 	{ TMP_CS_BUSSET_p_ARTn(60)}
+			spriteset(Skoda606R_0, "gfx/Skoda606D.png") 		{ TMP_CS_BUSSET  (120) 	}
+			spriteset(Skoda606R_1, "gfx/Skoda606D.png") 		{ TMP_CS_BUSSET  (150) 	}
+  
+  // Skoda 606D mestsky
+			spriteset(Skoda606DC_purch, "gfx/Skoda606D.png") 	{ TMP_CS_BUSSET_p_ARTn(90)}
+			spriteset(Skoda606C_0, "gfx/Skoda606D.png") 		{ TMP_CS_BUSSET  (180) 	}
+			spriteset(Skoda606C_1, "gfx/Skoda606D.png") 		{ TMP_CS_BUSSET  (210) 	}
+  
+  // Praga RND primestsky
+ 			spriteset(PragaRNDR_purch, "gfx/PragaRND.png") 	{ TMP_CS_BUSSET_p_ARTn(30)}
+			spriteset(PragaRNDR_0, "gfx/PragaRND.png") 		{ TMP_CS_BUSSET   (60) 	}
+			spriteset(PragaRNDR_1, "gfx/PragaRND.png") 		{ TMP_CS_BUSSET   (90) 	}
+			spriteset(PragaRNDR_2, "gfx/PragaRND.png") 		{ TMP_CS_BUSSET  (150) 	}
+  
+  // Praga RND mestsky
+ 			spriteset(PragaRNDC_purch, "gfx/PragaRND.png") 	{ TMP_CS_BUSSET_p_ARTn(60)}
+			spriteset(PragaRNDC_0, "gfx/PragaRND.png") 		{ TMP_CS_BUSSET  (120) 	}
+			spriteset(PragaRNDC_1, "gfx/PragaRND.png") 		{ TMP_CS_BUSSET  (180) 	}
+
+  // Praga RN dialkovy
+  
+  // Praga NDO 1939 primestsky
+ 			spriteset(PragaNDORa_purch, "gfx/PragaNDO.png") 	{ TMP_CS_BUSSET_p_ARTn(0)}
+  			spriteset(PragaNDOR_0, "gfx/PragaNDO.png") 		{ TMP_CS_BUSSET    (0) 	}
+			spriteset(PragaNDOR_1, "gfx/PragaNDO.png") 		{ TMP_CS_BUSSET   (30) 	}
+  
+  // Praga NDO 1939 mestsky
+ 			spriteset(PragaNDOCa_purch, "gfx/PragaNDO.png") 	{ TMP_CS_BUSSET_p_ARTn(60)}
+			spriteset(PragaNDOC_0, "gfx/PragaNDO.png") 		{ TMP_CS_BUSSET  (120) 	}
+			spriteset(PragaNDOC_1, "gfx/PragaNDO.png") 		{ TMP_CS_BUSSET  (150) 	}
+  
+  // Skoda 606D dialkovy
+			spriteset(Skoda606DI_purch, "gfx/Skoda606D.png") 	{ TMP_CS_BUSSET_p_ARTn(0)}
+			spriteset(Skoda606I_0, "gfx/Skoda606D.png") 		{ TMP_CS_BUSSET    (0) 	}
+			spriteset(Skoda606I_1, "gfx/Skoda606D.png") 		{ TMP_CS_BUSSET   (30) 	}
+			spriteset(Skoda606I_2, "gfx/Skoda606D.png") 		{ TMP_CS_BUSSET   (60) 	}
+  
+  // Skoda 606D postovy
+			spriteset(Skoda606DP_purch, "gfx/Skoda606D.png") 	{ TMP_CS_BUSSET_p_ARTn(30)}
+			spriteset(Skoda606P_0, "gfx/Skoda606D.png") 		{ TMP_CS_BUSSET   (90) 	}
+			
+  // Skoda 706N primestsky  
+ 			spriteset(Skoda706N_purch, "gfx/Skoda706N.png") 	{ TMP_CS_BUSSET_p_ARTn(0)}
+			spriteset(Skoda706N_0, "gfx/Skoda706N.png") 		{ TMP_CS_BUSSET    (0) 	}			
+			spriteset(Skoda706N_1, "gfx/Skoda706N.png") 		{ TMP_CS_BUSSET   (30) 	}
+			
+  // Skoda 706N+PRK6
+			spriteset(spriteset_706NaPRK6_purch, "gfx/Skoda706NaPRK6.png") 	{ TMP_CS_BUSSET_p_ARTna(0)}
+			spriteset(spriteset_706NaPRK6_0a, "gfx/Skoda706NaPRK6.png") 		{ TMP_CS_BUSSET_ART(0) 	}
+			spriteset(spriteset_706NaPRK6_0b, "gfx/Skoda706NaPRK6.png") 		{ TMP_CS_BUSSET_ART(25) } //second part long as first
+			spriteset(spriteset_706NaPRK6_1a, "gfx/Skoda706NaPRK6.png") 		{ TMP_CS_BUSSET_ART(50) }
+			spriteset(spriteset_706NaPRK6_1b, "gfx/Skoda706NaPRK6.png") 		{ TMP_CS_BUSSET_ART(75) } //second part long as first  
+			
+  // Skoda 706NG primestsky  
+ 			spriteset(Skoda706NG_purch, "gfx/Skoda706N.png") 	{ TMP_CS_BUSSET_p_ARTn(30)}
+			spriteset(Skoda706NG_0, "gfx/Skoda706N.png") 		{ TMP_CS_BUSSET   (60) 	}			
+			spriteset(Skoda706NG_1, "gfx/Skoda706N.png") 		{ TMP_CS_BUSSET   (90) 	}
+
+  // Skoda 706NG+PRK6
+			spriteset(spriteset_706NGaPRK6_purch, "gfx/Skoda706NaPRK6.png") 	{ TMP_CS_BUSSET_p_ARTna(100)}
+			spriteset(spriteset_706NGaPRK6_0a, "gfx/Skoda706NaPRK6.png") 		{ TMP_CS_BUSSET_ART(100) 	}
+			spriteset(spriteset_706NGaPRK6_0b, "gfx/Skoda706NaPRK6.png") 		{ TMP_CS_BUSSET_ART(125) } //second part long as first
+			spriteset(spriteset_706NGaPRK6_1a, "gfx/Skoda706NaPRK6.png") 		{ TMP_CS_BUSSET_ART(150) }
+			spriteset(spriteset_706NGaPRK6_1b, "gfx/Skoda706NaPRK6.png") 		{ TMP_CS_BUSSET_ART(175) } //second part long as first  
+  
+  // Praga RND+PRK4
+			spriteset(spriteset_RNDaPRK4_purch, "gfx/PragaRNaPRK4.png") 	{ TMP_CS_BUSSET_p_ARTna(0)}
+			spriteset(spriteset_RNDaPRK4_0a, "gfx/PragaRNaPRK4.png") 		{ TMP_CS_BUSSET_ART(0) 	}
+			spriteset(spriteset_RNDaPRK4_0b, "gfx/PragaRNaPRK4.png") 		{ TMP_CS_BUSSET_ART(25) } //second part long as first
+			spriteset(spriteset_RNDaPRK4_1a, "gfx/PragaRNaPRK4.png") 		{ TMP_CS_BUSSET_ART(50) }
+			spriteset(spriteset_RNDaPRK4_1b, "gfx/PragaRNaPRK4.png") 		{ TMP_CS_BUSSET_ART(75) } //second part long as first  
+
+  // Skoda 256
+			spriteset(Skoda256_purch, "gfx/Skoda256.png") 	{ TMP_CS_BUSSET_p_ARTn(0)}
+			spriteset(Skoda256_0, "gfx/Skoda256.png") 		{ TMP_CS_BUSSET    (0) 	}
+  
+  // Praga NDO 1947 primestsky
+ 			spriteset(PragaNDORb_purch, "gfx/PragaNDO.png") 	{ TMP_CS_BUSSET_p_ARTn(30)}
+    		spriteset(PragaNDOR_2, "gfx/PragaNDO.png") 		{ TMP_CS_BUSSET   (60) 	}
+			spriteset(PragaNDOR_3, "gfx/PragaNDO.png") 		{ TMP_CS_BUSSET   (90) 	}
+
+  // Praga NDO 1947 mestsky
+ 			spriteset(PragaNDOCb_purch, "gfx/PragaNDO.png") 	{ TMP_CS_BUSSET_p_ARTn(90)}
+    		spriteset(PragaNDOC_2, "gfx/PragaNDO.png") 		{ TMP_CS_BUSSET  (180) 	}
+			spriteset(PragaNDOC_3, "gfx/PragaNDO.png") 		{ TMP_CS_BUSSET  (210) 	}
+    		spriteset(PragaNDOC_4, "gfx/PragaNDO.png") 		{ TMP_CS_BUSSET  (240) 	}
+			spriteset(PragaNDOC_5, "gfx/PragaNDO.png") 		{ TMP_CS_BUSSET  (270) 	}
+			
+  // Praga NDO+DM4
+			spriteset(spriteset_NDOaDM4_purch, "gfx/PragaNDOaDM4.png") 	{ TMP_CS_BUSSET_p_ARTna(0)}
+			spriteset(spriteset_NDOaDM4_0a, "gfx/PragaNDOaDM4.png") 		{ TMP_CS_BUSSET_ART(0) 	}
+			spriteset(spriteset_NDOaDM4_0b, "gfx/PragaNDOaDM4.png") 		{ TMP_CS_BUSSET_ART(25) } //second part long as first
+			spriteset(spriteset_NDOaDM4_1a, "gfx/PragaNDOaDM4.png") 		{ TMP_CS_BUSSET_ART(50) }
+			spriteset(spriteset_NDOaDM4_1b, "gfx/PragaNDOaDM4.png") 		{ TMP_CS_BUSSET_ART(75) } //second part long as first  
+			spriteset(spriteset_NDOaDM4_purch2, "gfx/PragaNDOaDM4.png") 	{ TMP_CS_BUSSET_p_ARTna(100)}
+			spriteset(spriteset_NDOaDM4_2a, "gfx/PragaNDOaDM4.png") 		{ TMP_CS_BUSSET_ART(100) 	}
+			spriteset(spriteset_NDOaDM4_2b, "gfx/PragaNDOaDM4.png") 		{ TMP_CS_BUSSET_ART(125) } //second part long as first
+			spriteset(spriteset_NDOaDM4_3a, "gfx/PragaNDOaDM4.png") 		{ TMP_CS_BUSSET_ART(150) }
+			spriteset(spriteset_NDOaDM4_3b, "gfx/PragaNDOaDM4.png") 		{ TMP_CS_BUSSET_ART(175) } //second part long as first
+
+  // Skoda 706RO 1947 Pullman dialkovy  
+
+  // Skoda 706RO 1947 Avia dialkovy 
+//			spriteset(Skoda706ROA_0, "gfx/Skoda706RO.png") 	{ TMP_CS_BUSSET   (30) 	}
+  
+  // Skoda 706RO primestsky 1947
+ 			spriteset(Skoda706ROR_purch, "gfx/Skoda706RO.png") 	{ TMP_CS_BUSSET_p_ARTn(0)}
+			spriteset(Skoda706ROPL_0, "gfx/Skoda706RO.png") 	{ TMP_CS_BUSSET   (0) 	}
+			spriteset(Skoda706ROA_0, "gfx/Skoda706RO.png") 	{ TMP_CS_BUSSET   (30)  }
+			spriteset(Skoda706ROR_0, "gfx/Skoda706RO.png") 	{ TMP_CS_BUSSET   (60) 	}
+			spriteset(Skoda706ROR_1, "gfx/Skoda706RO.png") 	{ TMP_CS_BUSSET   (90) 	}
+			spriteset(Skoda706ROR_2, "gfx/Skoda706RO.png") 	{ TMP_CS_BUSSET  (120) 	}
+			spriteset(Skoda706ROR_3, "gfx/Skoda706RO.png") 	{ TMP_CS_BUSSET  (150) 	}
+			spriteset(Skoda706ROR_4, "gfx/Skoda706RO.png") 	{ TMP_CS_BUSSET  (180) 	}
+			spriteset(Skoda706ROR_5, "gfx/Skoda706RO.png") 	{ TMP_CS_BUSSET  (210) 	}
+			spriteset(Skoda706ROS_0, "gfx/Skoda706RO.png") 	{ TMP_CS_BUSSET  (570) 	}
+			spriteset(Skoda706ROH_0, "gfx/Skoda706RO.png") 	{ TMP_CS_BUSSET  (600) 	}
+			spriteset(Skoda706RO_ROH_0, "gfx/Skoda706RO.png") 	{ TMP_CS_BUSSET  (480) 	}
+			spriteset(Skoda706RO_BA_0, "gfx/Skoda706RO.png") 	{ TMP_CS_BUSSET  (540) 	}
+  
+  // Skoda 706RO+D4
+			spriteset(spriteset_706ROaD4_purch, "gfx/Skoda706ROaD4.png") 	{ TMP_CS_BUSSET_p_ARTna(0)}
+			spriteset(spriteset_706ROaD4_0a, "gfx/Skoda706ROaD4.png") 		{ TMP_CS_BUSSET_ART  (0)}
+			spriteset(spriteset_706ROaD4_0b, "gfx/Skoda706ROaD4.png") 		{ TMP_CS_BUSSET_ARTb (25)} //second part long as first
+			spriteset(spriteset_706ROaD4_1a, "gfx/Skoda706ROaD4.png") 		{ TMP_CS_BUSSET_ART (50)}
+			spriteset(spriteset_706ROaD4_1b, "gfx/Skoda706ROaD4.png") 		{ TMP_CS_BUSSET_ARTb (75)} //second part long as first  
+			spriteset(spriteset_706ROaD4_2a, "gfx/Skoda706ROaD4.png") 		{ TMP_CS_BUSSET_ART(100)}
+			spriteset(spriteset_706ROaD4_2b, "gfx/Skoda706ROaD4.png") 		{ TMP_CS_BUSSET_ARTb(125)} //second part long as first    
+
+  // Skoda 706ROS 1948
+
+  // Skoda 706RO mestsky 1949
+ 			spriteset(Skoda706ROC_purch, "gfx/Skoda706RO.png") 	{ TMP_CS_BUSSET_p_ARTn(30)}
+			spriteset(Skoda706ROC_0, "gfx/Skoda706RO.png") 	{ TMP_CS_BUSSET  (240) 	}
+			spriteset(Skoda706ROC_1, "gfx/Skoda706RO.png") 	{ TMP_CS_BUSSET  (270) 	}
+			spriteset(Skoda706ROC_2, "gfx/Skoda706RO.png") 	{ TMP_CS_BUSSET  (300) 	}
+			spriteset(Skoda706ROC_3, "gfx/Skoda706RO.png") 	{ TMP_CS_BUSSET  (330) 	}
+			spriteset(Skoda706ROL_0, "gfx/Skoda706RO.png") 	{ TMP_CS_BUSSET  (630) 	}
+			spriteset(Skoda706RLSh_0, "gfx/Skoda706RO.png") 	{ TMP_CS_BUSSET  (660) 	}
+  
+  // Ikarus 30
+ 			spriteset(Ikarus30_purch, "gfx/IK30.png") 	{ TMP_CS_BUSSET_p_ARTn(0)}
+			spriteset(Ikarus30_0, "gfx/IK30.png") 	{ TMP_CS_BUSSET  (0) 	}
+			spriteset(Ikarus30_1, "gfx/IK30.png") 	{ TMP_CS_BUSSET  (30) 	}
+			spriteset(Ikarus30_2, "gfx/IK30.png") 	{ TMP_CS_BUSSET  (60) 	}
+			spriteset(Ikarus30_3, "gfx/IK30.png") 	{ TMP_CS_BUSSET  (90) 	}
+  
+
+  // Skoda 706RO dialkovy
+ 			spriteset(Skoda706ROI_purch, "gfx/Skoda706RO.png") 	{ TMP_CS_BUSSET_p_ARTn(60)}
+  			spriteset(Skoda706ROI_0, "gfx/Skoda706RO.png") 	{ TMP_CS_BUSSET  (360) 	}
+			spriteset(Skoda706ROI_1, "gfx/Skoda706RO.png") 	{ TMP_CS_BUSSET  (390) 	}
+			spriteset(Skoda706ROI_2, "gfx/Skoda706RO.png") 	{ TMP_CS_BUSSET  (420) 	}
+
+  // Skoda 706RO postovy
+ 			spriteset(Skoda706ROP_purch, "gfx/Skoda706RO.png") 	{ TMP_CS_BUSSET_p_ARTn(90)}
+  			spriteset(Skoda706ROP_0, "gfx/Skoda706RO.png") 	{ TMP_CS_BUSSET  (450) 	}
+
+  // Karosa T500HB
+ 			spriteset(KarosaT500HB_purch, "gfx/KarosaT500HB.png") 	{ TMP_CS_BUSSET_p_ARTn(0)}
+			spriteset(KarosaT500HB_0, "gfx/KarosaT500HB.png") 	{ TMP_CS_BUSSET    (0) 	}
+			spriteset(KarosaT500HB_1, "gfx/KarosaT500HB.png") 	{ TMP_CS_BUSSET   (30) 	}
+			spriteset(KarosaT500HB_2, "gfx/KarosaT500HB.png") 	{ TMP_CS_BUSSET   (60) 	}
+			spriteset(KarosaT500HB_3, "gfx/KarosaT500HB.png") 	{ TMP_CS_BUSSET   (90) 	}
+  
+  // Ikarus 55
+ 			spriteset(Ikarus55_purch, "gfx/Ikarus55.png") 	{ TMP_CS_BUSSET_p_ARTn(0)}
+			spriteset(Ikarus55_0, "gfx/Ikarus55.png") 	{ TMP_CS_BUSSET    (0) 	}
+			spriteset(Ikarus55_1, "gfx/Ikarus55.png") 	{ TMP_CS_BUSSET   (30) 	}
+			spriteset(Ikarus55_2, "gfx/Ikarus55.png") 	{ TMP_CS_BUSSET   (60) 	}
+			spriteset(Ikarus55_3, "gfx/Ikarus55.png") 	{ TMP_CS_BUSSET   (90) 	}
+			spriteset(Ikarus55_4, "gfx/Ikarus55.png") 	{ TMP_CS_BUSSET  (120) 	}
+			spriteset(Ikarus55_5, "gfx/Ikarus55.png") 	{ TMP_CS_BUSSET  (150) 	}
+			spriteset(Ikarus55_6, "gfx/Ikarus55.png") 	{ TMP_CS_BUSSET  (180) 	}
+			spriteset(Ikarus55_7, "gfx/Ikarus55.png") 	{ TMP_CS_BUSSET  (210) 	}
+			spriteset(Ikarus55_8, "gfx/Ikarus55.png") 	{ TMP_CS_BUSSET  (240) 	}
+			spriteset(Ikarus55_9, "gfx/Ikarus55.png") 	{ TMP_CS_BUSSET  (270) 	}
+			spriteset(Ikarus55_10, "gfx/Ikarus55.png") 	{ TMP_CS_BUSSET  (300) 	}
+
+  // Skoda 706RTO primestsky
+ 			spriteset(Skoda706RTOR_purch, "gfx/Skoda706RTO-CAR.png") 	{ TMP_CS_BUSSET_p_ARTn(0)}
+			spriteset(Skoda706RTOR_0, "gfx/Skoda706RTO-CAR.png") { TMP_CS_BUSSET    (0) }
+			spriteset(Skoda706RTOR_1, "gfx/Skoda706RTO-CAR.png") { TMP_CS_BUSSET   (30) }
+			spriteset(Skoda706RTOR_2, "gfx/Skoda706RTO-CAR.png") { TMP_CS_BUSSET   (60) }
+			spriteset(Skoda706RTOR_3, "gfx/Skoda706RTO-CAR.png") { TMP_CS_BUSSET   (90) }
+			spriteset(Skoda706RTOR_4, "gfx/Skoda706RTO-CAR.png") { TMP_CS_BUSSET  (120) }
+			spriteset(Skoda706RTOR_5, "gfx/Skoda706RTO-CAR.png") { TMP_CS_BUSSET  (150) }
+			
+  // Skoda 706RTO CAR+B40
+
+  // Skoda 706RTO mestsky
+  			spriteset(Skoda706RTOC_purch, "gfx/Skoda706RTO-MTZ.png") 	{ TMP_CS_BUSSET_p_ARTn(0)}
+			spriteset(Skoda706RTOC_0, "gfx/Skoda706RTO-MTZ.png") { TMP_CS_BUSSET   (0) }
+			spriteset(Skoda706RTOC_1, "gfx/Skoda706RTO-MTZ.png") { TMP_CS_BUSSET  (30) }
+			spriteset(Skoda706RTOC_2, "gfx/Skoda706RTO-MTZ.png") { TMP_CS_BUSSET  (60) }
+			spriteset(Skoda706RTOC_3, "gfx/Skoda706RTO-MTZ.png") { TMP_CS_BUSSET  (90) }
+  
+  // Skoda 706RTO postovy
+ 			spriteset(Skoda706RTOP_purch, "gfx/Skoda706RTO-CAR.png") 	{ TMP_CS_BUSSET_p_ARTn(30)}  
+			spriteset(Skoda706RTOP_0, "gfx/Skoda706RTO-CAR.png") { TMP_CS_BUSSET  (180) }
+
+  // Skoda 706RTO MTZ+B40
+   			spriteset(spriteset_706RTOaB40_purch, "gfx/Skoda706RTO-MTZaB40.png") 	{ TMP_CS_BUSSET_p_ARTna(0)}
+			spriteset(spriteset_706RTOaB40_0a, "gfx/Skoda706RTO-MTZaB40.png") 		{ TMP_CS_BUSSET_ART  (0)}
+			spriteset(spriteset_706RTOaB40_0b, "gfx/Skoda706RTO-MTZaB40.png") 		{ TMP_CS_BUSSET_ART (25)} //second part long as first
+			spriteset(spriteset_706RTOaB40_1a, "gfx/Skoda706RTO-MTZaB40.png") 		{ TMP_CS_BUSSET_ART (50)}
+			spriteset(spriteset_706RTOaB40_1b, "gfx/Skoda706RTO-MTZaB40.png") 		{ TMP_CS_BUSSET_ART (75)} //second part long as first    
+
+  // Ikarus 630
+ 			spriteset(Ikarus630_purch, "gfx/IK620a630.png") 	{ TMP_CS_BUSSET_p_ARTn(90)}
+ 			spriteset(Ikarus630_purch2, "gfx/IK620a630.png") 	{ TMP_CS_BUSSET_p_ARTn(120)}
+			spriteset(Ikarus630_0, "gfx/IK620a630.png") 	{ TMP_CS_BUSSET    (90) 	}
+			spriteset(Ikarus630_1, "gfx/IK620a630.png") 	{ TMP_CS_BUSSET   (120) 	}
+			spriteset(Ikarus630_2, "gfx/IK620a630.png") 	{ TMP_CS_BUSSET   (150) 	}
+			
+  // Skoda 706RTO dialkovy
+ 			spriteset(Skoda706RTOI_purch, "gfx/Skoda706RTO-LUX.png") 	{ TMP_CS_BUSSET_p_ARTn(0)}
+  			spriteset(Skoda706RTOI_0, "gfx/Skoda706RTO-LUX.png") { TMP_CS_BUSSET   (0) }
+			spriteset(Skoda706RTOI_1, "gfx/Skoda706RTO-LUX.png") { TMP_CS_BUSSET  (30) }
+			spriteset(Skoda706RTOI_2, "gfx/Skoda706RTO-LUX.png") { TMP_CS_BUSSET  (60) }
+			spriteset(Skoda706RTOI_3, "gfx/Skoda706RTO-LUX.png") { TMP_CS_BUSSET  (90) }
+			spriteset(Skoda706RTOI_4, "gfx/Skoda706RTO-LUX.png") { TMP_CS_BUSSET (120) }
+			spriteset(Skoda706RTOI_5, "gfx/Skoda706RTO-LUX.png") { TMP_CS_BUSSET (150) }
+
+  // Ikarus 620
+ 			spriteset(Ikarus620_purch, "gfx/IK620a630.png") 	{ TMP_CS_BUSSET_p_ARTn (0)}
+			spriteset(Ikarus620_purch2, "gfx/IK620a630.png") 	{ TMP_CS_BUSSET_p_ARTn(30)}
+			spriteset(Ikarus620_0, "gfx/IK620a630.png") 	{ TMP_CS_BUSSET    (0) 	}
+			spriteset(Ikarus620_1, "gfx/IK620a630.png") 	{ TMP_CS_BUSSET   (30) 	}
+			spriteset(Ikarus620_2, "gfx/IK620a630.png") 	{ TMP_CS_BUSSET   (60) 	}
+			
+  // Skoda 706RTO CAR+Jelcz P01
+  			spriteset(spriteset_706RTOaP01_purcha, "gfx/Skoda706RTO-CARaP01.png") 	{ TMP_CS_BUSSET_p_ARTna(0)}
+  			spriteset(spriteset_706RTOaP01_purchb, "gfx/Skoda706RTO-CARaP01.png") 	{ TMP_CS_BUSSET_p_ARTna(50)}
+			spriteset(spriteset_706RTOaP01_0a, "gfx/Skoda706RTO-CARaP01.png") 		{ TMP_CS_BUSSET_ART  (0)}
+			spriteset(spriteset_706RTOaP01_0b, "gfx/Skoda706RTO-CARaP01.png") 		{ TMP_CS_BUSSET_ART (25)} //second part long as first
+			spriteset(spriteset_706RTOaP01_1a, "gfx/Skoda706RTO-CARaP01.png") 		{ TMP_CS_BUSSET_ART (50)}
+			spriteset(spriteset_706RTOaP01_1b, "gfx/Skoda706RTO-CARaP01.png") 		{ TMP_CS_BUSSET_ART (75)} //second part long as first  
+			spriteset(spriteset_706RTOaP01_2a, "gfx/Skoda706RTO-CARaP01.png") 		{ TMP_CS_BUSSET_ART(100)}
+			spriteset(spriteset_706RTOaP01_2b, "gfx/Skoda706RTO-CARaP01.png") 		{ TMP_CS_BUSSET_ART(125)} //second part long as first    
+			spriteset(spriteset_706RTOaP01_3a, "gfx/Skoda706RTO-CARaP01.png") 		{ TMP_CS_BUSSET_ART(150)}
+			spriteset(spriteset_706RTOaP01_3b, "gfx/Skoda706RTO-CARaP01.png") 		{ TMP_CS_BUSSET_ART(175)} //second part long as first    
+
+  // Skoda 706RTO MTZ+Jelcz P01  
+  			spriteset(spriteset_706RTOCaP01_purcha, "gfx/Skoda706RTO-MTZaP01.png") 	{ TMP_CS_BUSSET_p_ARTna(0)}
+  			spriteset(spriteset_706RTOCaP01_purchb, "gfx/Skoda706RTO-MTZaP01.png") 	{ TMP_CS_BUSSET_p_ARTna(50)}
+			spriteset(spriteset_706RTOCaP01_0a, "gfx/Skoda706RTO-MTZaP01.png") 		{ TMP_CS_BUSSET_ART  (0)}
+			spriteset(spriteset_706RTOCaP01_0b, "gfx/Skoda706RTO-MTZaP01.png") 		{ TMP_CS_BUSSET_ART (25)} //second part long as first
+			spriteset(spriteset_706RTOCaP01_1a, "gfx/Skoda706RTO-MTZaP01.png") 		{ TMP_CS_BUSSET_ART (50)}
+			spriteset(spriteset_706RTOCaP01_1b, "gfx/Skoda706RTO-MTZaP01.png") 		{ TMP_CS_BUSSET_ART (75)} //second part long as first  
+			spriteset(spriteset_706RTOCaP01_2a, "gfx/Skoda706RTO-MTZaP01.png") 		{ TMP_CS_BUSSET_ART(100)}
+			spriteset(spriteset_706RTOCaP01_2b, "gfx/Skoda706RTO-MTZaP01.png") 		{ TMP_CS_BUSSET_ART(125)} //second part long as first    
+			spriteset(spriteset_706RTOCaP01_3a, "gfx/Skoda706RTO-MTZaP01.png") 		{ TMP_CS_BUSSET_ART(150)}
+			spriteset(spriteset_706RTOCaP01_3b, "gfx/Skoda706RTO-MTZaP01.png") 		{ TMP_CS_BUSSET_ART(175)} //second part long as first  
+
+  
+  // Skoda 706RTO posta+Jelcz P01
+ 			spriteset(spriteset_RTOaP01p_purch, "gfx/Skoda706RTOaP01-P.png") 	{ TMP_CS_BUSSET_p_ARTna(0)}
+			spriteset(spriteset_706RTOaP01P_0a, "gfx/Skoda706RTOaP01-P.png") 		{ TMP_CS_BUSSET_ART  (0)}
+			spriteset(spriteset_706RTOaP01P_0b, "gfx/Skoda706RTOaP01-P.png") 		{ TMP_CS_BUSSET_ART (25)} 
+			//second part long as first
+  
+  // Skoda 706RTOK
+  
+ // Jelcz 272 MEX
+  			spriteset(JelczMEX_purch, "gfx/Jelcz.png")	 	{ TMP_CS_BUSSET_p_ARTn(0)}
+			spriteset(JelczMEX_0, "gfx/Jelcz.png") 			{ TMP_CS_BUSSET   (0) }
+			spriteset(JelczMEX_1, "gfx/Jelcz.png") 			{ TMP_CS_BUSSET  (30) }
+
+ // Jelcz 043E
+  			spriteset(Jelcz043_purch, "gfx/Jelcz.png")	 	{ TMP_CS_BUSSET_p_ARTn(120)}
+			spriteset(Jelcz043_0, "gfx/Jelcz.png") 			{ TMP_CS_BUSSET  (120) }
+			spriteset(Jelcz043_1, "gfx/Jelcz.png") 			{ TMP_CS_BUSSET  (150) }
+
+ // Jelcz 041
+  			spriteset(Jelcz041_purch, "gfx/Jelcz.png")	 	{ TMP_CS_BUSSET_p_ARTn(60)}
+			spriteset(Jelcz041_0, "gfx/Jelcz.png") 			{ TMP_CS_BUSSET   (60) }
+			spriteset(Jelcz041_1, "gfx/Jelcz.png") 			{ TMP_CS_BUSSET  (90) }
+			spriteset(Jelcz041_2, "gfx/Jelcz.png") 			{ TMP_CS_BUSSET   (180) }
+			spriteset(Jelcz041_3, "gfx/Jelcz.png") 			{ TMP_CS_BUSSET  (210) }
+			spriteset(Jelcz041_4, "gfx/Jelcz.png") 			{ TMP_CS_BUSSET  (240) }
+
+// Jelcx 272 MEX+Jelcz P01  
+  			spriteset(spriteset_JelczMEXaP01_purcha, "gfx/JelczMEXaP01.png") 	{ TMP_CS_BUSSET_p_ARTna(0)}
+			spriteset(spriteset_JelczMEXaP01_0a, "gfx/JelczMEXaP01.png") 		{ TMP_CS_BUSSET_ART  (0)}
+			spriteset(spriteset_JelczMEXaP01_0b, "gfx/JelczMEXaP01.png") 		{ TMP_CS_BUSSET_ART (25)} //second part long as first
+			spriteset(spriteset_JelczMEXaP01_1a, "gfx/JelczMEXaP01.png") 		{ TMP_CS_BUSSET_ART (50)}
+			spriteset(spriteset_JelczMEXaP01_1b, "gfx/JelczMEXaP01.png") 		{ TMP_CS_BUSSET_ART (75)} //second part long as first  
+
+// Jelcx 041+Jelcz P01  
+  			spriteset(spriteset_Jelcz041aP01_purcha, "gfx/Jelcz041aP01.png") 	{ TMP_CS_BUSSET_p_ARTna(0)}
+			spriteset(spriteset_Jelcz041aP01_0a, "gfx/Jelcz041aP01.png") 		{ TMP_CS_BUSSET_ART  (0)}
+			spriteset(spriteset_Jelcz041aP01_0b, "gfx/Jelcz041aP01.png") 		{ TMP_CS_BUSSET_ART (25)} //second part long as first
+			spriteset(spriteset_Jelcz041aP01_1a, "gfx/Jelcz041aP01.png") 		{ TMP_CS_BUSSET_ART (50)}
+			spriteset(spriteset_Jelcz041aP01_1b, "gfx/Jelcz041aP01.png") 		{ TMP_CS_BUSSET_ART (75)} //second part long as first  
+
+// Switches
+
+  // Laurin & Klement MS / Skoda 540
+  					switch(FEAT_ROADVEHS, SELF, sw_LaKMS540_livery, cargo_subtype) {
+										0:      LaK540MS_0;
+										1:      LaK540MS_1;
+										2:      LaK540MS_2;
+										3:      LaK540MS_3;
+																				}
+					switch(FEAT_ROADVEHS, SELF, sw_LaKMS540_name_yearbased_TEXT, cargo_subtype) {
+										0: return string(STR_NAME_LaK540MS_1); 
+										1: return string(STR_NAME_LaK540MS_2); 
+										2: return string(STR_NAME_LaK540MS_3); 
+										3: return string(STR_NAME_LaK540MS_4); 
+										return CB_RESULT_NO_TEXT;
+																					}																					
+  // Praga N primestsky									
+					switch(FEAT_ROADVEHS, SELF, sw_PragaNspeed_yearbased, build_year) 	{
+										1914..1921:      25;
+										1922..2100:      30;
+																					}										
+					switch(FEAT_ROADVEHS, SELF, sw_PragaNpower_yearbased, build_year) 	{
+										1914..1921:      50;
+										1922..2100:      55;
+																					}										
+					switch(FEAT_ROADVEHS, SELF, sw_PragaNR_livery, cargo_subtype) {
+										0:      PragaNR_0;
+										1:      PragaNR_1;
+										2:      PragaNR_2;
+																				}
+					switch(FEAT_ROADVEHS, SELF, sw_PragaNR_livery_TEXT, cargo_subtype) {
+										0: return string(STR_NAME_PragaNR_1); 
+										1: return string(STR_NAME_PragaNR_2); 
+										2: return string(STR_NAME_PragaNR_3); 
+										return CB_RESULT_NO_TEXT;
+																					}
+  // Praga N mestsky
+  					switch(FEAT_ROADVEHS, SELF, sw_PragaNC_livery, cargo_subtype) {
+										0:      PragaNC_0;
+										1:      PragaNC_1;
+																				}
+					switch(FEAT_ROADVEHS, SELF, sw_PragaNC_livery_TEXT, cargo_subtype) {
+										0: return string(STR_NAME_PragaNC_1); 
+										1: return string(STR_NAME_PragaNC_2); 
+										return CB_RESULT_NO_TEXT;
+																					}
+  // Skoda 505 primestsky
+  					switch(FEAT_ROADVEHS, SELF, sw_Skoda505R_livery, cargo_subtype) {
+										0:      Skoda505R_0;
+										1:      Skoda505R_1;
+										2:      Skoda505R_2;
+										3:      Skoda505R_3;
+																				}
+					switch(FEAT_ROADVEHS, SELF, sw_Skoda505R_livery_TEXT, cargo_subtype) {
+										0: return string(STR_NAME_Skoda505R_1); 
+										1: return string(STR_NAME_Skoda505R_2); 
+										2: return string(STR_NAME_Skoda505R_3); 
+										3: return string(STR_NAME_Skoda505R_4); 
+										return CB_RESULT_NO_TEXT;
+																					}
+  // Skoda 505 mestsky
+  					switch(FEAT_ROADVEHS, SELF, sw_Skoda505C_livery, cargo_subtype) {
+										0:      Skoda505C_0;
+										1:      Skoda505C_1;
+																				}
+					switch(FEAT_ROADVEHS, SELF, sw_Skoda505C_livery_TEXT, cargo_subtype) {
+										0: return string(STR_NAME_Skoda505C_1); 
+										1: return string(STR_NAME_Skoda505C_2); 
+										return CB_RESULT_NO_TEXT;  
+																					}
+  // Tatra 13  No switches needed yet
+
+  // Praga NO primestsky
+					switch(FEAT_ROADVEHS, SELF, sw_PragaNOspeed_yearbased, build_year) 	{
+										1923..1926:      28;
+										1927..2100:      35;
+																					}										
+					switch(FEAT_ROADVEHS, SELF, sw_PragaNOpower_yearbased, build_year) 	{
+										1923..1926:      52;
+										1927..2100:      55;
+																					}
+					switch(FEAT_ROADVEHS, SELF, sw_PragaNOR_livery, cargo_subtype) {
+										0:      PragaNOR_0;
+										1:      PragaNOR_1;
+										2:      PragaNOR_2;
+										3:      PragaNOR_3;
+																				}
+					switch(FEAT_ROADVEHS, SELF, sw_PragaNOR_livery_TEXT, cargo_subtype) {
+										0: return string(STR_NAME_PragaNOR_1); 
+										1: return string(STR_NAME_PragaNOR_2); 
+										2: return string(STR_NAME_PragaNOR_3); 
+										3: return string(STR_NAME_PragaNOR_4); 
+										return CB_RESULT_NO_TEXT;
+																						}		
+  // Praga NO mestsky
+					switch(FEAT_ROADVEHS, SELF, sw_PragaNOC_livery, cargo_subtype) {
+										0:      PragaNOC_0;
+										1:      PragaNOC_1;
+																				}
+					switch(FEAT_ROADVEHS, SELF, sw_PragaNOC_livery_TEXT, cargo_subtype) {
+										0: return string(STR_NAME_PragaNOC_1); 
+										1: return string(STR_NAME_PragaNOC_2); 
+										return CB_RESULT_NO_TEXT;
+																					}
+  // Tatra 23 primestsky  No switches needed yet
+					switch(FEAT_ROADVEHS, SELF, sw_Tatra23R_livery, cargo_subtype) {
+										0:      Tatra23R_0;
+										1:      Tatra23R_1;
+																				}
+					switch(FEAT_ROADVEHS, SELF, sw_Tatra23R_livery_TEXT, cargo_subtype) {
+										0: return string(STR_NAME_Tatra23R_1); 
+										1: return string(STR_NAME_Tatra23R_2); 
+										return CB_RESULT_NO_TEXT;
+																					}
+
+  // Tatra 23 mestsky
+					switch(FEAT_ROADVEHS, SELF, sw_Tatra23C_livery, cargo_subtype) {
+										0:      Tatra23C_0;
+										1:      Tatra23C_1;
+																				}
+					switch(FEAT_ROADVEHS, SELF, sw_Tatra23C_livery_TEXT, cargo_subtype) {
+										0: return string(STR_NAME_Tatra23C_1); 
+										1: return string(STR_NAME_Tatra23C_2); 
+										return CB_RESULT_NO_TEXT;
+																					}
+  // Tatra 24 primestsky
+					switch(FEAT_ROADVEHS, SELF, sw_Tatra24R_livery, cargo_subtype) {
+										0:      Tatra24R_0;
+										1:      Tatra24R_1;
+										2:      Tatra24R_2;
+																				}
+					switch(FEAT_ROADVEHS, SELF, sw_Tatra24R_livery_TEXT, cargo_subtype) {
+										0: return string(STR_NAME_Tatra24R_1); 
+										1: return string(STR_NAME_Tatra24R_2); 
+										2: return string(STR_NAME_Tatra24R_3); 
+										return CB_RESULT_NO_TEXT;
+																					}
+  // Tatra 24 mestsky
+					switch(FEAT_ROADVEHS, SELF, sw_Tatra24C_livery, cargo_subtype) {
+										0:      Tatra24C_0;
+										1:      Tatra24C_1;
+																				}
+					switch(FEAT_ROADVEHS, SELF, sw_Tatra24C_livery_TEXT, cargo_subtype) {
+										0: return string(STR_NAME_Tatra24C_1); 
+										1: return string(STR_NAME_Tatra24C_2); 
+										return CB_RESULT_NO_TEXT;		
+																					}
+  // Tatra 2458 primestsky
+					switch(FEAT_ROADVEHS, SELF, sw_Tatra2458power_yearbased, build_year) 	{
+										1929..1932:      100;
+										1933..1935:      105;											
+										1936..2100:		 110;
+																					}	
+					switch(FEAT_ROADVEHS, SELF, sw_Tatra2458weight_yearbased, build_year) 	{
+										1929..1932:      7; // 7.4
+										1933..1935:      8; // 8.1											
+										1936..2100:		 9; // 8.4
+																					}																						
+  
+  					switch(FEAT_ROADVEHS, SELF, sw_Tatra2458R_livery, cargo_subtype) {
+										0:      Tatra2458R_0;
+										1:      Tatra2458R_1;
+										2:      Tatra2458R_2;
+																				}
+					switch(FEAT_ROADVEHS, SELF, sw_Tatra2458R_livery_TEXT, cargo_subtype) {
+										0: return string(STR_NAME_Tatra2458R_1); 
+										1: return string(STR_NAME_Tatra2458R_2); 
+										2: return string(STR_NAME_Tatra2458R_3); 
+										return CB_RESULT_NO_TEXT;
+																					}
+  // Tatra 2458 mestsky
+					switch(FEAT_ROADVEHS, SELF, sw_Tatra2458Ca_livery, cargo_subtype) {
+										0:      Tatra2458C_0;
+										1:      Tatra2458C_1;
+										}
+					switch(FEAT_ROADVEHS, SELF, sw_Tatra2458Cb_livery, cargo_subtype) {
+										0:      Tatra2491C_2;
+										1:      Tatra2491C_3;	
+										}
+					switch(FEAT_ROADVEHS, SELF, sw_Tatra2458C_livery, build_year) 	{
+										1929..1935:      sw_Tatra2458Ca_livery;
+										1936..2100:      sw_Tatra2458Cb_livery;
+																					}	
+					switch(FEAT_ROADVEHS, SELF, sw_Tatra2458Ca_cargo_subtype_TEXT, cargo_subtype) {
+										0: return string(STR_NAME_Tatra2458C_1); 
+										1: return string(STR_NAME_Tatra2458C_2); 
+										return CB_RESULT_NO_TEXT;
+																					}
+					switch(FEAT_ROADVEHS, SELF, sw_Tatra2458Cb_cargo_subtype_TEXT, cargo_subtype) {
+										0: return string(STR_NAME_Tatra2467C_3); 
+										1: return string(STR_NAME_Tatra2467C_4); 
+										return CB_RESULT_NO_TEXT;
+																					}
+					switch(FEAT_ROADVEHS, SELF, sw_Tatra2458C_livery_TEXT, build_year) {
+										1929..1935:      sw_Tatra2458Ca_cargo_subtype_TEXT; 
+										1936..2100:      sw_Tatra2458Cb_cargo_subtype_TEXT; 
+																					}
+	
+  // Walter PN
+  // Skoda 304
+  // Skoda 506
+  
+  // Praga RN
+					switch(FEAT_ROADVEHS, SELF, sw_PragaRNspeed_yearbased, build_year) 	{
+										1929..1936:      78;
+										1932..1945:      80;											
+										1946..2100:		 85;
+																					}	
+					switch(FEAT_ROADVEHS, SELF, sw_PragaRNpower_yearbased, build_year) 	{
+										1929..1936:      52;
+										1937..1945:      68;											
+										1946..2100:		 72;
+																					}	
+					switch(FEAT_ROADVEHS, SELF, sw_PragaRNRa_livery, cargo_subtype) {
+										0:      PragaRNR_0;
+										1:      PragaRNR_1;
+																					}	
+					switch(FEAT_ROADVEHS, SELF, sw_PragaRNRb_livery, cargo_subtype) {
+										0:      PragaRNR_2;
+										1:      PragaRNR_3;
+										2:      PragaRNR_4;
+																					}
+					switch(FEAT_ROADVEHS, SELF, sw_PragaRNR_livery, build_year) 	{
+										1933..1936:      sw_PragaRNRa_livery;
+										1937..2100:      sw_PragaRNRb_livery;
+																					}
+					switch(FEAT_ROADVEHS, SELF, sw_PragaRNRa_livery_TEXT, cargo_subtype) {
+										0:      return string(STR_NAME_PragaRNR_1);
+										1:      return string(STR_NAME_PragaRNR_2);
+										return CB_RESULT_NO_TEXT;
+																					}	
+					switch(FEAT_ROADVEHS, SELF, sw_PragaRNRb_livery_TEXT, cargo_subtype) {
+										0:      return string(STR_NAME_PragaRNR_3);
+										1:      return string(STR_NAME_PragaRNR_4);
+										2:      return string(STR_NAME_PragaRNR_5);
+										return CB_RESULT_NO_TEXT;
+																					}
+					switch(FEAT_ROADVEHS, SELF, sw_PragaRNRlivery_yearbased_TEXT, build_year) 	{
+										1933..1936:      sw_PragaRNRa_livery_TEXT;
+										1937..2100:      sw_PragaRNRb_livery_TEXT;
+																					}	
+  // Skoda 404D
+					switch(FEAT_ROADVEHS, SELF, sw_Skoda404D_livery, cargo_subtype) {
+										0:      Skoda404D_0;
+										1:      Skoda404D_1;
+																				}
+					switch(FEAT_ROADVEHS, SELF, sw_Skoda404D_livery_TEXT, cargo_subtype) {
+										0: return string(STR_NAME_Skoda404D_1); 
+										1: return string(STR_NAME_Skoda404D_2); 
+										return CB_RESULT_NO_TEXT;
+																				}			
+  // Skoda 606D primestsky
+					switch(FEAT_ROADVEHS, SELF, sw_Skoda606DR_livery, cargo_subtype) {
+										0:      Skoda606R_0;
+										1:      Skoda606R_1;
+																				}
+					switch(FEAT_ROADVEHS, SELF, sw_Skoda606DR_livery_TEXT, cargo_subtype) {
+										0: return string(STR_NAME_Skoda606DR_1); 
+										1: return string(STR_NAME_Skoda606DR_2); 
+										return CB_RESULT_NO_TEXT;
+																				}
+
+  // Skoda 606D mestsky
+					switch(FEAT_ROADVEHS, SELF, sw_Skoda606DC_livery, cargo_subtype) {
+										0:      Skoda606C_0;
+										1:      Skoda606C_1;
+																				}
+					switch(FEAT_ROADVEHS, SELF, sw_Skoda606DC_livery_TEXT, cargo_subtype) {
+										0: return string(STR_NAME_Skoda606DC_1); 
+										1: return string(STR_NAME_Skoda606DC_2); 
+										return CB_RESULT_NO_TEXT;
+																				}
+
+  // Praga RND primestsky 1936
+					switch(FEAT_ROADVEHS, SELF, sw_PragaRNDR_livery, cargo_subtype) {
+										0:      PragaRNDR_0;
+										1:      PragaRNDR_1;
+										2:      PragaRNDR_2;
+																				}
+					switch(FEAT_ROADVEHS, SELF, sw_PragaRNDR_livery_TEXT, cargo_subtype) {
+										0: return string(STR_NAME_PragaRNDR_1); 
+										1: return string(STR_NAME_PragaRNDR_2); 
+										2: return string(STR_NAME_PragaRNDR_3); 
+										return CB_RESULT_NO_TEXT;
+																				}
+ 
+  // Praga RND mestsky
+					switch(FEAT_ROADVEHS, SELF, sw_PragaRNDC_livery, cargo_subtype) {
+										0:      PragaRNDC_0;
+										1:      PragaRNDC_1;
+																				}
+					switch(FEAT_ROADVEHS, SELF, sw_PragaRNDC_livery_TEXT, cargo_subtype) {
+										0: return string(STR_NAME_PragaRNDC_1); 
+										1: return string(STR_NAME_PragaRNDC_2); 
+										return CB_RESULT_NO_TEXT;
+																				}
+
+  // Praga RN dialkovy
+  
+  // Praga NDO 1939 primestsky
+  					switch(FEAT_ROADVEHS, SELF, sw_PragaNDOR_livery, cargo_subtype) {
+ 										0:      PragaNDOR_0;
+										1:      PragaNDOR_1;
+
+																				}
+					switch(FEAT_ROADVEHS, SELF, sw_PragaNDOR_livery_TEXT, cargo_subtype) {
+										0: return string(STR_NAME_PragaNDOR_1); 
+										1: return string(STR_NAME_PragaNDOR_2); 
+										return CB_RESULT_NO_TEXT; 				
+																				}
+  
+  // Praga NDO 1939 mestsky
+  					switch(FEAT_ROADVEHS, SELF, sw_PragaNDOC_livery, cargo_subtype) {
+ 										0:      PragaNDOC_0;
+										1:      PragaNDOC_1;
+
+																				}
+					switch(FEAT_ROADVEHS, SELF, sw_PragaNDOC_livery_TEXT, cargo_subtype) {
+										0: return string(STR_NAME_PragaNDOC_1); 
+										1: return string(STR_NAME_PragaNDOC_2); 
+										return CB_RESULT_NO_TEXT; 				
+																				}	
+  
+  // Skoda 606D dialkovy
+					switch(FEAT_ROADVEHS, SELF, sw_Skoda606DI_livery, cargo_subtype) {
+										0:      Skoda606I_0;
+										1:      Skoda606I_1;
+										2:      Skoda606I_2;
+																				}
+					switch(FEAT_ROADVEHS, SELF, sw_Skoda606DI_livery_TEXT, cargo_subtype) {
+										0: return string(STR_NAME_Skoda606DI_1); 
+										1: return string(STR_NAME_Skoda606DI_2); 
+										2: return string(STR_NAME_Skoda606DI_3);
+										return CB_RESULT_NO_TEXT;
+																				}
+  
+  // Skoda 606D postovy  No switches needed yet
+			
+  // Skoda 706N primestsky  
+					switch(FEAT_ROADVEHS, SELF, sw_Skoda706N_livery, cargo_subtype) {
+										0:      Skoda706N_0;
+										1:      Skoda706N_1;
+																				}
+					switch(FEAT_ROADVEHS, SELF, sw_Skoda706N_livery_TEXT, cargo_subtype) {
+										0: return string(STR_NAME_Skoda706N_1); 
+										1: return string(STR_NAME_Skoda706N_2); 
+										return CB_RESULT_NO_TEXT;
+																				}
+			
+  // Skoda 706N+PRK6
+		  switch (FEAT_ROADVEHS, SELF, switch_spriteset_706NaPRK6_0, position_in_consist) { 
+									0 : return spriteset_706NaPRK6_0a; 
+									1 : return spriteset_706NaPRK6_0b; 
+								return CB_FAILED;  
+																					 } 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_706NaPRK6_1, position_in_consist) { 
+									0 : return spriteset_706NaPRK6_1a; 
+									1 : return spriteset_706NaPRK6_1b; 
+								return CB_FAILED;  
+							} 
+
+		switch(FEAT_ROADVEHS, SELF, sw_706NaPRK6_livery, cargo_subtype) {
+									0:      switch_spriteset_706NaPRK6_0;
+									1:      switch_spriteset_706NaPRK6_1;
+								}
+		 switch(FEAT_ROADVEHS, SELF, sw_706NaPRK6_length, position_in_consist ) {
+									1: return 7;
+									return 8;
+									}
+		  
+		 switch (FEAT_ROADVEHS, SELF, switch_706NaPRK6_articulated, extra_callback_info1) { 
+									1: return ITEM_706NaPRK6;
+									return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+								 } 
+
+		switch(FEAT_ROADVEHS, SELF, sw_706NaPRK6_cargo_subtype_TEXT, cargo_subtype) {
+									0: return string(STR_NAME_706NaPRK6_1);
+									1: return string(STR_NAME_706NaPRK6_2);
+									return CB_RESULT_NO_TEXT;
+									}   
+			
+  // Skoda 706NG primestsky 
+					switch(FEAT_ROADVEHS, SELF, sw_Skoda706NG_livery, cargo_subtype) {
+										0:      Skoda706NG_0;
+										1:      Skoda706NG_1;
+																				}
+					switch(FEAT_ROADVEHS, SELF, sw_Skoda706NG_livery_TEXT, cargo_subtype) {
+										0: return string(STR_NAME_Skoda706NG_1); 
+										1: return string(STR_NAME_Skoda706NG_2); 
+										return CB_RESULT_NO_TEXT;
+																				}  
+  // Skoda 706NG+PRK6
+		  switch (FEAT_ROADVEHS, SELF, switch_spriteset_706NGaPRK6_0, position_in_consist) { 
+									0 : return spriteset_706NGaPRK6_0a; 
+									1 : return spriteset_706NGaPRK6_0b; 
+								return CB_FAILED;  
+																					 } 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_706NGaPRK6_1, position_in_consist) { 
+									0 : return spriteset_706NGaPRK6_1a; 
+									1 : return spriteset_706NGaPRK6_1b; 
+								return CB_FAILED;  
+							} 
+
+		switch(FEAT_ROADVEHS, SELF, sw_706NGaPRK6_livery, cargo_subtype) {
+									0:      switch_spriteset_706NGaPRK6_0;
+									1:      switch_spriteset_706NGaPRK6_1;
+								}
+		 switch(FEAT_ROADVEHS, SELF, sw_706NGaPRK6_length, position_in_consist ) {
+									1: return 7;
+									return 8;
+									}
+		  
+		 switch (FEAT_ROADVEHS, SELF, switch_706NGaPRK6_articulated, extra_callback_info1) { 
+									1: return ITEM_706NGaPRK6;
+									return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+								 } 
+
+		switch(FEAT_ROADVEHS, SELF, sw_706NGaPRK6_cargo_subtype_TEXT, cargo_subtype) {
+									0: return string(STR_NAME_706NGaPRK6_1);
+									1: return string(STR_NAME_706NGaPRK6_2);
+									return CB_RESULT_NO_TEXT;
+									} 
+  
+  // Praga RND+PRK4
+  		  switch (FEAT_ROADVEHS, SELF, switch_spriteset_RNDaPRK4_0, position_in_consist) { 
+									0 : return spriteset_RNDaPRK4_0a; 
+									1 : return spriteset_RNDaPRK4_0b; 
+								return CB_FAILED;  
+																					 } 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_RNDaPRK4_1, position_in_consist) { 
+									0 : return spriteset_RNDaPRK4_1a; 
+									1 : return spriteset_RNDaPRK4_1b; 
+								return CB_FAILED;  
+							} 
+
+		switch(FEAT_ROADVEHS, SELF, sw_RNDaPRK4_livery, cargo_subtype) {
+									0:      switch_spriteset_RNDaPRK4_0;
+									1:      switch_spriteset_RNDaPRK4_1;
+								}
+		 switch(FEAT_ROADVEHS, SELF, sw_RNDaPRK4_length, position_in_consist ) {
+									1: return 7;
+									return 8;
+									}
+		  
+		 switch (FEAT_ROADVEHS, SELF, switch_RNDaPRK4_articulated, extra_callback_info1) { 
+									1: return ITEM_RNDaPRK4;
+									return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+								 } 
+
+		switch(FEAT_ROADVEHS, SELF, sw_RNDaPRK4_cargo_subtype_TEXT, cargo_subtype) {
+									0: return string(STR_NAME_RNDaPRK4_1);
+									1: return string(STR_NAME_RNDaPRK4_2);
+									return CB_RESULT_NO_TEXT;
+									} 
+
+  // Skoda 256  not needed
+  
+  // Praga NDO 1947 primestsky
+  
+		switch(FEAT_ROADVEHS, SELF, sw_PragaNDO47Ra_livery, cargo_subtype) {
+ 										0:      PragaNDOR_0;
+										1:      PragaNDOR_1;
+																			} 
+		switch(FEAT_ROADVEHS, SELF, sw_PragaNDO47Rb_livery, cargo_subtype) {
+ 										0:      PragaNDOR_2;
+										1:      PragaNDOR_3;
+																			}
+					switch(FEAT_ROADVEHS, SELF, sw_PragaNDO47R_livery, build_year) 	{
+										1946..1947:      sw_PragaNDO47Ra_livery;
+										1948..2100:		 sw_PragaNDO47Rb_livery;
+																	}
+		switch(FEAT_ROADVEHS, SELF, sw_PragaNDO47R_livery_TEXT, cargo_subtype) {
+										0: return string(STR_NAME_PragaNDOR_3); 
+										1: return string(STR_NAME_PragaNDOR_4); 
+										return CB_RESULT_NO_TEXT; 				
+																				}
+					switch(FEAT_ROADVEHS, SELF, sw_PragaNDO47R_capacity, build_year) 	{
+										1946..1947:      65;										
+										1949..2100:		 77;
+																	}  
+  // Praga NDO 1947 mestsky
+		switch(FEAT_ROADVEHS, SELF, sw_PragaNDO47Cc_livery, cargo_subtype) {
+ 										0:      PragaNDOC_2;
+										1:      PragaNDOC_3;
+																	}
+		switch(FEAT_ROADVEHS, SELF, sw_PragaNDO47Cb_livery, cargo_subtype) {
+										0:      PragaNDOC_4;
+										1:      PragaNDOC_5;
+																	}
+		switch(FEAT_ROADVEHS, SELF, sw_PragaNDO47Ca_livery, cargo_subtype) {
+										0:      PragaNDOC_0;
+										1:      PragaNDOC_1;
+																	}
+					switch(FEAT_ROADVEHS, SELF, sw_PragaNDO47liveries_yearbased, build_year) 	{
+										1946..1947:      sw_PragaNDO47Ca_livery;
+										1948:      		 sw_PragaNDO47Cb_livery;											
+										1949..2100:		 sw_PragaNDO47Cc_livery;
+																	}
+									
+  switch(FEAT_ROADVEHS, SELF, sw_PragaNDO47C_cargo_subtype_TEXTc, cargo_subtype) {
+										0: return string(STR_NAME_PragaNDO47C_1); 
+										1: return string(STR_NAME_PragaNDO47C_2); 
+										return CB_RESULT_NO_TEXT; 				
+																	}
+  switch(FEAT_ROADVEHS, SELF, sw_PragaNDO47C_cargo_subtype_TEXTb, cargo_subtype) {
+										0: return string(STR_NAME_PragaNDO47C_1); 
+										1: return string(STR_NAME_PragaNDO47C_2); 
+										return CB_RESULT_NO_TEXT; 				
+																	}
+  switch(FEAT_ROADVEHS, SELF, sw_PragaNDO47C_cargo_subtype_TEXTa, cargo_subtype) {
+										0: return string(STR_NAME_PragaNDO47C_1); 
+										1: return string(STR_NAME_PragaNDO47C_2); 
+										return CB_RESULT_NO_TEXT; 				
+																	}
+					switch(FEAT_ROADVEHS, SELF, sw_PragaNDO47C_livery_TEXT, build_year) 	{
+										1946..1947:      sw_PragaNDO47C_cargo_subtype_TEXTa;
+										1948:      		 sw_PragaNDO47C_cargo_subtype_TEXTb;											
+										1949..2100:		 sw_PragaNDO47C_cargo_subtype_TEXTc;
+																	}																		
+										
+					switch(FEAT_ROADVEHS, SELF, sw_PragaNDO47C_capacity, build_year) 	{
+										1946..1947:      65;
+										1948:      		 67;											
+										1949..2100:		 77;
+																	}
+			
+  // Praga NDO+DM4 ======== unfinished, missing date based liveries per grf file
+  		  switch (FEAT_ROADVEHS, SELF, switch_spriteset_NDOaDM4_0, position_in_consist) { 
+									0 : return spriteset_NDOaDM4_0a; 
+									1 : return spriteset_NDOaDM4_0b; 
+								return CB_FAILED;  
+																					 } 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_NDOaDM4_1, position_in_consist) { 
+									0 : return spriteset_NDOaDM4_1a; 
+									1 : return spriteset_NDOaDM4_1b; 
+								return CB_FAILED;  
+							} 
+  		  switch (FEAT_ROADVEHS, SELF, switch_spriteset_NDOaDM4_2, position_in_consist) { 
+									0 : return spriteset_NDOaDM4_2a; 
+									1 : return spriteset_NDOaDM4_2b; 
+								return CB_FAILED;  
+																					 } 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_NDOaDM4_3, position_in_consist) { 
+									0 : return spriteset_NDOaDM4_3a; 
+									1 : return spriteset_NDOaDM4_3b; 
+								return CB_FAILED;  
+							} 
+					switch(FEAT_ROADVEHS, SELF, switch_YBspriteset_NDOaDM4_0, build_year) 	{
+										1946..1947:      switch_spriteset_NDOaDM4_0;
+										1948..2100:		 switch_spriteset_NDOaDM4_2;
+																	}
+					switch(FEAT_ROADVEHS, SELF, switch_YBspriteset_NDOaDM4_2, build_year) 	{
+										1946..1947:      switch_spriteset_NDOaDM4_1;
+										1948..2100:		 switch_spriteset_NDOaDM4_3;
+																	}							
+							
+		switch(FEAT_ROADVEHS, SELF, sw_NDOaDM4_livery, cargo_subtype) {
+									0:      switch_YBspriteset_NDOaDM4_0;
+									1:      switch_YBspriteset_NDOaDM4_2;
+									}
+		 switch(FEAT_ROADVEHS, SELF, sw_NDOaDM4_length, position_in_consist ) {
+									1: return 7;
+									return 8;
+									}
+		  
+		 switch (FEAT_ROADVEHS, SELF, switch_NDOaDM4_articulated, extra_callback_info1) { 
+									1: return ITEM_NDOaDM4;
+									return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+								 } 
+
+		switch(FEAT_ROADVEHS, SELF, sw_NDOaDM4_cargo_subtype_TEXT, cargo_subtype) {
+									0: return string(STR_NAME_NDOaDM4_1);
+									1: return string(STR_NAME_NDOaDM4_2);
+									return CB_RESULT_NO_TEXT;
+									} 
+					switch(FEAT_ROADVEHS, SELF, sw_NDOaDM4_capacity, build_year) 	{
+										1946..1947:      86;										
+										1949..2100:		 98;
+										} 
+					switch(FEAT_ROADVEHS, SELF, sw_spriteset_NDOaDM4_purch, build_year) 	{
+										1946..1947:      spriteset_NDOaDM4_purch;
+										1948..2100:		 spriteset_NDOaDM4_purch2;
+																	}
+ 
+
+
+
+  
+  // Skoda 706RO primestsky 1947
+  
+		random_switch(FEAT_ROADVEHS, SELF, sw_706RO_1947Cargage, TRIGGER_VEHICLE_32_CALLBACK) {
+										10:     190;
+										1:      225;
+										1:      240;
+										}  
+		random_switch(FEAT_ROADVEHS, SELF, sw_706RO_1955Cargage, TRIGGER_VEHICLE_32_CALLBACK) {
+										11:      190;
+										1:      230;
+										}  
+		random_switch(FEAT_ROADVEHS, SELF, sw_706RO_1957Cargage, TRIGGER_VEHICLE_32_CALLBACK) {
+										11:      190;
+										1:      250;
+										} 
+  					switch(FEAT_ROADVEHS, SELF, sw_Skoda706ROR_cargoage, build_year) 	{
+										1945..1947:      sw_706RO_1947Cargage;
+										1948..1954: 			190;
+										1955: sw_706RO_1955Cargage; // RO-ROH
+										1956: 	 190;
+										1957: sw_706RO_1957Cargage; // Bratislava
+										1958..2100: 	 190;													
+																	}
+		random_switch(FEAT_ROADVEHS, SELF, sw_706RO_1947Carg, TRIGGER_VEHICLE_32_CALLBACK) {
+										10:      70;
+										1:      32;
+										1:      30;
+										}  
+random_switch(FEAT_ROADVEHS, SELF, sw_706RO_1948Carg, TRIGGER_VEHICLE_32_CALLBACK) {
+										11:      70;
+										1:      80; 
+										}  
+random_switch(FEAT_ROADVEHS, SELF, sw_706RO_1949Carg, TRIGGER_VEHICLE_32_CALLBACK) {
+										11:      70;
+										1:      89;
+										}  
+
+		random_switch(FEAT_ROADVEHS, SELF, sw_706RO_1955Carg, TRIGGER_VEHICLE_32_CALLBACK) {
+										11:      70;
+										1:      35;
+										}  
+		random_switch(FEAT_ROADVEHS, SELF, sw_706RO_1957Carg, TRIGGER_VEHICLE_32_CALLBACK) {
+										11:      70;
+										1:      18;
+										} 
+					switch(FEAT_ROADVEHS, SELF, sw_Skoda706ROR_capacity, build_year) 	{
+										1945..1947:      sw_706RO_1947Carg; // Avia, pullman
+										1948:	sw_706RO_1948Carg; // ROS
+										1949:   sw_706RO_1949Carg; // ROH
+										1950..1954: 			70;
+										1955: sw_706RO_1955Carg; // RO-ROH
+										1956: 	 70;
+										1957: sw_706RO_1957Carg; // Bratislava
+										1958..2100: 	 70;											
+																	} 
+  					switch(FEAT_ROADVEHS, SELF, sw_Skoda706RORRDoor_RND, TRIGGER_VEHICLE_32_CALLBACK) 	{
+										7:      Skoda706ROR_1;
+										5: 	    Skoda706ROR_4;											
+																	} 
+  					switch(FEAT_ROADVEHS, SELF, sw_Skoda706RORRliveries_yearbased, build_year) 	{
+										1945..1947:      Skoda706ROR_0;
+										1948..2100: 	 sw_Skoda706RORRDoor_RND;											
+																	} 																	
+					switch(FEAT_ROADVEHS, SELF, sw_Skoda706ROR_livery, cargo_subtype) {
+										0:      sw_Skoda706RORRliveries_yearbased;
+										1:      Skoda706ROR_0;
+										2:      Skoda706ROR_1;
+										3:      Skoda706ROR_2;
+										4:      Skoda706ROR_3;
+										5:      Skoda706ROR_4;
+										6:      Skoda706ROR_5;
+																				}
+		random_switch(FEAT_ROADVEHS, SELF, sw_706RO_1947, TRIGGER_VEHICLE_32_CALLBACK) {
+										10:      sw_Skoda706ROR_livery;
+										1:      Skoda706ROA_0;
+										1:      Skoda706ROPL_0;
+										}  
+		random_switch(FEAT_ROADVEHS, SELF, sw_706RO_1948, TRIGGER_VEHICLE_32_CALLBACK) {
+										11:      sw_Skoda706ROR_livery;
+										1:       Skoda706ROS_0;
+										} 
+		random_switch(FEAT_ROADVEHS, SELF, sw_706RO_1949, TRIGGER_VEHICLE_32_CALLBACK) {
+										11:      sw_Skoda706ROR_livery;
+										1:      Skoda706ROH_0;
+										} 
+		random_switch(FEAT_ROADVEHS, SELF, sw_706RO_1955, TRIGGER_VEHICLE_32_CALLBACK) {
+										11:      sw_Skoda706ROR_livery;
+										1:      Skoda706RO_ROH_0;
+										} 
+		random_switch(FEAT_ROADVEHS, SELF, sw_706RO_1957, TRIGGER_VEHICLE_32_CALLBACK) {
+										11:      sw_Skoda706ROR_livery;
+										1:      Skoda706RO_BA_0;
+										} 
+
+  					switch(FEAT_ROADVEHS, SELF, sw_Skoda706ROliveries_yearbased, build_year) 	{
+										1945..1947:  sw_706RO_1947; 
+										1948:	sw_706RO_1948; 
+										1949:   sw_706RO_1949; 
+										1950..1954: sw_Skoda706ROR_livery;
+										1955: sw_706RO_1955; 
+										1956: 	 sw_Skoda706ROR_livery;
+										1957: sw_706RO_1957; 
+										1958..2100: 	 sw_Skoda706ROR_livery;											
+																	} 
+	
+
+
+		switch(FEAT_ROADVEHS, SELF, sw_Skoda706ROR_livery_TEXT, cargo_subtype) {
+									0: return string(STR_NAME_Skoda706ROR_1);
+									1: return string(STR_NAME_Skoda706ROR_2);
+									2: return string(STR_NAME_Skoda706ROR_3);
+									3: return string(STR_NAME_Skoda706ROR_4);
+									4: return string(STR_NAME_Skoda706ROR_5);
+									5: return string(STR_NAME_Skoda706ROR_6);
+									6: return string(STR_NAME_Skoda706ROR_7);
+									return CB_RESULT_NO_TEXT;
+																				}
+		random_switch(FEAT_ROADVEHS, SELF, sw_706RO_1947_TEXT, TRIGGER_VEHICLE_32_CALLBACK) {
+										10:     sw_Skoda706ROR_livery_TEXT;
+										1:      return string(STR_NAME_Skoda706ROA_1);
+										1:      return string(STR_NAME_Skoda706ROPL_1);
+										}  
+		random_switch(FEAT_ROADVEHS, SELF, sw_706RO_1948_TEXT, TRIGGER_VEHICLE_32_CALLBACK) {
+										11:      sw_Skoda706ROR_livery_TEXT;
+										1:       return string(STR_NAME_Skoda706ROS_1);
+										} 
+		random_switch(FEAT_ROADVEHS, SELF, sw_706RO_1949_TEXT, TRIGGER_VEHICLE_32_CALLBACK) {
+										11:      sw_Skoda706ROR_livery_TEXT;
+										1:      return string(STR_NAME_Skoda706ROH_1);
+										} 
+		random_switch(FEAT_ROADVEHS, SELF, sw_706RO_1955_TEXT, TRIGGER_VEHICLE_32_CALLBACK) {
+										11:      sw_Skoda706ROR_livery_TEXT;
+										1:      return string(STR_NAME_Skoda706ROROH_1);
+										} 
+		random_switch(FEAT_ROADVEHS, SELF, sw_706RO_1957_TEXT, TRIGGER_VEHICLE_32_CALLBACK) {
+										11:      sw_Skoda706ROR_livery_TEXT;
+										1:      return string(STR_NAME_Skoda706ROBA_1);
+										} 
+
+  					switch(FEAT_ROADVEHS, SELF, sw_Skoda706ROliveries_yearbased_TEXT, build_year) 	{
+										1945..1947:      sw_706RO_1947_TEXT; // Avia, pullman
+										1948:	sw_706RO_1948_TEXT; // ROS
+										1949:   sw_706RO_1949_TEXT; // ROH
+										1950..1954: sw_Skoda706ROR_livery_TEXT;
+										1955: sw_706RO_1955_TEXT; // RO-ROH
+										1956: 	 sw_Skoda706ROR_livery_TEXT;
+										1957: sw_706RO_1957_TEXT; // Bratislava
+										1958..2100: 	 sw_Skoda706ROR_livery_TEXT;									
+																	} 
+  // Skoda 706RO+D4
+		  switch (FEAT_ROADVEHS, SELF, switch_spriteset_706ROaD4_0, position_in_consist) { 
+									0 : return spriteset_706ROaD4_0a; 
+									1 : return spriteset_706ROaD4_0b; 
+								return CB_FAILED;  
+																					 } 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_706ROaD4_1, position_in_consist) { 
+									0 : return spriteset_706ROaD4_1a; 
+									1 : return spriteset_706ROaD4_1b; 
+								return CB_FAILED;  
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_706ROaD4_2, position_in_consist) { 
+									0 : return spriteset_706ROaD4_2a; 
+									1 : return spriteset_706ROaD4_2b; 
+								return CB_FAILED; 
+							} 
+								switch(FEAT_ROADVEHS, SELF, sw_706ROaD4_livery, cargo_subtype) {
+									0:      switch_spriteset_706ROaD4_0;
+									1:      switch_spriteset_706ROaD4_1;
+									2:      switch_spriteset_706ROaD4_2;
+								}
+		 switch(FEAT_ROADVEHS, SELF, sw_706ROaD4_length, position_in_consist ) {
+									1: return 7;
+									return 8;
+									}
+		  
+		 switch (FEAT_ROADVEHS, SELF, switch_706ROaD4_articulated, extra_callback_info1) { 
+									1: return ITEM_706ROaD4;
+									return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+								 } 
+
+		switch(FEAT_ROADVEHS, SELF, sw_706ROaD4_cargo_subtype_TEXT, cargo_subtype) {
+									0: return string(STR_NAME_706ROaD4_1);
+									1: return string(STR_NAME_706ROaD4_2);
+									2: return string(STR_NAME_706ROaD4_3);
+									return CB_RESULT_NO_TEXT;
+									} 
+
+  // Skoda 706RO mestsky 1949
+		random_switch(FEAT_ROADVEHS, SELF, sw_706RO_1950Carg, TRIGGER_VEHICLE_32_CALLBACK) {
+										11:      74;
+										1:      90;
+										}  
+		random_switch(FEAT_ROADVEHS, SELF, sw_706RO_1951Carg, TRIGGER_VEHICLE_32_CALLBACK) {
+										11:      74;
+										1:      70;
+										} 
+					switch(FEAT_ROADVEHS, SELF, sw_Skoda706ROC_capacity, build_year) 	{
+										1945..1949:      74; 
+										1950:	sw_706RO_1950Carg; // ROL
+										1951:   sw_706RO_1951Carg; // RLSh
+										1952..2100: 	 74;											
+																	} 
+																	
+  		switch(FEAT_ROADVEHS, SELF, sw_Skoda706ROCCliveries_yearbased, build_year) 	{
+										1947..1956:      Skoda706ROC_0;
+										1957..2100:    	 Skoda706ROC_2;											
+																	}
+																	
+		switch(FEAT_ROADVEHS, SELF, sw_Skoda706ROC_livery, cargo_subtype) {
+										0:      sw_Skoda706ROCCliveries_yearbased;
+										1:      Skoda706ROC_0;
+										2:      Skoda706ROC_1;
+										3:      Skoda706ROC_2;
+										4:      Skoda706ROC_3;
+																				}
+		random_switch(FEAT_ROADVEHS, SELF, sw_706RO_1950, TRIGGER_VEHICLE_32_CALLBACK) {
+										11:      sw_Skoda706ROC_livery;
+										1:       Skoda706ROL_0;
+										} 
+		random_switch(FEAT_ROADVEHS, SELF, sw_706RO_1951, TRIGGER_VEHICLE_32_CALLBACK) {
+										11:      sw_Skoda706ROC_livery;
+										1:      Skoda706RLSh_0;
+										} 																				
+																				
+  					switch(FEAT_ROADVEHS, SELF, sw_Skoda706ROCliveries_yearbased, build_year) 	{
+										1945..1949:     sw_Skoda706ROC_livery;
+										1950:	sw_706RO_1950; // ROL
+										1951:   sw_706RO_1951; // RLSh
+										1952..2100: 	 sw_Skoda706ROC_livery;											
+																	} 																				
+																				
+		switch(FEAT_ROADVEHS, SELF, sw_Skoda706ROC_livery_TEXT, cargo_subtype) {
+									0: return string(STR_NAME_Skoda706ROC_1);
+									1: return string(STR_NAME_Skoda706ROC_2);
+									2: return string(STR_NAME_Skoda706ROC_3);
+									3: return string(STR_NAME_Skoda706ROC_4);
+									return CB_RESULT_NO_TEXT;
+																				}
+		random_switch(FEAT_ROADVEHS, SELF, sw_706RO_1950_TEXT, TRIGGER_VEHICLE_32_CALLBACK) {
+										11:      sw_Skoda706ROC_livery_TEXT;
+										1:       return string(STR_NAME_Skoda706ROL_1);
+										} 
+		random_switch(FEAT_ROADVEHS, SELF, sw_706RO_1951_TEXT, TRIGGER_VEHICLE_32_CALLBACK) {
+										11:     sw_Skoda706ROC_livery_TEXT;
+										1:      return string(STR_NAME_Skoda706RLSh_1);
+										} 
+
+  					switch(FEAT_ROADVEHS, SELF, sw_Skoda706ROCliveries_yearbased_TEXT, build_year) 	{
+										1945..1949:      sw_Skoda706ROC_livery_TEXT;
+										1950:	sw_706RO_1950_TEXT; // ROS
+										1951:   sw_706RO_1951_TEXT; // ROH
+										1952..2100: 	 sw_Skoda706ROC_livery_TEXT;		
+										} 
+
+  // Ikarus 30
+
+		random_switch(FEAT_ROADVEHS, SELF, sw_Ikarus30liveries, TRIGGER_VEHICLE_32_CALLBACK) 	{
+										4:      Ikarus30_0;
+										8:      Ikarus30_1;
+																						}
+																	
+					switch(FEAT_ROADVEHS, SELF, sw_Ikarus30_livery, cargo_subtype) {
+										0:      sw_Ikarus30liveries;
+										1:      Ikarus30_0;
+										2:      Ikarus30_1;
+										3:      Ikarus30_2;
+										4:      Ikarus30_3;
+																				}
+					switch(FEAT_ROADVEHS, SELF, sw_Ikarus30_livery_TEXT, cargo_subtype) {
+									0: return string(STR_NAME_Ikarus30_1);
+									1: return string(STR_NAME_Ikarus30_2);
+									2: return string(STR_NAME_Ikarus30_3);
+									3: return string(STR_NAME_Ikarus30_4);
+									4: return string(STR_NAME_Ikarus30_5);
+									return CB_RESULT_NO_TEXT;  
+																				}
+
+  // Skoda 706RO dialkovy
+  		switch(FEAT_ROADVEHS, SELF, sw_Skoda706ROIliveries_yearbased, build_year) 	{
+										1947..1956:      Skoda706ROI_0;
+										1957..2100:    	 Skoda706ROI_1;											
+																	}
+																	
+		switch(FEAT_ROADVEHS, SELF, sw_Skoda706ROD_livery, cargo_subtype) {
+										0:      sw_Skoda706ROIliveries_yearbased;
+										1:      Skoda706ROI_0;
+										2:      Skoda706ROI_1;
+										3:      Skoda706ROI_2;
+																				}
+		switch(FEAT_ROADVEHS, SELF, sw_Skoda706ROD_livery_TEXT, cargo_subtype) {
+									0: return string(STR_NAME_Skoda706ROI_1);
+									1: return string(STR_NAME_Skoda706ROI_2);
+									2: return string(STR_NAME_Skoda706ROI_3);
+									return CB_RESULT_NO_TEXT;
+																				}
+  // Skoda 706RO postovy  not needed
+
+  // Karosa T500HB
+  		switch(FEAT_ROADVEHS, SELF, sw_KarosaT500HBliveries_yearbased, build_year) 	{
+										1953..1954:      KarosaT500HB_0;
+										1955..2100:    	 KarosaT500HB_1;											
+																	}
+																	
+		switch(FEAT_ROADVEHS, SELF, sw_KarosaT500HB_livery, cargo_subtype) {
+										0:      sw_KarosaT500HBliveries_yearbased;
+										1:      KarosaT500HB_0;
+										2:      KarosaT500HB_1;
+										3:      KarosaT500HB_2;
+										4:      KarosaT500HB_3;
+																				}
+		switch(FEAT_ROADVEHS, SELF, sw_KarosaT500HB_livery_TEXT, cargo_subtype) {
+									0: return string(STR_NAME_KarosaT500HB_1);
+									1: return string(STR_NAME_KarosaT500HB_2);
+									2: return string(STR_NAME_KarosaT500HB_3);
+									3: return string(STR_NAME_KarosaT500HB_4);
+									4: return string(STR_NAME_KarosaT500HB_5);
+									return CB_RESULT_NO_TEXT;
+																				}  
+  
+  // Skoda 706RO Bratislava
+
+  // Skoda 706RO ROH
+
+  // Ikarus 55
+
+		random_switch(FEAT_ROADVEHS, SELF, sw_Ikarus55liveriesC, TRIGGER_VEHICLE_32_CALLBACK) 	{
+										4:      Ikarus55_8;
+										8:      Ikarus55_9;
+																						}
+
+																						
+					switch(FEAT_ROADVEHS, SELF, sw_Ikarus55_2, cargo_subtype) {
+										0:      sw_Ikarus55liveriesC;
+										1:      Ikarus55_8;
+										2:      Ikarus55_9;
+										3:      Ikarus55_10;
+																	}
+		random_switch(FEAT_ROADVEHS, SELF, sw_Ikarus55_B0, TRIGGER_VEHICLE_32_CALLBACK) 	{
+										2:      Ikarus55_2;
+										5:      Ikarus55_3;
+										5:      Ikarus55_4;
+																						}
+		random_switch(FEAT_ROADVEHS, SELF, sw_Ikarus55_B1, TRIGGER_VEHICLE_32_CALLBACK) 	{
+										6:      Ikarus55_5;
+										6:      Ikarus55_6;
+																						}
+
+  					switch(FEAT_ROADVEHS, SELF, sw_Ikarus55_yearbasedB, build_year) 	{
+										1955..1957:      sw_Ikarus55_B0;
+										1958..1961:      sw_Ikarus55_B1;
+									
+
+																				}
+					switch(FEAT_ROADVEHS, SELF, sw_Ikarus55_1, cargo_subtype) {
+										0:      sw_Ikarus55_yearbasedB;
+										1:      Ikarus55_2;
+										2:      Ikarus55_3;
+										3:      Ikarus55_4;
+										4:      Ikarus55_5;
+										5:      Ikarus55_6;
+										6:      Ikarus55_7;							
+																						}
+
+		random_switch(FEAT_ROADVEHS, SELF, sw_Ikarus55liveriesA, TRIGGER_VEHICLE_32_CALLBACK) 	{
+										4:      Ikarus55_0;
+										8:      Ikarus55_1;
+																						}
+																	
+					switch(FEAT_ROADVEHS, SELF, sw_Ikarus55_0, cargo_subtype) {
+										0:      sw_Ikarus55liveriesA;
+										1:      Ikarus55_0;
+										2:      Ikarus55_1;
+																						}
+
+  					switch(FEAT_ROADVEHS, SELF, sw_Ikarus55_yearbased, build_year) 	{
+										1953..1954:      sw_Ikarus55_0;
+										1955..1961:      sw_Ikarus55_1;
+										1962..2100:    	 sw_Ikarus55_2;											
+																	}
+					switch(FEAT_ROADVEHS, SELF, sw_Ikarus55_TEXT2, cargo_subtype) {
+									0: return string(STR_NAME_Ikarus55_1);
+									1: return string(STR_NAME_Ikarus55_10);
+									2: return string(STR_NAME_Ikarus55_11);
+									3: return string(STR_NAME_Ikarus55_12);
+									return CB_RESULT_NO_TEXT;  
+																				}
+				switch(FEAT_ROADVEHS, SELF, sw_Ikarus55_TEXT1, cargo_subtype) {
+									0: return string(STR_NAME_Ikarus55_1);
+									1: return string(STR_NAME_Ikarus55_4);
+									2: return string(STR_NAME_Ikarus55_5);
+									3: return string(STR_NAME_Ikarus55_6);
+									4: return string(STR_NAME_Ikarus55_7);
+									5: return string(STR_NAME_Ikarus55_8);
+									6: return string(STR_NAME_Ikarus55_9);
+									return CB_RESULT_NO_TEXT;  
+																				}
+					switch(FEAT_ROADVEHS, SELF, sw_Ikarus55_TEXT0, cargo_subtype) {
+									0: return string(STR_NAME_Ikarus55_1);
+									1: return string(STR_NAME_Ikarus55_2);
+									2: return string(STR_NAME_Ikarus55_3);
+									return CB_RESULT_NO_TEXT;  
+																				}
+  					switch(FEAT_ROADVEHS, SELF, sw_Ikarus55_yearbased_TEXT, build_year) 	{
+										1953..1954:      sw_Ikarus55_TEXT0;
+										1955..1961:      sw_Ikarus55_TEXT1;
+										1962..2100:    	 sw_Ikarus55_TEXT2;											
+																	}
+
+  // Skoda 706RTO primestsky
+  					switch(FEAT_ROADVEHS, SELF, sw_Skoda706RTORliveries_yearbased, build_year) 	{
+										1957..1964:      Skoda706RTOR_0;
+										1965..2100:    	 Skoda706RTOR_1;											
+																	}
+																	
+					switch(FEAT_ROADVEHS, SELF, sw_Skoda706RTOR_livery, cargo_subtype) {
+										0:      sw_Skoda706RTORliveries_yearbased;
+										1:      Skoda706RTOR_0;
+										2:      Skoda706RTOR_1;
+										3:      Skoda706RTOR_2;
+										4:      Skoda706RTOR_3;
+										5:      Skoda706RTOR_4;
+										6:      Skoda706RTOR_5;
+																				}
+					switch(FEAT_ROADVEHS, SELF, sw_Skoda706RTOR_livery_TEXT, cargo_subtype) {
+									0: return string(STR_NAME_Skoda706RTOR_1);
+									1: return string(STR_NAME_Skoda706RTOR_2);
+									2: return string(STR_NAME_Skoda706RTOR_3);
+									3: return string(STR_NAME_Skoda706RTOR_4);
+									4: return string(STR_NAME_Skoda706RTOR_5);
+									5: return string(STR_NAME_Skoda706RTOR_6);
+									6: return string(STR_NAME_Skoda706RTOR_7);
+									return CB_RESULT_NO_TEXT;
+																				}
+		
+  // Skoda 706RTO MTZ+B40
+		  switch (FEAT_ROADVEHS, SELF, switch_spriteset_706RTOaB40_0, position_in_consist) { 
+									0 : return spriteset_706RTOaB40_0a; 
+									1 : return spriteset_706RTOaB40_0b; 
+								return CB_FAILED;  
+																					 } 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_706RTOaB40_1, position_in_consist) { 
+									0 : return spriteset_706RTOaB40_1a; 
+									1 : return spriteset_706RTOaB40_1b; 
+								return CB_FAILED;  
+							} 
+
+								switch(FEAT_ROADVEHS, SELF, sw_706RTOaB40_livery, cargo_subtype) {
+									0:      switch_spriteset_706RTOaB40_0;
+									1:      switch_spriteset_706RTOaB40_1;
+								}
+		 switch(FEAT_ROADVEHS, SELF, sw_706RTOaB40_length, position_in_consist ) {
+									1: return 7;
+									return 8;
+									}
+		  
+		 switch (FEAT_ROADVEHS, SELF, switch_706RTOaB40_articulated, extra_callback_info1) { 
+									1: return ITEM_706RTOaB40;
+									return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+								 } 
+
+		switch(FEAT_ROADVEHS, SELF, sw_706RTOaB40_cargo_subtype_TEXT, cargo_subtype) {
+									0: return string(STR_NAME_706RTOaB40_1);
+									1: return string(STR_NAME_706RTOaB40_2);
+									return CB_RESULT_NO_TEXT;
+									} 
+  
+  
+  // Skoda 706RTO mestsky
+  					switch(FEAT_ROADVEHS, SELF, sw_Skoda706RTOCliveries_yearbased, build_year) 	{
+										1957..1964:      Skoda706RTOC_0;
+										1965..2100:    	 Skoda706RTOC_1;											
+																	}
+																	
+					switch(FEAT_ROADVEHS, SELF, sw_Skoda706RTOC_livery, cargo_subtype) {
+										0:      sw_Skoda706RTOCliveries_yearbased;
+										1:      Skoda706RTOC_0;
+										2:      Skoda706RTOC_1;
+										3:      Skoda706RTOC_2;
+										4:      Skoda706RTOC_3;
+																				}
+					switch(FEAT_ROADVEHS, SELF, sw_Skoda706RTOC_livery_TEXT, cargo_subtype) {
+									0: return string(STR_NAME_Skoda706RTOC_1);
+									1: return string(STR_NAME_Skoda706RTOC_2);
+									2: return string(STR_NAME_Skoda706RTOC_3);
+									3: return string(STR_NAME_Skoda706RTOC_4);
+									4: return string(STR_NAME_Skoda706RTOC_5);
+									return CB_RESULT_NO_TEXT;  
+																				}
+																				
+  // Skoda 706RTO postovy  no need			
+
+  // Skoda 706RTO CAR+B40
+  
+  // Skoda 706RTO dialkovy
+		random_switch(FEAT_ROADVEHS, SELF, sw_Skoda706RTOI_liverya, TRIGGER_VEHICLE_32_CALLBACK) 	{
+										10:      Skoda706RTOI_0;
+										2:      Skoda706RTOI_5;
+																						}
+		random_switch(FEAT_ROADVEHS, SELF, sw_Skoda706RTOI_liveryb, TRIGGER_VEHICLE_32_CALLBACK) 	{
+										5:      Skoda706RTOI_1;
+										5:      Skoda706RTOI_2;
+										1:      Skoda706RTOI_3;
+										1:      Skoda706RTOI_5;
+																						}																						
+  switch(FEAT_ROADVEHS, SELF, sw_Skoda706RTOIliveries_yearbased, build_year) 	{
+										1957..1964:      sw_Skoda706RTOI_liverya;
+										1965..2100:    	 sw_Skoda706RTOI_liveryb;											
+																	}
+																	
+					switch(FEAT_ROADVEHS, SELF, sw_Skoda706RTOI_livery, cargo_subtype) {
+										0:      sw_Skoda706RTOIliveries_yearbased;
+										1:      Skoda706RTOI_0;
+										2:      Skoda706RTOI_1;
+										3:      Skoda706RTOI_2;
+										4:      Skoda706RTOI_3;
+										5:      Skoda706RTOI_4;
+										6:      Skoda706RTOI_5;
+																				}
+					switch(FEAT_ROADVEHS, SELF, sw_Skoda706RTOI_livery_TEXT, cargo_subtype) {
+									0: return string(STR_NAME_Skoda706RTOI_1);
+									1: return string(STR_NAME_Skoda706RTOI_2);
+									2: return string(STR_NAME_Skoda706RTOI_3);
+									3: return string(STR_NAME_Skoda706RTOI_4);
+									4: return string(STR_NAME_Skoda706RTOI_5);
+									5: return string(STR_NAME_Skoda706RTOI_6);
+									6: return string(STR_NAME_Skoda706RTOI_7);
+									return CB_RESULT_NO_TEXT;
+																				}
+  // Ikarus 630
+  switch(FEAT_ROADVEHS, SELF, sw_Ikarus630PURCH_yearbased, build_year) 	{
+										1957..1964:  Ikarus630_purch;
+										1965..2100:  Ikarus630_purch2;											
+																	}
+  					switch(FEAT_ROADVEHS, SELF, sw_Ikarus630_yearbased, build_year) 	{
+										1963..1965:      Ikarus630_0;
+										1965..2100:      Ikarus630_1;
+																				}
+					switch(FEAT_ROADVEHS, SELF, sw_Ikarus630_livery, cargo_subtype) {
+										0:      sw_Ikarus630_yearbased;
+										1:      Ikarus630_0;
+										2:      Ikarus630_1;
+										3:      Ikarus630_2;
+//										4:      Ikarus630_3;							
+																						}
+
+					switch(FEAT_ROADVEHS, SELF, sw_Ikarus630_TEXT, cargo_subtype) {
+									0: return string(STR_NAME_Ikarus630_1);
+									1: return string(STR_NAME_Ikarus630_2);
+									2: return string(STR_NAME_Ikarus630_3);
+									3: return string(STR_NAME_Ikarus630_4);
+									return CB_RESULT_NO_TEXT;  
+																				}
+
+  // Ikarus 620 
+					switch(FEAT_ROADVEHS, SELF, sw_Ikarus620PURCH_yearbased, build_year) 	{
+										1957..1964:  Ikarus620_purch;
+										1965..2100:  Ikarus620_purch2;											
+																	}
+  					switch(FEAT_ROADVEHS, SELF, sw_Ikarus620_yearbased, build_year) 	{
+										1960..1965:      Ikarus620_0;
+										1965..2100:      Ikarus620_1;
+																				}
+					switch(FEAT_ROADVEHS, SELF, sw_Ikarus620_livery, cargo_subtype) {
+										0:      sw_Ikarus620_yearbased;
+										1:      Ikarus620_0;
+										2:      Ikarus620_1;
+										3:      Ikarus620_2;
+//										4:      Ikarus620_3;							
+																						}
+
+					switch(FEAT_ROADVEHS, SELF, sw_Ikarus620_TEXT, cargo_subtype) {
+									0: return string(STR_NAME_Ikarus620_1);
+									1: return string(STR_NAME_Ikarus620_2);
+									2: return string(STR_NAME_Ikarus620_3);
+									3: return string(STR_NAME_Ikarus620_4);
+//									4: return string(STR_NAME_Ikarus620_5);
+									return CB_RESULT_NO_TEXT;  
+																				}
+
+  // Skoda 706RTO CAR+Jelcz P01
+ 
+
+		switch(FEAT_ROADVEHS, SELF, sw_Skoda706RTOaP01Purch_yearbased, build_year) 	{
+										1960..1964:      spriteset_706RTOaP01_purcha;
+										1965..2100:    	 spriteset_706RTOaP01_purchb;											
+																	}
+
+		  switch (FEAT_ROADVEHS, SELF, switch_spriteset_706RTOaP01_0, position_in_consist) { 
+									0 : return spriteset_706RTOaP01_0a; 
+									1 : return spriteset_706RTOaP01_0b; 
+								return CB_FAILED;  
+																					 } 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_706RTOaP01_1, position_in_consist) { 
+									0 : return spriteset_706RTOaP01_1a; 
+									1 : return spriteset_706RTOaP01_1b; 
+								return CB_FAILED;  
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_706RTOaP01_2, position_in_consist) { 
+									0 : return spriteset_706RTOaP01_2a; 
+									1 : return spriteset_706RTOaP01_2b; 
+								return CB_FAILED; 
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_706RTOaP01_3, position_in_consist) { 
+									0 : return spriteset_706RTOaP01_3a; 
+									1 : return spriteset_706RTOaP01_3b; 
+								return CB_FAILED; 
+							} 
+		switch(FEAT_ROADVEHS, SELF, sw_Skoda706RTORP01liveries_yearbased, build_year) 	{
+										1963..1964:      switch_spriteset_706RTOaP01_0;
+										1965..2100:      	 switch_spriteset_706RTOaP01_1;											
+																	}
+
+
+							switch(FEAT_ROADVEHS, SELF, sw_706RTOaPO1_livery, cargo_subtype) {
+									0:      sw_Skoda706RTORP01liveries_yearbased;
+									1:      switch_spriteset_706RTOaP01_0;
+									2:      switch_spriteset_706RTOaP01_1;
+									3:      switch_spriteset_706RTOaP01_2;
+									4:      switch_spriteset_706RTOaP01_3;
+								}
+		 switch(FEAT_ROADVEHS, SELF, sw_706RTOaPO1_length, position_in_consist ) {
+									1: return 7;
+									return 8;
+									}
+		  
+		 switch (FEAT_ROADVEHS, SELF, switch_706RTOaPO1_articulated, extra_callback_info1) { 
+									1: return ITEM_706RTOaPO1;
+									return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+								 } 
+
+		switch(FEAT_ROADVEHS, SELF, sw_706RTOaPO1_cargo_subtype_TEXT, cargo_subtype) {
+									0: return string(STR_NAME_706RTOaPO1_1);
+									1: return string(STR_NAME_706RTOaPO1_2);
+									2: return string(STR_NAME_706RTOaPO1_3);
+									3: return string(STR_NAME_706RTOaPO1_4);
+									4: return string(STR_NAME_706RTOaPO1_5);
+									return CB_RESULT_NO_TEXT;
+									} 
+
+  // Skoda 706RTO MTZ+Jelcz P01  
+		switch(FEAT_ROADVEHS, SELF, sw_Skoda706RTOCP01Purch_yearbased, build_year) 	{
+										1963..1964:      spriteset_706RTOCaP01_purcha;
+										1965..2100:    	 spriteset_706RTOCaP01_purchb;											
+																	}
+  
+    
+		  switch (FEAT_ROADVEHS, SELF, switch_spriteset_706RTOCaP01_0, position_in_consist) { 
+									0 : return spriteset_706RTOCaP01_0a; 
+									1 : return spriteset_706RTOCaP01_0b; 
+								return CB_FAILED;  
+																					 } 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_706RTOCaP01_1, position_in_consist) { 
+									0 : return spriteset_706RTOCaP01_1a; 
+									1 : return spriteset_706RTOCaP01_1b; 
+								return CB_FAILED;  
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_706RTOCaP01_2, position_in_consist) { 
+									0 : return spriteset_706RTOCaP01_2a; 
+									1 : return spriteset_706RTOCaP01_2b; 
+								return CB_FAILED; 
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_706RTOCaP01_3, position_in_consist) { 
+									0 : return spriteset_706RTOCaP01_3a; 
+									1 : return spriteset_706RTOCaP01_3b; 
+								return CB_FAILED; 
+							} 
+		switch(FEAT_ROADVEHS, SELF, sw_Skoda706RTOCP01liveries_yearbased, build_year) 	{
+										1963..1964:      switch_spriteset_706RTOCaP01_0;
+										1965..2100:    	 switch_spriteset_706RTOCaP01_1;											
+																	}
+
+
+							switch(FEAT_ROADVEHS, SELF, sw_706RTOCaPO1_livery, cargo_subtype) {
+									0:      sw_Skoda706RTOCP01liveries_yearbased;
+									1:      switch_spriteset_706RTOCaP01_0;
+									2:      switch_spriteset_706RTOCaP01_1;
+									3:      switch_spriteset_706RTOCaP01_2;
+									4:      switch_spriteset_706RTOCaP01_3;
+								}
+		 switch(FEAT_ROADVEHS, SELF, sw_706RTOCaPO1_length, position_in_consist ) {
+									1: return 7;
+									return 8;
+									}
+		  
+		 switch (FEAT_ROADVEHS, SELF, switch_706RTOCaPO1_articulated, extra_callback_info1) { 
+									1: return ITEM_706RTOCaPO1;
+									return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+								 } 
+
+		switch(FEAT_ROADVEHS, SELF, sw_706RTOCaPO1_cargo_subtype_TEXT, cargo_subtype) {
+									0: return string(STR_NAME_706RTOCaPO1_1);
+									1: return string(STR_NAME_706RTOCaPO1_2);
+									2: return string(STR_NAME_706RTOCaPO1_3);
+									3: return string(STR_NAME_706RTOCaPO1_4);
+									4: return string(STR_NAME_706RTOCaPO1_5);
+									return CB_RESULT_NO_TEXT;
+									}  
+  // Skoda 706RTO posta+Jelcz P01
+		switch(FEAT_ROADVEHS, SELF, sw_706RTOPOSTaPO1_livery, position_in_consist) {
+									0 : return spriteset_706RTOaP01P_0a; 
+									1 : return spriteset_706RTOaP01P_0b; 
+								return CB_FAILED;
+								}
+		 switch(FEAT_ROADVEHS, SELF, sw_706RTOPOSTaPO1_length, position_in_consist ) {
+									1: return 7;
+									return 8;
+									}
+		  
+		 switch (FEAT_ROADVEHS, SELF, switch_706RTOPOSTaPO1_articulated, extra_callback_info1) { 
+									1: return ITEM_706RTOPOSTaP01;
+									return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+								 } 
+
+  // Jelcz MEX mestsky
+																	
+					switch(FEAT_ROADVEHS, SELF, sw_JelczMEX_livery, cargo_subtype) {
+										0:      JelczMEX_0;
+										1:      JelczMEX_1;
+																				}
+					switch(FEAT_ROADVEHS, SELF, sw_JelczMEX_powerRC, build_year) 	{
+										1970..1974:      78;										
+										1975..2100:		 84;
+																				}										
+					switch(FEAT_ROADVEHS, SELF, sw_JelczMEX_power, build_year) 	{
+										1970..1974:      15;										
+										1975..2100:		 20;
+																	}  																				
+					switch(FEAT_ROADVEHS, SELF, sw_JelczMEX_livery_TEXT, cargo_subtype) {
+									0: return string(STR_NAME_JelczMEX_1);
+									1: return string(STR_NAME_JelczMEX_2);
+									return CB_RESULT_NO_TEXT;  
+																				}
+  // Jelcz 041/043 primestsky
+					switch(FEAT_ROADVEHS, SELF, sw_JelczCAR_powerRC, build_year) 	{
+										1970..1974:      68;										
+										1975..2100:		 74;
+																				}																		
+					switch(FEAT_ROADVEHS, SELF, sw_043_Livery, cargo_subtype) {
+										0:      Jelcz043_0;
+										1:      Jelcz043_1;
+																				}
+					switch(FEAT_ROADVEHS, SELF, sw_041_Livery, cargo_subtype) {
+										0:      Jelcz041_0;
+										1:      Jelcz041_1;
+										2:      Jelcz041_2;
+										3:      Jelcz041_3;
+										4:      Jelcz041_4;
+																				}
+		random_switch(FEAT_ROADVEHS, SELF, sw_041043, TRIGGER_VEHICLE_32_CALLBACK) 	{
+										3:      sw_043_Livery;
+										9:      sw_041_Livery;
+																						}
+
+					switch(FEAT_ROADVEHS, SELF, sw_Jelcz_yearbased, build_year) 	{
+										1970..1974:      sw_041043;										
+										1975..2100:		 sw_041_Livery;
+																	}  
+																				
+					switch(FEAT_ROADVEHS, SELF, sw_041_Livery_TEXT, cargo_subtype) {
+									0: return string(STR_NAME_Jelcz041_1);
+									1: return string(STR_NAME_Jelcz041_2);
+									2: return string(STR_NAME_Jelcz041_3);
+									3: return string(STR_NAME_Jelcz041_4);
+									4: return string(STR_NAME_Jelcz041_5);
+									return CB_RESULT_NO_TEXT;  
+																				}
+					switch(FEAT_ROADVEHS, SELF, sw_043_Livery_TEXT, cargo_subtype) {
+									0: return string(STR_NAME_Jelcz043_1);
+									1: return string(STR_NAME_Jelcz043_2);
+									return CB_RESULT_NO_TEXT;  
+																				}
+		random_switch(FEAT_ROADVEHS, SELF, sw_041043_TEXT, TRIGGER_VEHICLE_32_CALLBACK) 	{
+										3:      sw_043_Livery_TEXT;
+										9:      sw_041_Livery_TEXT;
+																						}
+					switch(FEAT_ROADVEHS, SELF, sw_Jelcz041043_TEXT, build_year) 	{
+										1970..1974:      sw_041043_TEXT;										
+										1975..2100:		 sw_041_Livery_TEXT;
+																	}  
+																	
+					switch(FEAT_ROADVEHS, SELF, sw_Jelcz041043_purch, build_year) 	{
+										1970..1974:      Jelcz043_purch;										
+										1975..2100:		 Jelcz041_purch;
+																	}
+
+
+  // Jelcz 041+P01
+					switch(FEAT_ROADVEHS, SELF, sw_JelczCARP01_powerRC, build_year) 	{
+										1970..1974:      76;										
+										1975..2100:		 82;
+																				}	 
+
+		  switch (FEAT_ROADVEHS, SELF, switch_spriteset_Jelcz041aP01_0, position_in_consist) { 
+									0 : return spriteset_Jelcz041aP01_0a; 
+									1 : return spriteset_Jelcz041aP01_0b; 
+								return CB_FAILED;  
+																					 } 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_Jelcz041aP01_1, position_in_consist) { 
+									0 : return spriteset_Jelcz041aP01_1a; 
+									1 : return spriteset_Jelcz041aP01_1b; 
+								return CB_FAILED;  
+							} 
+
+							switch(FEAT_ROADVEHS, SELF, sw_Jelcz041aP01_livery, cargo_subtype) {
+									0:      switch_spriteset_Jelcz041aP01_0;
+									1:      switch_spriteset_Jelcz041aP01_1;
+								}
+		 switch(FEAT_ROADVEHS, SELF, sw_Jelcz041aP01_length, position_in_consist ) {
+									1: return 7;
+									return 8;
+									}
+		  
+		 switch (FEAT_ROADVEHS, SELF, switch_Jelcz041aP01_articulated, extra_callback_info1) { 
+									1: return ITEM_Jelcz041aP01;
+									return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+								 } 
+
+		switch(FEAT_ROADVEHS, SELF, sw_Jelcz041aP01_cargo_subtype_TEXT, cargo_subtype) {
+									0: return string(STR_NAME_Jelcz041aP01_1);
+									1: return string(STR_NAME_Jelcz041aP01_2);
+									return CB_RESULT_NO_TEXT;
+									} 
+
+  // Jelcz MEX+P01  
+  
+					switch(FEAT_ROADVEHS, SELF, sw_JelczMEXP01_powerRC, build_year) 	{
+										1970..1974:      86;										
+										1975..2100:		 92;
+																				}	 
+		  switch (FEAT_ROADVEHS, SELF, switch_spriteset_JelczMEXaP01_0, position_in_consist) { 
+									0 : return spriteset_JelczMEXaP01_0a; 
+									1 : return spriteset_JelczMEXaP01_0b; 
+								return CB_FAILED;  
+																					 } 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_JelczMEXaP01_1, position_in_consist) { 
+									0 : return spriteset_JelczMEXaP01_1a; 
+									1 : return spriteset_JelczMEXaP01_1b; 
+								return CB_FAILED;  
+							} 
+
+
+							switch(FEAT_ROADVEHS, SELF, sw_JelczMEXaP01_livery, cargo_subtype) {
+									0:      switch_spriteset_JelczMEXaP01_0;
+									1:      switch_spriteset_JelczMEXaP01_1;
+								}
+		 switch(FEAT_ROADVEHS, SELF, sw_JelczMEXaP01_length, position_in_consist ) {
+									1: return 7;
+									return 8;
+									}
+		  
+		 switch (FEAT_ROADVEHS, SELF, switch_JelczMEXaP01_articulated, extra_callback_info1) { 
+									1: return ITEM_JelczMEXaP01;
+									return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+								 } 
+
+		switch(FEAT_ROADVEHS, SELF, sw_JelczMEXaP01_cargo_subtype_TEXT, cargo_subtype) {
+									0: return string(STR_NAME_JelczMEXaPO1_1);
+									1: return string(STR_NAME_JelczMEXaPO1_2);
+									return CB_RESULT_NO_TEXT;
+									}  
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Properties
+
+  // 001 Laurin & Klement MS / Skoda 540 1914
+		item (FEAT_ROADVEHS, ITEM_LaKMS540) {
+									property {
+											name: string(STR_NAME_LaKMS540_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1914,01,01);
+											model_life: 15;
+											vehicle_life: 7;
+											reliability_decay: 25;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 5;								   
+											cost_factor: 42;								   
+											running_cost_factor: 45;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 30 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 40 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 25;				
+											cargo_age_period: 160;
+											weight: 2.6 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											cargo_subtype_text: return sw_LaKMS540_name_yearbased_TEXT;
+											default: sw_LaKMS540_livery;
+											purchase:	   	LaK540MS_purch;
+											additional_text:        return string(STR_NAME_540MS_0);
+											 }
+											}  
+
+  // Praga N primestsky 1915
+		item (FEAT_ROADVEHS, ITEM_PragaNR) {
+									property {
+											name: string(STR_NAME_PragaNR_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1915,01,01);
+											model_life: 10;
+											vehicle_life: 20;
+											reliability_decay: 23;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 5;								   
+											cost_factor: 58;								   
+											running_cost_factor: 47;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 25 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 51 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 35;		
+											cargo_age_period: 165;											
+											weight: 3.6 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											speed: sw_PragaNspeed_yearbased;
+											power: sw_PragaNpower_yearbased;
+											cargo_subtype_text: return sw_PragaNR_livery_TEXT;
+											default: sw_PragaNR_livery;
+											purchase:	   	PragaNR_purch;
+											additional_text:        return string(STR_NAME_NR_0);
+											 }
+											}
+
+  // Praga N mestsky 1922
+		item (FEAT_ROADVEHS, ITEM_PragaNC) {
+									property {
+											name: string(STR_NAME_PragaNC_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1922,01,01);
+											model_life: 4;
+											vehicle_life: 7;
+											reliability_decay: 23;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 5;								   
+											cost_factor: 60;								   
+											running_cost_factor: 52;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 30 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 55 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 40;
+											cargo_age_period: 135;
+											weight: 3.6 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											speed: sw_PragaNspeed_yearbased;
+											power: sw_PragaNpower_yearbased;
+											cargo_subtype_text: return sw_PragaNC_livery_TEXT;
+											default: sw_PragaNC_livery;
+											purchase:	   	PragaNC_purch;
+											additional_text:        return string(STR_NAME_NC_0);
+											 }
+											}
+
+  // Skoda 505 primestsky 1923
+		item (FEAT_ROADVEHS, ITEM_Skoda505R) {
+									property {
+											name: string(STR_NAME_Skoda505R_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1923,01,01);
+											model_life: 7;
+											vehicle_life: 25;
+											reliability_decay: 22;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 5;								   
+											cost_factor: 46;								   
+											running_cost_factor: 46;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 40 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 35 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 28;
+											cargo_age_period: 185;
+											weight: 4.5 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											cargo_subtype_text: return sw_Skoda505R_livery_TEXT;
+											default: sw_Skoda505R_livery;
+											purchase:	   	Skoda505R_purch;
+											additional_text:        return string(STR_NAME_505R_0);
+											 }
+											}
+
+  // Skoda 505 mestsky 1923
+		item (FEAT_ROADVEHS, ITEM_Skoda505C) {
+									property {
+											name: string(STR_NAME_Skoda505C_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1923,01,01);
+											model_life: 7;
+											vehicle_life: 25;
+											reliability_decay: 22;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 5;								   
+											cost_factor: 45;								   
+											running_cost_factor: 51;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 40 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 35 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 32;
+											cargo_age_period: 140;
+											weight: 4.5 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											cargo_subtype_text: return sw_Skoda505C_livery_TEXT;
+											default: sw_Skoda505C_livery;
+											purchase:	   	Skoda505C_purch;
+											additional_text:        return string(STR_NAME_505C_0);
+											 }
+											}
+
+  // Tatra 13 1924
+  		item (FEAT_ROADVEHS, ITEM_Tatra13) {
+									property {
+											name: string(STR_NAME_Tatra13_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1924,01,01);
+											model_life: 9;
+											vehicle_life: 15;
+											reliability_decay: 21;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 2;								   
+											cost_factor: 26;								   
+											running_cost_factor: 20;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 45 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 12 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 15;
+											cargo_age_period: 215;
+											weight: 1.2 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											cargo_subtype_text: return string(STR_NAME_Tatra13_1);
+											default: Tatra13_0;
+											purchase:	   	Tatra13_purch;
+											additional_text:        return string(STR_NAME_T13_0);
+											 }
+											}			
+
+  // Praga NO primestsky 1925
+		item (FEAT_ROADVEHS, ITEM_PragaNOR) {
+									property {
+											name: string(STR_NAME_PragaNOR_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1925,01,01);
+											model_life: 12;
+											vehicle_life: 20;
+											reliability_decay: 18;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 5;								   
+											cost_factor: 62;								   
+											running_cost_factor: 52;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 40 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 51 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 45;		
+											cargo_age_period: 180;
+											weight: 5.7 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											speed: sw_PragaNOspeed_yearbased;
+											power: sw_PragaNOpower_yearbased;
+											cargo_subtype_text: return sw_PragaNOR_livery_TEXT;
+											default: sw_PragaNOR_livery;
+											purchase:	   	PragaNOR_purch;
+											additional_text:        return string(STR_NAME_NOR_0);
+											 }
+											}
+			
+  // Praga NO mestsky 1925
+		item (FEAT_ROADVEHS, ITEM_PragaNOC) {
+									property {
+											name: string(STR_NAME_PragaNOC_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1925,01,01);
+											model_life: 12;
+											vehicle_life: 20;
+											reliability_decay: 18;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 10;								   
+											cost_factor: 61;								   
+											running_cost_factor: 57;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 40 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 51 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 50;		
+											cargo_age_period: 145;
+											weight: 5.7 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											speed: sw_PragaNOspeed_yearbased;
+											power: sw_PragaNOpower_yearbased;
+											cargo_subtype_text: return sw_PragaNOC_livery_TEXT;
+											default: sw_PragaNOC_livery;
+											purchase:	   	PragaNOC_purch;
+											additional_text:        return string(STR_NAME_NOC_0);
+											 }
+											}
+
+  // Tatra 23 primestsky 1927
+		item (FEAT_ROADVEHS, ITEM_Tatra23R) {
+									property {
+											name: string(STR_NAME_Tatra23R_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1927,01,01);
+											model_life: 7;
+											vehicle_life: 25;
+											reliability_decay: 21;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 5;								   
+											cost_factor: 66;								   
+											running_cost_factor: 54;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 55 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 65 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 30;		
+											cargo_age_period: 190;											
+											weight: 5 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											cargo_subtype_text: return sw_Tatra23R_livery_TEXT;
+											default: sw_Tatra23R_livery;
+											purchase:	   	Tatra23R_purch;
+											additional_text:        return string(STR_NAME_T23R_0);
+											 }
+											}
+
+  // Tatra 23 mestsky 1927
+		item (FEAT_ROADVEHS, ITEM_Tatra23C) {
+									property {
+											name: string(STR_NAME_Tatra23C_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1927,01,01);
+											model_life: 7;
+											vehicle_life: 25;
+											reliability_decay: 21;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 10;								   
+											cost_factor: 65;								   
+											running_cost_factor: 59;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 55 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 65 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 35;	
+											cargo_age_period: 150;
+											weight: 5 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											cargo_subtype_text: return sw_Tatra23C_livery_TEXT;
+											default: sw_Tatra23C_livery;
+											purchase:	   	Tatra23C_purch;
+											additional_text:        return string(STR_NAME_T23C_0);
+											 }
+											}
+
+  // Tatra 24 primestsky 1927
+		item (FEAT_ROADVEHS, ITEM_Tatra24R) {
+									property {
+											name: string(STR_NAME_Tatra24R_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1927,01,01);
+											model_life: 4;
+											vehicle_life: 25;
+											reliability_decay: 22;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 5;								   
+											cost_factor: 70;								   
+											running_cost_factor: 58;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 45 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 80 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 42;	
+											cargo_age_period: 180;
+											weight: 6.4 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											cargo_subtype_text: return sw_Tatra24R_livery_TEXT;
+											default: sw_Tatra24R_livery;
+											purchase:	   	Tatra24R_purch;
+											additional_text:        return string(STR_NAME_T24R_0);
+											 }
+											}
+
+  // Tatra 24 mestsky 1927
+		item (FEAT_ROADVEHS, ITEM_Tatra24C) {
+									property {
+											name: string(STR_NAME_Tatra24C_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1927,01,01);
+											model_life: 4;
+											vehicle_life: 25;
+											reliability_decay: 22;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 10;								   
+											cost_factor: 69;								   
+											running_cost_factor: 63;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 45 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 80 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 54;	
+											cargo_age_period: 145;
+											weight: 6.4 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											cargo_subtype_text: return sw_Tatra24C_livery_TEXT;
+											default: sw_Tatra24C_livery;
+											purchase:	   	Tatra24C_purch;
+											additional_text:        return string(STR_NAME_T24C_0);
+											 }
+											}			
+
+  // Tatra 2458 mestsky 1930
+		item (FEAT_ROADVEHS, ITEM_Tatra2458C) {
+									property {
+											name: string(STR_NAME_Tatra2458C_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1930,01,01);
+											model_life: 7;
+											vehicle_life: 25;
+											reliability_decay: 19;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 10;								   
+											cost_factor: 73;								   
+											running_cost_factor: 69;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 45 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 80 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 63;		
+											cargo_age_period: 200;
+											weight: 7.4 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											power: sw_Tatra2458power_yearbased;
+											weight: sw_Tatra2458weight_yearbased;
+											cargo_subtype_text: return sw_Tatra2458C_livery_TEXT;
+											default: sw_Tatra2458C_livery;
+											purchase:	   	Tatra2458C_purch;
+											additional_text:        return string(STR_NAME_T2458C_0);
+											 }
+											}
+
+  // Tatra 2458 primestsky 1930
+		item (FEAT_ROADVEHS, ITEM_Tatra2458R) {
+									property {
+											name: string(STR_NAME_Tatra2458R_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1930,01,01);
+											model_life: 6;
+											vehicle_life: 25;
+											reliability_decay: 19;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 5;								   
+											cost_factor: 76;								   
+											running_cost_factor: 64;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 45 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 100 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 45;	
+											cargo_age_period: 150;
+											weight: 7.4 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											power: sw_Tatra2458power_yearbased;
+											weight: sw_Tatra2458weight_yearbased;
+											cargo_subtype_text: return sw_Tatra2458R_livery_TEXT;
+											default: sw_Tatra2458R_livery;
+											purchase:	   	Tatra2458R_purch;
+											additional_text:        return string(STR_NAME_T2458R_0);
+											 }
+											}
+
+// Praga RN 1933
+		item (FEAT_ROADVEHS, ITEM_PragaRNR) {
+									property {
+											name: string(STR_NAME_PragaRNR_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1933,01,01);
+											model_life: 20;
+											vehicle_life: 20;
+											reliability_decay: 21;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 5;								   
+											cost_factor: 62;								   
+											running_cost_factor: 55;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 78 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 67 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 24;		
+											cargo_age_period: 175;
+											weight: 2.8 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											speed: sw_PragaRNspeed_yearbased;
+											power: sw_PragaRNpower_yearbased;
+											cargo_subtype_text: return sw_PragaRNRlivery_yearbased_TEXT;
+											default: sw_PragaRNR_livery;
+											purchase:	   	PragaRNR_purch;
+											additional_text:        return string(STR_NAME_RN33R_0);
+											 }
+											}
+											
+											
+  // Skoda 404DND 1934
+		item (FEAT_ROADVEHS, ITEM_Skoda404DND) {
+									property {
+											name: string(STR_NAME_Skoda404DND_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1934,01,01);
+											model_life: 9;
+											vehicle_life: 15;
+											reliability_decay: 20;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 5;								   
+											cost_factor: 78;								   
+											running_cost_factor: 40;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 52 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 65 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 40;
+											cargo_age_period: 185;
+											weight: 5.6 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											cargo_subtype_text: return sw_Skoda404D_livery_TEXT;
+											default: sw_Skoda404D_livery;
+											purchase:	   	Skoda404D_purch;
+											additional_text:        return string(STR_NAME_404DNDR_0);
+											 }
+											}
+			
+  // Skoda 606D primestsky 1934
+		item (FEAT_ROADVEHS, ITEM_Skoda606DR) {
+									property {
+											name: string(STR_NAME_Skoda606DR_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1934,01,01);
+											model_life: 7;
+											vehicle_life: 20;
+											reliability_decay: 20;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 5;								   
+											cost_factor: 90;								   
+											running_cost_factor: 55;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 52 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 99 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 50;	
+											cargo_age_period: 185;
+											weight: 4.5 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											cargo_subtype_text: return sw_Skoda606DR_livery_TEXT;
+											default: sw_Skoda606DR_livery;
+											purchase:	   	Skoda606DR_purch;
+											additional_text:        return string(STR_NAME_606DR_0);
+											 }
+											}
+  
+  // Skoda 606D mestsky 1934
+		item (FEAT_ROADVEHS, ITEM_Skoda606DC) {
+									property {
+											name: string(STR_NAME_Skoda606DC_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1934,01,01);
+											model_life: 7;
+											vehicle_life: 20;
+											reliability_decay: 20;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 5;								   
+											cost_factor: 87;								   
+											running_cost_factor: 60;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 52 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 99 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 60;	
+											cargo_age_period: 155;
+											weight: 4.5 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											cargo_subtype_text: return sw_Skoda606DC_livery_TEXT;
+											default: sw_Skoda606DC_livery;
+											purchase:	   	Skoda606DC_purch;
+											additional_text:        return string(STR_NAME_606DC_0);
+											 }
+											}
+
+  // Tatra 2467 mestsky 1936
+//		item (FEAT_ROADVEHS, ITEM_Tatra2467C) {
+//									property {
+//											name: string(STR_NAME_Tatra2467C_0);
+//											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+//											introduction_date: date(1936,01,01);
+//											model_life: 4;
+//											retire_early: 1;
+//											vehicle_life: 25;
+//											reliability_decay: 19;
+//											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+//											loading_speed: 10;								   
+//											cost_factor: 96;								   
+//											running_cost_factor: 58;								   
+//											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+//											speed: 45 km/h;								   
+//											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+//											power: 140 hp;								   
+//											running_cost_base: RUNNING_COST_ROADVEH;								   
+//											cargo_capacity: 63;	
+//											cargo_age_period: 145;
+//											weight: 7.4 ton;								   
+//											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+//											 }		
+//									graphics {
+//											cargo_subtype_text: return sw_Tatra2467C_livery_TEXT;
+//											default: sw_Tatra2467C_livery;
+//											purchase:	   	Tatra2467C_purch;
+//											 }
+//											}
+											
+  // Skoda 606D dialkovy 1936
+		item (FEAT_ROADVEHS, ITEM_Skoda606DI) {
+									property {
+											name: string(STR_NAME_Skoda606DI_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1936,01,01);
+											model_life: 6;
+											vehicle_life: 20;
+											reliability_decay: 19;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 5;								   
+											cost_factor: 120;								   
+											running_cost_factor: 55;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 68 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 99 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 25;	
+											cargo_age_period: 235;
+											weight: 4.5 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											cargo_subtype_text: return sw_Skoda606DI_livery_TEXT;
+											default: sw_Skoda606DI_livery;
+											purchase:	   	Skoda606DI_purch;
+											additional_text:        return string(STR_NAME_606DI_0);
+											 }
+											}
+											
+  // Praga RND primestsky 1936
+		item (FEAT_ROADVEHS, ITEM_PragaRNDR1) {
+									property {
+											name: string(STR_NAME_PragaRNDR1_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1936,01,01);
+											model_life: 4;
+											vehicle_life: 20;
+											reliability_decay: 20;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 5;								   
+											cost_factor: 68;								   
+											running_cost_factor: 32;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 64 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 60 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 24;		
+											cargo_age_period: 180;
+											weight: 2.5 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											cargo_subtype_text: return sw_PragaRNDR_livery_TEXT;
+											default: sw_PragaRNDR_livery;
+											purchase:	   	PragaRNDR_purch;
+											additional_text:        return string(STR_NAME_RND36R_0);
+											 }
+											}
+  
+  // Praga RND mestsky 1936
+		item (FEAT_ROADVEHS, ITEM_PragaRNDC1) {
+									property {
+											name: string(STR_NAME_PragaRNDC1_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1936,01,01);
+											model_life: 4;
+											vehicle_life: 20;
+											reliability_decay: 20;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 5;								   
+											cost_factor: 67;								   
+											running_cost_factor: 37;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 64 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 60 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 38;
+											cargo_age_period: 140;
+											weight: 2.5 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											cargo_subtype_text: return sw_PragaRNDC_livery_TEXT;
+											default: sw_PragaRNDC_livery;
+											purchase:	   	PragaRNDC_purch;
+											additional_text:        return string(STR_NAME_RND36C_0);
+											 }
+											}
+
+  // Praga RN dialkovy
+  
+  // Praga NDO 1939 primestsky
+		item (FEAT_ROADVEHS, ITEM_PragaNDOR1) {
+									property {
+											name: string(STR_NAME_PragaNDOR1_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1939,01,01);
+											model_life: 1;
+											vehicle_life: 15;
+											reliability_decay: 20;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 5;								   
+											cost_factor: 106;								   
+											running_cost_factor: 60;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 70 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 123 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 50;	
+											cargo_age_period: 190;											
+											weight: 8 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											cargo_subtype_text: return sw_PragaNDOR_livery_TEXT;
+											default: sw_PragaNDOR_livery;
+											purchase:	   	PragaNDORa_purch;
+											additional_text:        return string(STR_NAME_NDO39R_0);
+											 }
+											}
+  
+  // Praga NDO 1939 mestsky
+		item (FEAT_ROADVEHS, ITEM_PragaNDOC1) {
+									property {
+											name: string(STR_NAME_PragaNDOC1_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1939,01,01);
+											model_life: 1;
+											vehicle_life: 15;
+											reliability_decay: 20;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 5;								   
+											cost_factor: 106;								   
+											running_cost_factor: 65;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 50 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 123 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 77;
+											cargo_age_period: 150;											
+											weight: 8 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											cargo_subtype_text: return sw_PragaNDOC_livery_TEXT;
+											default: sw_PragaNDOC_livery;
+											purchase:	   	PragaNDOCa_purch;
+											additional_text:        return string(STR_NAME_NDO39C_0); 
+											 }
+											}
+
+  // Skoda 706N primestsky  1939
+		item (FEAT_ROADVEHS, ITEM_Skoda706N) {
+									property {
+											name: string(STR_NAME_Skoda706N_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1939,01,01);
+											model_life: 5;
+											vehicle_life: 15;
+											reliability_decay: 19;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 5;								   
+											cost_factor: 103;								   
+											running_cost_factor: 58;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 60 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 110 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 61;	
+											cargo_age_period: 185;											
+											weight: 6.5 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											cargo_subtype_text: return sw_Skoda706N_livery_TEXT;
+											default: sw_Skoda706N_livery;
+											purchase:	   	Skoda706N_purch;
+											additional_text:        return string(STR_NAME_706N_0); 
+											 }
+											}
+											
+  // Skoda 256 1939
+		item (FEAT_ROADVEHS, ITEM_Skoda256) {
+									property {
+											name: string(STR_NAME_Skoda256_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1939,01,01);
+											model_life: 9;
+											vehicle_life: 20;
+											reliability_decay: 18;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 5;								   
+											cost_factor: 64;								   
+											running_cost_factor: 46;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 70 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 80 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 26;	
+											cargo_age_period: 170;											
+											weight: 2.5 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											cargo_subtype_text: return string(STR_NAME_Skoda256_1);
+											default: Skoda256_0;
+											purchase:	   	Skoda256_purch;
+											additional_text:        return string(STR_NAME_256_0); 
+											 }
+											}			
+
+											
+  // Skoda 606D postovy 1940
+		item (FEAT_ROADVEHS, ITEM_Skoda606DPOST) {
+									property {
+											name: string(STR_NAME_Skoda606DPOST_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1940,01,01);
+											model_life: 4;
+											vehicle_life: 20;
+											reliability_decay: 20;
+											refittable_cargo_classes:    bitmask(CC_MAIL);
+											loading_speed: 5;								   
+											cost_factor: 92;								   
+											running_cost_factor: 55;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 68 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 99 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+										    cargo_capacity: 17;					   			   
+											weight: 4.5 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											cargo_subtype_text: return string(STR_NAME_Skoda606DPOST_1);
+											default: Skoda606P_0;
+											purchase:	   	Skoda606DP_purch;
+											additional_text:        return string(STR_NAME_606DP_0); 
+											 }
+											}
+
+ 									    					   
+
+			
+  // Skoda 706NG primestsky  1940
+		item (FEAT_ROADVEHS, ITEM_Skoda706NG) {
+									property {
+											name: string(STR_NAME_Skoda706NG_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1940,01,01);
+											model_life: 4;
+											vehicle_life: 10;
+											reliability_decay: 30;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 5;								   
+											cost_factor: 112;								   
+											running_cost_factor: 26;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 50 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 80 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 57;	
+											cargo_age_period: 180;											
+											weight: 6.7 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											cargo_subtype_text: return sw_Skoda706NG_livery_TEXT;
+											default: sw_Skoda706NG_livery;
+											purchase:	   	Skoda706NG_purch;
+											additional_text:        return string(STR_NAME_706NG_0); 
+											 }
+											}
+
+  // Skoda 706N+PRK6
+  		item (FEAT_ROADVEHS, ITEM_706NaPRK6) {
+									property {
+										    name: string(STR_NAME_706NaPRK6_0);
+										    climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+									 	    introduction_date: date(1941,01,01);
+										    model_life: 3;
+									 	    vehicle_life: 15;
+										    reliability_decay: 22;
+										    refittable_cargo_classes:    bitmask(CC_PASSENGERS);
+//											cargo_allow_refit: [PASS];								   
+										    loading_speed: 9;								   
+										    cost_factor: 133;								   
+										    running_cost_factor: 68;								   
+										    sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+										    speed: 60 km/h;								   
+										    misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+										    refit_cost: 200;								   
+										    power: 110 hp;								   
+										    running_cost_base: RUNNING_COST_ROADVEH;								   
+//		 								    default_cargo_type:            PASS;	
+										    cargo_capacity: 98;	
+											cargo_age_period: 175;											
+										    weight: 10.4 ton;								   
+										    sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+										}					  
+									graphics {  
+											cargo_subtype_text: sw_706NaPRK6_cargo_subtype_TEXT;
+											default:	    	sw_706NaPRK6_livery;  
+											purchase:	   	spriteset_706NaPRK6_purch;  
+											additional_text:        return string(STR_NAME_706NPRK_0); 
+											articulated_part:	switch_706NaPRK6_articulated;
+											length: sw_706NaPRK6_length;						
+											 }
+										 }
+											
+  // Skoda 706NG+PRK6
+  		item (FEAT_ROADVEHS, ITEM_706NGaPRK6) {
+									property {
+										    name: string(STR_NAME_706NGaPRK6_0);
+										    climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+									 	    introduction_date: date(1941,01,01);
+										    model_life: 3;
+									 	    vehicle_life: 10;
+										    reliability_decay: 33;
+										    refittable_cargo_classes:    bitmask(CC_PASSENGERS);
+//											cargo_allow_refit: [PASS];								   
+										    loading_speed: 9;								   
+										    cost_factor: 142;								   
+										    running_cost_factor: 48;								   
+										    sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+										    speed: 50 km/h;								   
+										    misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+										    refit_cost: 200;								   
+										    power: 80 hp;								   
+										    running_cost_base: RUNNING_COST_ROADVEH;								   
+//		 								    default_cargo_type:            PASS;	
+										    cargo_capacity: 94;
+											cargo_age_period: 170;											
+										    weight: 10.6 ton;								   
+										    sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+										}					  
+									graphics {  
+											cargo_subtype_text: sw_706NGaPRK6_cargo_subtype_TEXT;
+											default:	    	sw_706NGaPRK6_livery;  
+											purchase:	   	spriteset_706NGaPRK6_purch;  
+											additional_text:        return string(STR_NAME_706NGPRK_0);
+											articulated_part:	switch_706NGaPRK6_articulated;
+											length: sw_706NGaPRK6_length;							
+											 }
+										 }
+  
+  // Praga RN+PRK4
+  		item (FEAT_ROADVEHS, ITEM_RNDaPRK4) {
+									property {
+										    name: string(STR_NAME_RNaPRK4_0);
+										    climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+									 	    introduction_date: date(1943,01,01);
+										    model_life: 2;
+									 	    vehicle_life: 20;
+										    reliability_decay: 25;
+										    refittable_cargo_classes:    bitmask(CC_PASSENGERS);
+//											cargo_allow_refit: [PASS];								   
+										    loading_speed: 8;								   
+										    cost_factor: 100;								   
+										    running_cost_factor: 55;								   
+										    sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+										    speed: 70 km/h;								   
+										    misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+										    refit_cost: 200;								   
+										    power: 67 hp;								   
+										    running_cost_base: RUNNING_COST_ROADVEH;								   
+//		 								    default_cargo_type:            PASS;	
+										    cargo_capacity: 45;	
+											cargo_age_period: 170;											
+										    weight: 4.7 ton;								   
+										    sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+										}					  
+									graphics {  
+											cargo_subtype_text: sw_RNDaPRK4_cargo_subtype_TEXT;
+											default:	    	sw_RNDaPRK4_livery;  
+											purchase:	   	spriteset_RNDaPRK4_purch;  
+										    additional_text:        return string(STR_NAME_RNPRK4_0);
+											articulated_part:	switch_RNDaPRK4_articulated;
+											length: sw_RNDaPRK4_length;							
+											 }
+										 }
+
+  // Praga RND primestsky 1946
+		item (FEAT_ROADVEHS, ITEM_PragaRNDR1) {
+									property {
+											name: string(STR_NAME_PragaRNDR1_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1946,01,01);
+											model_life: 9;
+											vehicle_life: 18;
+											reliability_decay: 5;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 5;								   
+											cost_factor: 72;								   
+											running_cost_factor: 38;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 61 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 60 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 24;
+											cargo_age_period: 180;											
+											weight: 3.1 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											cargo_subtype_text: return sw_PragaRNDR_livery_TEXT;
+											default: sw_PragaRNDR_livery;
+											purchase:	   	PragaRNDR_purch;
+											additional_text:        return string(STR_NAME_RND46R_0);
+											 }
+											}
+  
+  // Praga RND mestsky 1946
+		item (FEAT_ROADVEHS, ITEM_PragaRNDC1) {
+									property {
+											name: string(STR_NAME_PragaRNDC1_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1946,01,01);
+											model_life: 9;
+											vehicle_life: 18;
+											reliability_decay: 5;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 5;								   
+											cost_factor: 72;								   
+											running_cost_factor: 43;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 60 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 60 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 38;	
+											cargo_age_period: 140;											
+											weight: 3.1 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											cargo_subtype_text: return sw_PragaRNDC_livery_TEXT;
+											default: sw_PragaRNDC_livery;
+											purchase:	   	PragaRNDC_purch;
+											additional_text:        return string(STR_NAME_RND46C_0);
+											 }
+											}
+  
+  // Praga NDO 1947 primestsky
+		item (FEAT_ROADVEHS, ITEM_PragaNDO47R) {
+									property {
+											name: string(STR_NAME_PragaNDO47R_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1947,01,01);
+											model_life: 4;
+											vehicle_life: 15;
+											reliability_decay: 18;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 5;								   
+											cost_factor: 116;								   
+											running_cost_factor: 62;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 70 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 123 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 50;
+											cargo_age_period: 185;											
+											weight: 8 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											cargo_capacity: sw_PragaNDO47R_capacity;
+											cargo_subtype_text: return sw_PragaNDO47R_livery_TEXT;
+											default: sw_PragaNDO47R_livery;
+											purchase:	   	PragaNDORb_purch;
+											additional_text:        return string(STR_NAME_NDO47R_0);
+											 }
+											}
+
+  // Praga NDO 1947 mestsky
+		item (FEAT_ROADVEHS, ITEM_PragaNDO47C) {
+									property {
+											name: string(STR_NAME_PragaNDO47C_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1947,01,01);
+											model_life: 4;
+											vehicle_life: 15;
+											reliability_decay: 18;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 5;								   
+											cost_factor: 114;								   
+											running_cost_factor: 67;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 50 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 123 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 77;	
+											cargo_age_period: 145;											
+											weight: 8 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											cargo_capacity: sw_PragaNDO47C_capacity;
+											cargo_subtype_text: return sw_PragaNDO47C_livery_TEXT;
+											default: sw_PragaNDO47liveries_yearbased;
+											purchase:	   	PragaNDOCb_purch;
+											additional_text:        return string(STR_NAME_NDO47C_0);
+											 }
+											}
+			
+  // Praga NDO+DM4 1947
+  		item (FEAT_ROADVEHS, ITEM_NDOaDM4) {
+									property {
+										    name: string(STR_NAME_NDOaDM4_0);
+										    climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+									 	    introduction_date: date(1947,01,01);
+										    model_life: 4;
+									 	    vehicle_life: 15;
+										    reliability_decay: 20;
+										    refittable_cargo_classes:    bitmask(CC_PASSENGERS);
+//											cargo_allow_refit: [PASS];								   
+										    loading_speed: 9;								   
+										    cost_factor: 146;								   
+										    running_cost_factor: 72;								   
+										    sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+										    speed: 70 km/h;								   
+										    misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+										    refit_cost: 200;								   
+										    power: 123 hp;								   
+										    running_cost_base: RUNNING_COST_ROADVEH;								   
+//		 								    default_cargo_type:            PASS;	
+										    cargo_capacity: 75;
+											cargo_age_period: 180;											
+										    weight: 10.6 ton;								   
+										    sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+										}					  
+									graphics {  
+											cargo_capacity:	sw_NDOaDM4_capacity;	
+											cargo_subtype_text: sw_NDOaDM4_cargo_subtype_TEXT;
+											default:	    	sw_NDOaDM4_livery;  
+											purchase:	   	sw_spriteset_NDOaDM4_purch;  
+											additional_text:        return string(STR_NAME_NDO47RDM4_0);
+											articulated_part:	switch_NDOaDM4_articulated;
+											length: sw_NDOaDM4_length;	
+											 }
+										 } 
+
+  
+  // Skoda 706RO primestsky 1947
+		item (FEAT_ROADVEHS, ITEM_Skoda706ROR) {
+									property {
+											name: string(STR_NAME_Skoda706ROR_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1947,01,01);
+											model_life: 12;
+											vehicle_life: 15;
+											reliability_decay: 18;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 5;								   
+											cost_factor: 122;								   
+											running_cost_factor: 64;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 68 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 135 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 70;
+											cargo_age_period: 190;											
+											weight: 8.8 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											cargo_subtype_text: return sw_Skoda706ROliveries_yearbased_TEXT;
+											default: sw_Skoda706ROliveries_yearbased;
+											purchase:	   	Skoda706ROR_purch;
+											cargo_capacity: sw_Skoda706ROR_capacity;
+											cargo_age_period: sw_Skoda706ROR_cargoage;
+											additional_text:        return string(STR_NAME_706ROR_0);
+											 }
+											}
+  
+  // Skoda 706RO+D4
+  		item (FEAT_ROADVEHS, ITEM_706ROaD4) {
+									property {
+										    name: string(STR_NAME_706ROaD4_0);
+										    climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+									 	    introduction_date: date(1947,01,01);
+										    model_life: 6;
+									 	    vehicle_life: 15;
+										    reliability_decay: 20;
+										    refittable_cargo_classes:    bitmask(CC_PASSENGERS);
+//											cargo_allow_refit: [PASS];								   
+										    loading_speed: 9;								   
+										    cost_factor: 152;								   
+										    running_cost_factor: 72;								   
+										    sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+										    speed: 68 km/h;								   
+										    misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+										    refit_cost: 200;								   
+										    power: 135 hp;								   
+										    running_cost_base: RUNNING_COST_ROADVEH;								   
+//		 								    default_cargo_type:            PASS;	
+										    cargo_capacity: 90;	
+											cargo_age_period: 180;											
+										    weight: 11.6 ton;								   
+										    sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+										}					  
+									graphics {  
+											cargo_subtype_text: sw_706ROaD4_cargo_subtype_TEXT;
+											default:	    	sw_706ROaD4_livery;  
+											purchase:	   	spriteset_706ROaD4_purch;  
+											additional_text:        return string(STR_NAME_706RORD4_0); 
+											articulated_part:	switch_706ROaD4_articulated;
+											length: sw_706ROaD4_length;							
+											 }
+										 }
+
+  // Skoda 706RO mestsky 1949
+		item (FEAT_ROADVEHS, ITEM_Skoda706ROC) {
+									property {
+											name: string(STR_NAME_Skoda706ROC_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1949,01,01);
+											model_life: 10;
+											vehicle_life: 10;
+											reliability_decay: 19;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 10;								   
+											cost_factor: 120;								   
+											running_cost_factor: 69;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 68 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 135 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 74;	
+											cargo_age_period: 150;											
+											weight: 8.6 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											cargo_subtype_text: return sw_Skoda706ROCliveries_yearbased_TEXT;
+											default: sw_Skoda706ROCliveries_yearbased;
+											purchase:	   	Skoda706ROC_purch;
+											cargo_capacity: sw_Skoda706ROC_capacity;
+											additional_text:        return string(STR_NAME_706ROC_0);
+											 }
+											}
+  
+  // Ikarus 30 primestsky 1951
+		item (FEAT_ROADVEHS, ITEM_Ikarus30) {
+									property {
+											name: string(STR_NAME_Ikarus30_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1951,01,01);
+											model_life: 6;
+											vehicle_life: 8;
+											reliability_decay: 20;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 5;								   
+											cost_factor: 84;								   
+											running_cost_factor: 56;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 78 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 87 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 39;	
+											cargo_age_period: 175;											
+											weight: 8 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											cargo_subtype_text: return sw_Ikarus30_livery_TEXT;
+											default: sw_Ikarus30_livery;
+											purchase:	   	Ikarus30_purch;
+											additional_text:        return string(STR_NAME_IK30_0);
+											 }
+											}
+
+  // Skoda 706RO dialkovy
+		item (FEAT_ROADVEHS, ITEM_Skoda706ROD) {
+									property {
+											name: string(STR_NAME_Skoda706ROD_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1955,01,01);
+											model_life: 4;
+											vehicle_life: 15;
+											reliability_decay: 17;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 4;								   
+											cost_factor: 137;								   
+											running_cost_factor: 65;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 68 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 135 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 31;	
+											cargo_age_period: 225;											
+											weight: 8.8 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											cargo_subtype_text: return sw_Skoda706ROD_livery_TEXT;
+											default: sw_Skoda706ROD_livery;
+											purchase:	   	Skoda706ROI_purch;
+											additional_text:        return string(STR_NAME_706ROI_0);
+											 }
+											}
+
+  // Skoda 706RO postovy
+		item (FEAT_ROADVEHS, ITEM_Skoda706ROPOST) {
+									property {
+											name: string(STR_NAME_Skoda706ROPOST_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1956,01,01);
+											model_life: 3;
+											vehicle_life: 15;
+											reliability_decay: 18;
+											refittable_cargo_classes:    bitmask(CC_MAIL);
+											loading_speed: 5;								   
+											cost_factor: 150;								   
+											running_cost_factor: 64;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 68 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 135 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+										    cargo_capacity: 20;					   			   
+											weight: 8.6 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											cargo_subtype_text: return string(STR_NAME_Skoda706ROPOST_1);
+											default: Skoda706ROP_0;
+											purchase:	   	Skoda706ROP_purch;
+											additional_text:        return string(STR_NAME_706ROP_0);
+											 }
+											}
+  
+  // Karosa T500HB 1954
+		item (FEAT_ROADVEHS, ITEM_KarosaT500HB) {
+									property {
+											name: string(STR_NAME_KarosaT500HB_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1954,01,01);
+											model_life: 4;
+											vehicle_life: 15;
+											reliability_decay: 21;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 5;								   
+											cost_factor: 114;								   
+											running_cost_factor: 60;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 65 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 125 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 45;	
+											cargo_age_period: 175;											
+											weight: 7 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											cargo_subtype_text: return sw_KarosaT500HB_livery_TEXT;
+											default: sw_KarosaT500HB_livery;
+											purchase:	   	KarosaT500HB_purch;
+											additional_text:        return string(STR_NAME_500HB_0);
+											 }
+											}
+  
+  // Ikarus 55 dialkovy 1955
+		item (FEAT_ROADVEHS, ITEM_Ikarus55) {
+									property {
+											name: string(STR_NAME_Ikarus55_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1954,12,12);
+											model_life: 11;
+											vehicle_life: 10;
+											reliability_decay: 20;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 5;								   
+											cost_factor: 138;								   
+											running_cost_factor: 62;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 90 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 142 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 43;
+											cargo_age_period: 235;											
+											weight: 8.8 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											cargo_subtype_text: return sw_Ikarus55_yearbased_TEXT;
+											default: sw_Ikarus55_yearbased;
+											purchase:	   	Ikarus55_purch;
+											additional_text:        return string(STR_NAME_IK55_0);
+											 }
+											}
+
+  // Skoda 706RTO primestsky
+		item (FEAT_ROADVEHS, ITEM_Skoda706RTOR) {
+									property {
+											name: string(STR_NAME_Skoda706RTOR_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1958,01,01);
+											model_life: 14;
+											vehicle_life: 20;
+											reliability_decay: 16;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 5;								   
+											cost_factor: 132;								   
+											running_cost_factor: 66;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 75 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 160 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 71;		
+											cargo_age_period: 190;											
+											weight: 8.9 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											cargo_subtype_text: return sw_Skoda706RTOR_livery_TEXT;
+											default: sw_Skoda706RTOR_livery;
+											purchase:	   	Skoda706RTOR_purch;
+											additional_text:        return string(STR_NAME_706RTOR_0);
+											 }
+											}
+			
+  // Skoda 706RTO CAR+B40
+
+  // Skoda 706RTO mestsky
+		item (FEAT_ROADVEHS, ITEM_Skoda706RTOC) {
+									property {
+											name: string(STR_NAME_Skoda706RTOC_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1958,01,01);
+											model_life: 14;
+											vehicle_life: 20;
+											reliability_decay: 17;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 10;								   
+											cost_factor: 132;								   
+											running_cost_factor: 76;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 65 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 160 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 75;	
+											cargo_age_period: 150;											
+											weight: 8.6 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											cargo_subtype_text: return sw_Skoda706RTOC_livery_TEXT;
+											default: sw_Skoda706RTOC_livery;
+											purchase:	   	Skoda706RTOC_purch;
+											additional_text:        return string(STR_NAME_706RTOC_0);
+											 }
+											}
+  
+  // Skoda 706RTO postovy			
+		item (FEAT_ROADVEHS, ITEM_Skoda706RTOPOST) {
+									property {
+											name: string(STR_NAME_Skoda706RTOPOST_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1958,01,01);
+											model_life: 14;
+											vehicle_life: 20;
+											reliability_decay: 18;
+											refittable_cargo_classes:    bitmask(CC_MAIL);
+											loading_speed: 5;								   
+											cost_factor: 130;								   
+											running_cost_factor: 66;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 75 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 160 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 25;					   			   
+											weight: 8.9 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											cargo_subtype_text: return string(STR_NAME_Skoda706RTOPOST_1);
+											default: Skoda706RTOP_0;
+											purchase:	   	Skoda706RTOP_purch;
+											additional_text:        return string(STR_NAME_706RTOP_0);
+											 }
+											}
+
+  // Skoda 706RTO MTZ+B40
+  		item (FEAT_ROADVEHS, ITEM_706RTOaB40) {
+									property {
+										    name: string(STR_NAME_706RTOaB40_0);
+										    climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+									 	    introduction_date: date(1953,01,01);
+										    model_life: 12;
+									 	    vehicle_life: 15;
+										    reliability_decay: 19;
+										    refittable_cargo_classes:    bitmask(CC_PASSENGERS);
+//											cargo_allow_refit: [PASS];								   
+										    loading_speed: 14;								   
+										    cost_factor: 162;								   
+										    running_cost_factor: 74;								   
+										    sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+										    speed: 65 km/h;								   
+										    misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+										    refit_cost: 200;								   
+										    power: 160 hp;								   
+										    running_cost_base: RUNNING_COST_ROADVEH;								   
+//		 								    default_cargo_type:            PASS;	
+										    cargo_capacity: 115;
+											cargo_age_period: 140;											
+										    weight: 12.2 ton;								   
+										    sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+										}					  
+									graphics {  
+											cargo_subtype_text: sw_706RTOaB40_cargo_subtype_TEXT;
+											default:	    	sw_706RTOaB40_livery;  
+											purchase:	   	spriteset_706RTOaB40_purch;  
+										//	additional_text:        return description_##BUS_Name##_switch; 
+											articulated_part:	switch_706RTOaB40_articulated;
+											length: sw_706RTOaB40_length;	
+											additional_text:        return string(STR_NAME_706RTOCaB40_0);
+											 }
+										 } 
+ // Ikarus 630 primestsky 1961
+		item (FEAT_ROADVEHS, ITEM_Ikarus630) {
+									property {
+											name: string(STR_NAME_Ikarus630_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1961,01,01);
+											model_life: 6;
+											vehicle_life: 8;
+											reliability_decay: 26;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 5;								   
+											cost_factor: 124;								   
+											running_cost_factor: 62;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 77 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 142 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 44;
+											cargo_age_period: 165;											
+											weight: 8.6 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											cargo_subtype_text: return sw_Ikarus630_TEXT;
+											default: sw_Ikarus630_livery;
+											purchase:	   	sw_Ikarus630PURCH_yearbased;
+											additional_text:        return string(STR_NAME_IK630_0);
+											 }
+											}
+  // Skoda 706RTO dialkovy
+		item (FEAT_ROADVEHS, ITEM_Skoda706RTOI) {
+									property {
+											name: string(STR_NAME_Skoda706RTOI_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1958,01,01);
+											model_life: 14;
+											vehicle_life: 25;
+											reliability_decay: 16;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 5;								   
+											cost_factor: 140;								   
+											running_cost_factor: 70;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 86 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 160 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 35;
+											cargo_age_period: 230;											
+											weight: 8.9 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											cargo_subtype_text: return sw_Skoda706RTOI_livery_TEXT;
+											default: sw_Skoda706RTOI_livery;
+											purchase:	   	Skoda706RTOI_purch;
+											additional_text:        return string(STR_NAME_706RTOI_0);
+											 }
+											}
+ // Ikarus 620 mestsky 1963
+		item (FEAT_ROADVEHS, ITEM_Ikarus620) {
+									property {
+											name: string(STR_NAME_Ikarus620_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1963,01,01);
+											model_life: 4;
+											vehicle_life: 6;
+											reliability_decay:26;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 8;								   
+											cost_factor: 118;								   
+											running_cost_factor: 72;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 77 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 142 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 44;
+											cargo_age_period: 125;											
+											weight: 8.1 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											cargo_subtype_text: return sw_Ikarus620_TEXT;
+											default: sw_Ikarus620_livery;
+											purchase:	   	sw_Ikarus620PURCH_yearbased;
+											additional_text:        return string(STR_NAME_IK620_0);
+											 }
+											}
+			
+  // Skoda 706RTO CAR+Jelcz P01
+  		item (FEAT_ROADVEHS, ITEM_706RTOaPO1) {
+									property {
+										    name: string(STR_NAME_706RTOaPO1_0);
+										    climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+									 	    introduction_date: date(1965,01,01);
+										    model_life: 11;
+									 	    vehicle_life: 15;
+										    reliability_decay: 18;
+										    refittable_cargo_classes:    bitmask(CC_PASSENGERS);
+//											cargo_allow_refit: [PASS];								   
+										    loading_speed: 9;								   
+										    cost_factor: 172;								   
+										    running_cost_factor: 74;								   
+										    sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+										    speed: 70 km/h;								   
+										    misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+										    refit_cost: 200;								   
+										    power: 160 hp;								   
+										    running_cost_base: RUNNING_COST_ROADVEH;								   
+//		 								    default_cargo_type:            PASS;	
+										    cargo_capacity: 106;
+											cargo_age_period: 185;											
+										    weight: 12.7 ton;								   
+										    sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+										}					  
+									graphics {  
+											cargo_subtype_text: sw_706RTOaPO1_cargo_subtype_TEXT;
+											default:	    	sw_706RTOaPO1_livery;  
+											purchase:	   	sw_Skoda706RTOaP01Purch_yearbased;  
+										    additional_text:        return string(STR_NAME_706RTORP01_0);
+											articulated_part:	switch_706RTOaPO1_articulated;
+											length: sw_706RTOaPO1_length;							
+											 }
+										 }  
+
+  // Skoda 706RTO MTZ+Jelcz P01  
+  		item (FEAT_ROADVEHS, ITEM_706RTOCaPO1) {
+									property {
+										    name: string(STR_NAME_706RTOCaPO1_0);
+										    climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+									 	    introduction_date: date(1965,01,01);
+										    model_life: 11;
+									 	    vehicle_life: 15;
+										    reliability_decay: 18;
+										    refittable_cargo_classes:    bitmask(CC_PASSENGERS);
+//											cargo_allow_refit: [PASS];								   
+										    loading_speed: 14;								   
+										    cost_factor: 172;								   
+										    running_cost_factor: 84;								   
+										    sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+										    speed: 65 km/h;								   
+										    misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+										    refit_cost: 200;								   
+										    power: 160 hp;								   
+										    running_cost_base: RUNNING_COST_ROADVEH;								   
+//		 								    default_cargo_type:            PASS;	
+										    cargo_capacity: 119;
+											cargo_age_period: 145;											
+										    weight: 12.7 ton;								   
+										    sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+										}					  
+									graphics {  
+											cargo_subtype_text: sw_706RTOCaPO1_cargo_subtype_TEXT;
+											default:	    	sw_706RTOCaPO1_livery;  
+											purchase:	   	sw_Skoda706RTOCP01Purch_yearbased;  
+										    additional_text:        return string(STR_NAME_706RTOCP01_0);
+											articulated_part:	switch_706RTOCaPO1_articulated;
+											length: sw_706RTOCaPO1_length;							
+											 }
+										 }  
+  
+  // Skoda 706RTO posta+Jelcz P01
+  		item (FEAT_ROADVEHS, ITEM_706RTOPOSTaP01) {
+									property {
+										    name: string(STR_NAME_706RTOPOSTaPO1_0);
+										    climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+									 	    introduction_date: date(1965,01,01);
+										    model_life: 11;
+									 	    vehicle_life: 15;
+										    reliability_decay: 20;
+											refittable_cargo_classes:    bitmask(CC_MAIL);
+//											cargo_allow_refit: [PASS];								   
+										    loading_speed: 9;								   
+										    cost_factor: 165;								   
+										    running_cost_factor: 74;								   
+										    sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+										    speed: 70 km/h;								   
+										    misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+										    refit_cost: 200;								   
+										    power: 160 hp;								   
+										    running_cost_base: RUNNING_COST_ROADVEH;								   
+//		 								    default_cargo_type:            PASS;	
+										    cargo_capacity: 45;					   			   
+										    weight: 12.7 ton;								   
+										    sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+										}					  
+									graphics {  
+											cargo_subtype_text: return string(STR_NAME_706RTOPOSTaPO1_1);
+											default:	    	sw_706RTOPOSTaPO1_livery;  
+											purchase:	   	spriteset_RTOaP01p_purch;  
+											additional_text:        return string(STR_NAME_706RTOPP01_0);
+											articulated_part:	switch_706RTOPOSTaPO1_articulated;
+											length: sw_706RTOPOSTaPO1_length;							
+											 }
+										 }  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // Jelcz CAR
+		item (FEAT_ROADVEHS, ITEM_JelczCAR) {
+									property {
+											name: string(STR_NAME_Jelcz041043_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1972,01,01);
+											model_life: 9;
+											vehicle_life: 10;
+											reliability_decay: 18;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 5;								   
+											cost_factor: 146;								   
+											running_cost_factor: 68;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 75 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 160 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 61;
+											cargo_age_period: 175;											
+											weight: 8.7 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											cargo_subtype_text: return sw_Jelcz041043_TEXT;
+											power: sw_JelczMEX_power;
+											default: sw_Jelcz_yearbased;
+											purchase: sw_Jelcz041043_purch;
+											running_cost_factor: sw_JelczCAR_powerRC;
+											additional_text:        return string(STR_NAME_JelczR_0);
+											 }
+											}						
+
+  // Jelcz MEX
+		item (FEAT_ROADVEHS, ITEM_JelczMEX) {
+									property {
+											name: string(STR_NAME_JelczMEX_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1972,01,01);
+											model_life: 4;
+											vehicle_life: 9;
+											reliability_decay: 19;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 5;								   
+											cost_factor: 146;								   
+											running_cost_factor: 78;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 65 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 160 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 77;
+											cargo_age_period: 140;											
+											weight: 8.6 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											cargo_subtype_text: return sw_JelczMEX_livery_TEXT;
+											power: sw_JelczMEX_power;
+											default: sw_JelczMEX_livery;
+											purchase: JelczMEX_purch;
+											running_cost_factor: sw_JelczMEX_powerRC;
+											additional_text:        return string(STR_NAME_JelczC_0);
+											 }
+											}	
+  // Jelcz 041+P01
+  		item (FEAT_ROADVEHS, ITEM_Jelcz041aP01) {
+									property {
+										    name: string(STR_NAME_Jelcz041aP01_0);
+										    climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+									 	    introduction_date: date(1972,01,01);
+										    model_life: 4;
+									 	    vehicle_life: 11;
+										    reliability_decay: 20;
+										    refittable_cargo_classes:    bitmask(CC_PASSENGERS);
+//											cargo_allow_refit: [PASS];								   
+										    loading_speed: 9;								   
+										    cost_factor: 186;								   
+										    running_cost_factor: 76;								   
+										    sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+										    speed: 70 km/h;								   
+										    misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+										    refit_cost: 200;								   
+										    power: 160 hp;								   
+										    running_cost_base: RUNNING_COST_ROADVEH;								   
+//		 								    default_cargo_type:            PASS;	
+										    cargo_capacity: 106;
+											cargo_age_period: 170;											
+										    weight: 12.7 ton;								   
+										    sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+										}					  
+									graphics {  
+											cargo_subtype_text: sw_Jelcz041aP01_cargo_subtype_TEXT;
+											default:	    	sw_Jelcz041aP01_livery;  
+											purchase:	   	spriteset_Jelcz041aP01_purcha;  
+											articulated_part:	switch_Jelcz041aP01_articulated;
+											length: sw_Jelcz041aP01_length;
+											power: sw_JelczMEX_power;
+											running_cost_factor: sw_JelczCARP01_powerRC;
+											additional_text:        return string(STR_NAME_JelczRP01_0);
+											 }
+										 }  
+  // Jelcz MEX+P01  
+  		item (FEAT_ROADVEHS, ITEM_JelczMEXaP01) {
+									property {
+										    name: string(STR_NAME_JelczMEXaPO1_0);
+										    climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+									 	    introduction_date: date(1972,01,01);
+										    model_life: 4;
+									 	    vehicle_life: 9;
+										    reliability_decay: 20;
+										    refittable_cargo_classes:    bitmask(CC_PASSENGERS);
+//											cargo_allow_refit: [PASS];								   
+										    loading_speed: 14;								   
+										    cost_factor: 186;								   
+										    running_cost_factor: 86;								   
+										    sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+										    speed: 65 km/h;								   
+										    misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+										    refit_cost: 200;								   
+										    power: 160 hp;								   
+										    running_cost_base: RUNNING_COST_ROADVEH;								   
+//		 								    default_cargo_type:            PASS;	
+										    cargo_capacity: 119;
+											cargo_age_period: 135;											
+										    weight: 12.7 ton;								   
+										    sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+										}					  
+									graphics {  
+											cargo_subtype_text: sw_JelczMEXaP01_cargo_subtype_TEXT;
+											default:	    	sw_JelczMEXaP01_livery;  
+											purchase:	   	spriteset_JelczMEXaP01_purcha;  
+											articulated_part:	switch_JelczMEXaP01_articulated;
+											length: sw_JelczMEXaP01_length;	
+											power: sw_JelczMEX_power;
+											running_cost_factor: sw_JelczMEXP01_powerRC;
+											additional_text:        return string(STR_NAME_JelczCP01_0);
+											 }
+										 }
+
