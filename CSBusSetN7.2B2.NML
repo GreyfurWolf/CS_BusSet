@@ -1,0 +1,3801 @@
+grf {
+	grfid: "GFJ\03";
+	name: string(STR_GRF_NAME);
+	desc: string(STR_GRF_DESCRIPTION);
+	version: 0;
+	min_compatible_version: 0;
+    }
+
+disable_item(FEAT_ROADVEHS, 0, 3);
+
+// **** TEMPLATES ****************************************************************************
+
+// Length 8
+	template TMP_CS_BUSSET(y) {
+    [ 4  , 5 + y, 10, 28,  -5, -14]
+    [ 24 , 5 + y, 26, 28, -17, -15]
+    [ 54 , 5 + y, 36, 28, -18, -18]
+    [ 94 , 5 + y, 26, 28, -10, -15]
+    [ 124, 5 + y, 10, 28,  -5, -14]
+    [ 144, 5 + y, 26, 28, -16, -15]
+    [ 174, 5 + y, 36, 28, -18, -20]
+    [ 214, 5 + y, 26, 28, -9, -15]
+	}
+
+// Articulated - 741, 744			 
+	template TMP_CS_BUSSET_ART(y) {
+		[ 2  , 3 + y, 10, 22,  -4, -13]
+		[ 16 , 3 + y, 22, 19, -11,  -10]
+		[ 41 , 3 + y, 26, 15, -11,  -7]
+		[ 71 , 3 + y, 22, 19, -5,  -6]
+		[ 96 , 3 + y, 10, 22,  -5, -10]
+		[ 110, 3 + y, 22, 19, -18,  -5]
+		[ 135, 3 + y, 26, 15, -12,  -7]
+		[ 165, 3 + y, 22, 19, -10,  -10]		 
+				 }
+	template TMP_CS_BUSSET_ARTb(y) {
+		[ 2  , 3 + y, 10, 22,  -4, -8]
+		[ 16 , 3 + y, 22, 19, -15,  -7]
+		[ 41 , 3 + y, 26, 15, -15,  -7]
+		[ 71 , 3 + y, 22, 19, -8, -9]
+		[ 96 , 3 + y, 10, 22,  -4, -12]
+		[ 110, 3 + y, 22, 19, -15,  -8]
+		[ 135, 3 + y, 26, 15, -14,  -7]
+		[ 165, 3 + y, 22, 19, -6,  -7]		 
+				 }
+// Articulated - IK283.01				 
+	template TMP_CS_BUSSET_ART4(y) {
+		[ 2  , 3 + y, 10, 22,  -4, -13]
+		[ 16 , 3 + y, 22, 19, -10,  -10]
+		[ 41 , 3 + y, 26, 15, -7,  -7]
+		[ 71 , 3 + y, 22, 19, -6,  -6]
+		[ 96 , 3 + y, 10, 22,  -5, -10]
+		[ 110, 3 + y, 22, 19, -16,  -6]
+		[ 135, 3 + y, 26, 15, -14,  -7]
+		[ 165, 3 + y, 22, 19, -10,  -10]		 
+				 }
+	template TMP_CS_BUSSET_ARTb4(y) {
+		[ 2  , 3 + y, 10, 22,  -4, -8]
+		[ 16 , 3 + y, 22, 19, -15,  -7]
+		[ 41 , 3 + y, 26, 15, -15,  -7]
+		[ 71 , 3 + y, 22, 19, -9, -9]
+		[ 96 , 3 + y, 10, 22,  -4, -12]
+		[ 110, 3 + y, 22, 19, -13,  -9]
+		[ 135, 3 + y, 26, 15, -19,  -7]
+		[ 165, 3 + y, 22, 19, -7,  -7]		 
+				 }
+// Purchase templates
+	template TMP_CS_BUSSET_p_ART(y) {
+		[191, 3 + y, 38, 15, 0, 0]
+				 }	
+	template TMP_CS_BUSSET_p_ARTn(y) {
+		[244, 5 + y, 100, 14, -13, -4]
+				 }
+	template TMP_CS_BUSSET_p_ARTna(y) {
+		[190, 3 + y, 100, 14, -13, -4]
+				 }
+
+// **** LOADING GRAPHICS ****************************************************************************
+				
+	// LC735.00
+			spriteset(LC7350_purch, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET_p_ARTn(0)}
+			spriteset(LC7350_0, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET   (0) 	}
+			spriteset(LC7350_1, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET  (30) 	}
+			spriteset(LC7350_2, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET  (60) 	}
+			spriteset(LC7350_3, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET  (90) 	}
+			spriteset(LC7350_4, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET (120) 	}
+			spriteset(LC7350_5, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET (150) 	}
+			spriteset(LC7350_6, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET (180) 	}
+			spriteset(LC7350_7, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET (210) 	}
+			spriteset(LC7350_8, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET (240) 	}
+			spriteset(LC7350_9, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET (270) 	}
+			spriteset(LC7350_10, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET (300) 	}
+			spriteset(LC7350_11, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET  (330) 	}
+			spriteset(LC7350_12, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET  (360) 	}
+			spriteset(LC7350_13, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET  (390) 	}
+			spriteset(LC7350_14, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET (420) 	}
+			spriteset(LC7350_15, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET (450) 	}
+			spriteset(LC7350_16, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET (480) 	}
+			spriteset(LC7350_17, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET (510) 	}
+			spriteset(LC7350_18, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET (540) 	}
+			spriteset(LC7350_19, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET (570) 	}
+			spriteset(LC7350_20, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET   (600) 	}
+			spriteset(LC7350_21, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET  (630) 	}
+			spriteset(LC7350_22, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET  (660) 	}
+			spriteset(LC7350_23, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET  (690) 	}
+			spriteset(LC7350_24, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET (720) 	}
+			spriteset(LC7350_25, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET (750) 	}
+			spriteset(LC7350_26, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET (780) 	}
+			spriteset(LC7350_27, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET (810) 	}
+			spriteset(LC7350_28, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET (840) 	}
+			spriteset(LC7350_29, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET (870) 	}
+			spriteset(LC7350_30, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET   (900) 	}
+			spriteset(LC7350_31, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET  (930) 	}
+			spriteset(LC7350_32, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET  (960) 	}
+			spriteset(LC7350_33, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET  (990) 	}
+			spriteset(LC7350_34, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET (1020) 	}
+			spriteset(LC7350_35, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET (1050) 	}
+			spriteset(LC7350_36, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET (1080) 	}
+			spriteset(LC7350_37, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET (1110) 	}
+			spriteset(LC7350_38, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET (1140) 	}
+			spriteset(LC7350_39, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET (1170) 	}
+			spriteset(LC7350_40, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET   (1200) 	}
+			spriteset(LC7350_41, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET  (1230) 	}
+			spriteset(LC7350_42, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET  (1260) 	}
+			spriteset(LC7350_43, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET  (1290) 	}
+			spriteset(LC7350_44, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET (1320) 	}
+			spriteset(LC7350_45, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET (1350) 	}
+			spriteset(LC7350_46, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET (1380) 	}
+			spriteset(LC7350_47, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET (1410) 	}
+			spriteset(LC7350_48, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET (1440) 	}
+			spriteset(LC7350_49, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET (1470) 	}			
+			spriteset(LC7350_50, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET   (1500) 	}	
+			spriteset(LC7350_51, "gfx/KarosaLC73500.png") 	{ TMP_CS_BUSSET   (1530) 	}			
+
+			spriteset(LC7352_purch, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET_p_ARTn(0)}
+			spriteset(LC7352_0, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET   (0) 	}
+			spriteset(LC7352_1, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET  (30) 	}
+			spriteset(LC7352_2, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET  (60) 	}
+			spriteset(LC7352_3, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET  (90) 	}
+			spriteset(LC7352_4, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (120) 	}
+			spriteset(LC7352_5, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (150) 	}
+			spriteset(LC7352_6, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (180) 	}
+			spriteset(LC7352_7, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (210) 	}
+			spriteset(LC7352_8, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (240) 	}
+			spriteset(LC7352_9, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (270) 	}
+			spriteset(LC7352_10, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (300) 	}
+			spriteset(LC7352_11, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET  (330) 	}
+			spriteset(LC7352_12, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET  (360) 	}
+			spriteset(LC7352_13, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET  (390) 	}
+			spriteset(LC7352_14, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (420) 	}
+			spriteset(LC7352_15, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (450) 	}
+			spriteset(LC7352_16, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (480) 	}
+			spriteset(LC7352_17, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (510) 	}
+			spriteset(LC7352_18, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (540) 	}
+			spriteset(LC7352_19, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (570) 	}
+			spriteset(LC7352_20, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET   (600) 	}
+			spriteset(LC7352_21, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET  (630) 	}
+			spriteset(LC7352_22, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET  (660) 	}
+			spriteset(LC7352_23, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET  (690) 	}
+			spriteset(LC7352_24, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (720) 	}
+			spriteset(LC7352_25, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (750) 	}
+			spriteset(LC7352_26, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (780) 	}
+			spriteset(LC7352_27, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (810) 	}
+			spriteset(LC7352_28, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (840) 	}
+			spriteset(LC7352_29, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (870) 	}
+			spriteset(LC7352_30, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET   (900) 	}
+			spriteset(LC7352_31, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET  (930) 	}
+			spriteset(LC7352_32, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET  (960) 	}
+			spriteset(LC7352_33, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET  (990) 	}
+			spriteset(LC7352_34, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (1020) 	}
+			spriteset(LC7352_35, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (1050) 	}
+			spriteset(LC7352_36, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (1080) 	}
+			spriteset(LC7352_37, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (1110) 	}
+			spriteset(LC7352_38, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (1140) 	}
+			spriteset(LC7352_39, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (1170) 	}
+			spriteset(LC7352_40, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET   (1200) 	}
+			spriteset(LC7352_41, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET  (1230) 	}
+			spriteset(LC7352_42, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET  (1260) 	}
+			spriteset(LC7352_43, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET  (1290) 	}
+			spriteset(LC7352_44, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (1320) 	}
+			spriteset(LC7352_45, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (1350) 	}
+			spriteset(LC7352_46, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (1380) 	}
+			spriteset(LC7352_47, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (1410) 	}
+			spriteset(LC7352_48, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (1440) 	}
+			spriteset(LC7352_49, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (1470) 	}			
+			spriteset(LC7352_50, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET   (1500) 	}
+			spriteset(LC7352_51, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET  (1530) 	}
+			spriteset(LC7352_52, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET  (1560) 	}
+			spriteset(LC7352_53, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET  (1590) 	}
+			spriteset(LC7352_54, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (1620) 	}
+			spriteset(LC7352_55, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (1650) 	}
+			spriteset(LC7352_56, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (1680) 	}
+			spriteset(LC7352_57, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (1710) 	}
+			spriteset(LC7352_58, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (1740) 	}
+			spriteset(LC7352_59, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (1770) 	}			
+			spriteset(LC7352_60, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET   (1800)} 
+			spriteset(LC7352_61, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET  (1830) 	}
+			spriteset(LC7352_62, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET  (1860) 	}
+			spriteset(LC7352_63, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET  (1890) 	}
+			spriteset(LC7352_64, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (1920) 	}
+			spriteset(LC7352_65, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (1950) 	}
+			spriteset(LC7352_66, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (1980) 	}
+			spriteset(LC7352_67, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (2010) 	}
+			spriteset(LC7352_68, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (2040) 	}
+			spriteset(LC7352_69, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET (2070) 	}			
+			spriteset(LC7352_70, "gfx/KarosaLC73520.png") 	{ TMP_CS_BUSSET   (2100)} 
+			
+	// LC736.00
+  			spriteset(LC7360_purch1, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET_p_ARTn(0)}
+			spriteset(LC7360_purch2, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET_p_ARTn(30)}
+			spriteset(LC7360_purch3, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET_p_ARTn(60)}
+			spriteset(LC7360_purch4, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET_p_ARTn(90)}
+			spriteset(LC7360_purch5, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET_p_ARTn(120)}
+			spriteset(LC7360_purch6, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET_p_ARTn(150)}
+			spriteset(LC7360_purch7, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET_p_ARTn(180)}
+			spriteset(LC7360_0, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET   (0) 	}
+			spriteset(LC7360_1, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET  (30) 	}
+			spriteset(LC7360_2, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET  (60) 	}
+			spriteset(LC7360_3, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET  (90) 	}
+			spriteset(LC7360_4, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET (120) 	}
+			spriteset(LC7360_5, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET (150) 	}
+			spriteset(LC7360_6, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET (180) 	}
+			spriteset(LC7360_7, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET (210) 	}
+			spriteset(LC7360_8, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET (240) 	}
+			spriteset(LC7360_9, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET (270) 	}
+			spriteset(LC7360_10, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET (300) 	}
+			spriteset(LC7360_11, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET (330) 	}
+			spriteset(LC7360_12, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET (360) 	}
+			spriteset(LC7360_13, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET (390) 	}
+			spriteset(LC7360_14, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET (420) 	}
+			spriteset(LC7360_15, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET (450) 	}
+			spriteset(LC7360_16, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET (480) 	}
+			spriteset(LC7360_17, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET (510) 	}
+			spriteset(LC7360_18, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET (540) 	}
+			spriteset(LC7360_19, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET (570) 	}
+			spriteset(LC7360_20, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET   (600) 	}
+			spriteset(LC7360_21, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET  (630) 	}
+			spriteset(LC7360_22, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET  (660) 	}
+			spriteset(LC7360_23, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET  (690) 	}
+			spriteset(LC7360_24, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET (720) 	}
+			spriteset(LC7360_25, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET (750) 	}
+			spriteset(LC7360_26, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET (780) 	}
+			spriteset(LC7360_27, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET (810) 	}
+			spriteset(LC7360_28, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET (840) 	}
+			spriteset(LC7360_29, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET (870) 	}
+			spriteset(LC7360_30, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET   (900) 	}
+			spriteset(LC7360_31, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET  (930) 	}
+			spriteset(LC7360_32, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET  (960) 	}
+			spriteset(LC7360_33, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET  (990) 	}
+			spriteset(LC7360_34, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET (1020) 	}
+			spriteset(LC7360_35, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET (1050) 	}
+			spriteset(LC7360_36, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET (1080) 	}
+			spriteset(LC7360_37, "gfx/KarosaLC73600.png") 	{ TMP_CS_BUSSET (1110) 	}
+
+			spriteset(LC7362_0, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET   (0) 	}
+			spriteset(LC7362_1, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET  (30) 	}
+			spriteset(LC7362_2, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET  (60) 	}
+			spriteset(LC7362_3, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET  (90) 	}
+			spriteset(LC7362_4, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET (120) 	}
+			spriteset(LC7362_5, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET (150) 	}
+			spriteset(LC7362_6, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET (180) 	}
+			spriteset(LC7362_7, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET (210) 	}
+			spriteset(LC7362_8, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET (240) 	}
+			spriteset(LC7362_9, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET (270) 	}
+			spriteset(LC7362_10, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET (300) 	}
+			spriteset(LC7362_11, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET  (330) 	}
+			spriteset(LC7362_12, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET  (360) 	}
+			spriteset(LC7362_13, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET  (390) 	}
+			spriteset(LC7362_14, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET (420) 	}
+			spriteset(LC7362_15, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET (450) 	}
+			spriteset(LC7362_16, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET (480) 	}
+			spriteset(LC7362_17, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET (510) 	}
+			spriteset(LC7362_18, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET (540) 	}
+			spriteset(LC7362_19, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET (570) 	}
+			spriteset(LC7362_20, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET   (600) 	}
+			spriteset(LC7362_21, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET  (630) 	}
+			spriteset(LC7362_22, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET  (660) 	}
+			spriteset(LC7362_23, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET  (690) 	}
+			spriteset(LC7362_24, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET (720) 	}
+			spriteset(LC7362_25, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET (750) 	}
+			spriteset(LC7362_26, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET (780) 	}
+			spriteset(LC7362_27, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET (810) 	}
+			spriteset(LC7362_28, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET (840) 	}
+			spriteset(LC7362_29, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET (870) 	}
+			spriteset(LC7362_30, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET   (900) 	}
+			spriteset(LC7362_31, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET  (930) 	}
+			spriteset(LC7362_32, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET  (960) 	}
+			spriteset(LC7362_33, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET  (990) 	}
+			spriteset(LC7362_34, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET (1020) 	}
+			spriteset(LC7362_35, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET (1050) 	}
+			spriteset(LC7362_36, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET (1080) 	}
+			spriteset(LC7362_37, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET (1110) 	}
+			spriteset(LC7362_38, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET (1140) 	}
+			spriteset(LC7362_39, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET (1170) 	}
+			spriteset(LC7362_40, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET   (1200) 	}
+			spriteset(LC7362_41, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET  (1230) 	}
+			spriteset(LC7362_42, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET  (1260) 	}
+			spriteset(LC7362_43, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET  (1290) 	}
+			spriteset(LC7362_44, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET (1320) 	}
+			spriteset(LC7362_45, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET (1350) 	}
+			spriteset(LC7362_46, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET (1380) 	}
+			spriteset(LC7362_47, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET (1410) 	}
+			spriteset(LC7362_48, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET (1440) 	}
+			spriteset(LC7362_49, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET (1470) 	}			
+			spriteset(LC7362_50, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET   (1500) 	}
+			spriteset(LC7362_51, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET  (1530) 	}
+			spriteset(LC7362_52, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET  (1560) 	}
+			spriteset(LC7362_53, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET  (1590) 	}
+			spriteset(LC7362_54, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET (1620) 	}
+			spriteset(LC7362_55, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET (1650) 	}
+			spriteset(LC7362_56, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET (1680) 	}
+			spriteset(LC7362_57, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET (1710) 	}
+			spriteset(LC7362_58, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET (1740) 	}
+			spriteset(LC7362_59, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET (1770) 	}			
+			spriteset(LC7362_60, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET   (1800)} 
+			spriteset(LC7362_61, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET  (1830) 	}
+			spriteset(LC7362_62, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET  (1860) 	}
+			spriteset(LC7362_63, "gfx/KarosaLC73620.png") 	{ TMP_CS_BUSSET  (1890) 	}
+
+			spriteset(LC7361014_0, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET   (0) 	}
+			spriteset(LC7361014_1, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET  (30) 	}
+			spriteset(LC7361014_2, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET  (60) 	}
+			spriteset(LC7361014_3, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET  (90) 	}
+			spriteset(LC7361014_4, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET (120) 	}
+			spriteset(LC7361014_5, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET (150) 	}
+			spriteset(LC7361014_6, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET (180) 	}
+			spriteset(LC7361014_7, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET (210) 	}
+			spriteset(LC7361014_8, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET (240) 	}
+			spriteset(LC7361014_9, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET (270) 	}
+			spriteset(LC7361014_10, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET (300) 	}
+			spriteset(LC7361014_11, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET  (330) 	}
+			spriteset(LC7361014_12, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET  (360) 	}
+			spriteset(LC7361014_13, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET  (390) 	}
+			spriteset(LC7361014_14, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET (420) 	}
+			spriteset(LC7361014_15, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET (450) 	}
+			spriteset(LC7361014_16, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET (480) 	}
+			spriteset(LC7361014_17, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET (510) 	}
+			spriteset(LC7361014_18, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET (540) 	}
+			spriteset(LC7361014_19, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET (570) 	}
+			spriteset(LC7361014_20, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET   (600) 	}
+			spriteset(LC7361014_21, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET  (630) 	}
+			spriteset(LC7361014_22, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET  (660) 	}
+			spriteset(LC7361014_23, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET  (690) 	}
+			spriteset(LC7361014_24, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET (720) 	}
+			spriteset(LC7361014_25, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET (750) 	}
+			spriteset(LC7361014_26, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET (780) 	}
+			spriteset(LC7361014_27, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET (810) 	}
+			spriteset(LC7361014_28, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET (840) 	}
+			spriteset(LC7361014_29, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET (870) 	}
+			spriteset(LC7361014_30, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET   (900) 	}
+			spriteset(LC7361014_31, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET  (930) 	}
+			spriteset(LC7361014_32, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET  (960) 	}
+			spriteset(LC7361014_33, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET  (990) 	}
+			spriteset(LC7361014_34, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET (1020) 	}
+			spriteset(LC7361014_35, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET (1050) 	}
+			spriteset(LC7361014_36, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET (1080) 	}
+			spriteset(LC7361014_37, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET (1110) 	}
+			spriteset(LC7361014_38, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET (1140) 	}
+			spriteset(LC7361014_39, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET (1170) 	}
+			spriteset(LC7361014_40, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET   (1200) 	}
+			spriteset(LC7361014_41, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET  (1230) 	}
+			spriteset(LC7361014_42, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET  (1260) 	}
+			spriteset(LC7361014_43, "gfx/KarosaLC7361014.png") 	{ TMP_CS_BUSSET  (1290) 	}
+
+			spriteset(LC7361022K_0, "gfx/KarosaLC7361022k.png") 	{ TMP_CS_BUSSET   (0) 	}
+			spriteset(LC7361022K_1, "gfx/KarosaLC7361022k.png") 	{ TMP_CS_BUSSET  (30) 	}
+			spriteset(LC7361022K_2, "gfx/KarosaLC7361022k.png") 	{ TMP_CS_BUSSET  (60) 	}
+			spriteset(LC7361022K_3, "gfx/KarosaLC7361022k.png") 	{ TMP_CS_BUSSET  (90) 	}
+			spriteset(LC7361022K_4, "gfx/KarosaLC7361022k.png") 	{ TMP_CS_BUSSET (120) 	}
+			spriteset(LC7361022K_5, "gfx/KarosaLC7361022k.png") 	{ TMP_CS_BUSSET (150) 	}
+			spriteset(LC7361022K_6, "gfx/KarosaLC7361022k.png") 	{ TMP_CS_BUSSET (180) 	}
+			spriteset(LC7361022K_7, "gfx/KarosaLC7361022k.png") 	{ TMP_CS_BUSSET (210) 	}
+			spriteset(LC7361022K_8, "gfx/KarosaLC7361022k.png") 	{ TMP_CS_BUSSET (240) 	}
+			spriteset(LC7361022K_9, "gfx/KarosaLC7361022k.png") 	{ TMP_CS_BUSSET (270) 	}
+			spriteset(LC7361022K_10, "gfx/KarosaLC7361022k.png") 	{ TMP_CS_BUSSET (300) 	}
+			spriteset(LC7361022K_11, "gfx/KarosaLC7361022k.png") 	{ TMP_CS_BUSSET  (330) 	}
+			spriteset(LC7361022K_12, "gfx/KarosaLC7361022k.png") 	{ TMP_CS_BUSSET  (360) 	}
+			spriteset(LC7361022K_13, "gfx/KarosaLC7361022k.png") 	{ TMP_CS_BUSSET  (390) 	}
+			spriteset(LC7361022K_14, "gfx/KarosaLC7361022k.png") 	{ TMP_CS_BUSSET (420) 	}
+			spriteset(LC7361022K_15, "gfx/KarosaLC7361022k.png") 	{ TMP_CS_BUSSET (450) 	}
+			spriteset(LC7361022K_16, "gfx/KarosaLC7361022k.png") 	{ TMP_CS_BUSSET (480) 	}
+			spriteset(LC7361022K_17, "gfx/KarosaLC7361022k.png") 	{ TMP_CS_BUSSET (510) 	}
+			spriteset(LC7361022K_18, "gfx/KarosaLC7361022k.png") 	{ TMP_CS_BUSSET (540) 	}
+			spriteset(LC7361022K_19, "gfx/KarosaLC7361022k.png") 	{ TMP_CS_BUSSET (570) 	}
+			spriteset(LC7361022K_20, "gfx/KarosaLC7361022k.png") 	{ TMP_CS_BUSSET   (600) 	}
+			spriteset(LC7361022K_21, "gfx/KarosaLC7361022k.png") 	{ TMP_CS_BUSSET  (630) 	}
+			spriteset(LC7361022K_22, "gfx/KarosaLC7361022k.png") 	{ TMP_CS_BUSSET  (660) 	}
+			spriteset(LC7361022K_23, "gfx/KarosaLC7361022k.png") 	{ TMP_CS_BUSSET  (690) 	}
+			spriteset(LC7361022K_24, "gfx/KarosaLC7361022k.png") 	{ TMP_CS_BUSSET (720) 	}
+			spriteset(LC7361022K_25, "gfx/KarosaLC7361022k.png") 	{ TMP_CS_BUSSET (750) 	}
+			spriteset(LC7361022K_26, "gfx/KarosaLC7361022k.png") 	{ TMP_CS_BUSSET (780) 	}
+			spriteset(LC7361022K_27, "gfx/KarosaLC7361022k.png") 	{ TMP_CS_BUSSET (810) 	}
+			spriteset(LC7361022K_28, "gfx/KarosaLC7361022k.png") 	{ TMP_CS_BUSSET (840) 	}
+			spriteset(LC7361022K_29, "gfx/KarosaLC7361022k.png") 	{ TMP_CS_BUSSET (870) 	}
+			spriteset(LC7361022K_30, "gfx/KarosaLC7361022k.png") 	{ TMP_CS_BUSSET   (900) 	}
+			spriteset(LC7361022K_31, "gfx/KarosaLC7361022k.png") 	{ TMP_CS_BUSSET  (930) 	}
+			spriteset(LC7361022K_32, "gfx/KarosaLC7361022k.png") 	{ TMP_CS_BUSSET  (960) 	}
+			spriteset(LC7361022K_33, "gfx/KarosaLC7361022k.png") 	{ TMP_CS_BUSSET  (990) 	}
+			spriteset(LC7361022K_34, "gfx/KarosaLC7361022k.png") 	{ TMP_CS_BUSSET (1020) 	}
+
+			spriteset(LC7361022W_0, "gfx/KarosaLC7361022w.png") 	{ TMP_CS_BUSSET   (0) 	}
+			spriteset(LC7361022W_1, "gfx/KarosaLC7361022w.png") 	{ TMP_CS_BUSSET  (30) 	}
+			spriteset(LC7361022W_2, "gfx/KarosaLC7361022w.png") 	{ TMP_CS_BUSSET  (60) 	}
+			spriteset(LC7361022W_3, "gfx/KarosaLC7361022w.png") 	{ TMP_CS_BUSSET  (90) 	}
+			spriteset(LC7361022W_4, "gfx/KarosaLC7361022w.png") 	{ TMP_CS_BUSSET (120) 	}
+			spriteset(LC7361022W_5, "gfx/KarosaLC7361022w.png") 	{ TMP_CS_BUSSET (150) 	}
+			spriteset(LC7361022W_6, "gfx/KarosaLC7361022w.png") 	{ TMP_CS_BUSSET (180) 	}
+			spriteset(LC7361022W_7, "gfx/KarosaLC7361022w.png") 	{ TMP_CS_BUSSET (210) 	}
+			spriteset(LC7361022W_8, "gfx/KarosaLC7361022w.png") 	{ TMP_CS_BUSSET (240) 	}
+			spriteset(LC7361022W_9, "gfx/KarosaLC7361022w.png") 	{ TMP_CS_BUSSET (270) 	}
+			spriteset(LC7361022W_10, "gfx/KarosaLC7361022w.png") 	{ TMP_CS_BUSSET (300) 	}
+			spriteset(LC7361022W_11, "gfx/KarosaLC7361022w.png") 	{ TMP_CS_BUSSET  (330) 	}
+			spriteset(LC7361022W_12, "gfx/KarosaLC7361022w.png") 	{ TMP_CS_BUSSET  (360) 	}
+			spriteset(LC7361022W_13, "gfx/KarosaLC7361022w.png") 	{ TMP_CS_BUSSET  (390) 	}
+			spriteset(LC7361022W_14, "gfx/KarosaLC7361022w.png") 	{ TMP_CS_BUSSET (420) 	}
+			spriteset(LC7361022W_15, "gfx/KarosaLC7361022w.png") 	{ TMP_CS_BUSSET (450) 	}
+			spriteset(LC7361022W_16, "gfx/KarosaLC7361022w.png") 	{ TMP_CS_BUSSET (480) 	}
+			spriteset(LC7361022W_17, "gfx/KarosaLC7361022w.png") 	{ TMP_CS_BUSSET (510) 	}
+			spriteset(LC7361022W_18, "gfx/KarosaLC7361022w.png") 	{ TMP_CS_BUSSET (540) 	}
+			spriteset(LC7361022W_19, "gfx/KarosaLC7361022w.png") 	{ TMP_CS_BUSSET (570) 	}
+			spriteset(LC7361022W_20, "gfx/KarosaLC7361022w.png") 	{ TMP_CS_BUSSET   (600) 	}
+			spriteset(LC7361022W_21, "gfx/KarosaLC7361022w.png") 	{ TMP_CS_BUSSET  (630) 	}
+			spriteset(LC7361022W_22, "gfx/KarosaLC7361022w.png") 	{ TMP_CS_BUSSET  (660) 	}
+			spriteset(LC7361022W_23, "gfx/KarosaLC7361022w.png") 	{ TMP_CS_BUSSET  (690) 	}
+			spriteset(LC7361022W_24, "gfx/KarosaLC7361022w.png") 	{ TMP_CS_BUSSET (720) 	}
+			spriteset(LC7361022W_25, "gfx/KarosaLC7361022w.png") 	{ TMP_CS_BUSSET (750) 	}
+			spriteset(LC7361022W_26, "gfx/KarosaLC7361022w.png") 	{ TMP_CS_BUSSET (780) 	}
+			spriteset(LC7361022W_27, "gfx/KarosaLC7361022w.png") 	{ TMP_CS_BUSSET (810) 	}
+			spriteset(LC7361022W_28, "gfx/KarosaLC7361022w.png") 	{ TMP_CS_BUSSET (840) 	}
+			spriteset(LC7361022W_29, "gfx/KarosaLC7361022w.png") 	{ TMP_CS_BUSSET (870) 	}
+			spriteset(LC7361022W_30, "gfx/KarosaLC7361022w.png") 	{ TMP_CS_BUSSET   (900) 	}
+			spriteset(LC7361022W_31, "gfx/KarosaLC7361022w.png") 	{ TMP_CS_BUSSET  (930) 	}
+			spriteset(LC7361022W_32, "gfx/KarosaLC7361022w.png") 	{ TMP_CS_BUSSET  (960) 	}
+			spriteset(LC7361022W_33, "gfx/KarosaLC7361022w.png") 	{ TMP_CS_BUSSET  (990) 	}
+			spriteset(LC7361022W_34, "gfx/KarosaLC7361022w.png") 	{ TMP_CS_BUSSET (1020) 	}
+
+			spriteset(LC7361024_0, "gfx/KarosaLC7361024.png") 	{ TMP_CS_BUSSET   (0) 	}
+			spriteset(LC7361024_1, "gfx/KarosaLC7361024.png") 	{ TMP_CS_BUSSET  (30) 	}
+			spriteset(LC7361024_2, "gfx/KarosaLC7361024.png") 	{ TMP_CS_BUSSET  (60) 	}
+			spriteset(LC7361024_3, "gfx/KarosaLC7361024.png") 	{ TMP_CS_BUSSET  (90) 	}
+			spriteset(LC7361024_4, "gfx/KarosaLC7361024.png") 	{ TMP_CS_BUSSET (120) 	}
+			spriteset(LC7361024_5, "gfx/KarosaLC7361024.png") 	{ TMP_CS_BUSSET (150) 	}
+			spriteset(LC7361024_6, "gfx/KarosaLC7361024.png") 	{ TMP_CS_BUSSET (180) 	}
+			spriteset(LC7361024_7, "gfx/KarosaLC7361024.png") 	{ TMP_CS_BUSSET (210) 	}
+			spriteset(LC7361024_8, "gfx/KarosaLC7361024.png") 	{ TMP_CS_BUSSET (240) 	}
+			spriteset(LC7361024_9, "gfx/KarosaLC7361024.png") 	{ TMP_CS_BUSSET (270) 	}
+			spriteset(LC7361024_10, "gfx/KarosaLC7361024.png") 	{ TMP_CS_BUSSET (300) 	}
+			spriteset(LC7361024_11, "gfx/KarosaLC7361024.png") 	{ TMP_CS_BUSSET  (330) 	}
+			spriteset(LC7361024_12, "gfx/KarosaLC7361024.png") 	{ TMP_CS_BUSSET  (360) 	}
+			spriteset(LC7361024_13, "gfx/KarosaLC7361024.png") 	{ TMP_CS_BUSSET  (390) 	}
+			spriteset(LC7361024_14, "gfx/KarosaLC7361024.png") 	{ TMP_CS_BUSSET (420) 	}
+			spriteset(LC7361024_15, "gfx/KarosaLC7361024.png") 	{ TMP_CS_BUSSET (450) 	}
+			spriteset(LC7361024_16, "gfx/KarosaLC7361024.png") 	{ TMP_CS_BUSSET (480) 	}
+			spriteset(LC7361024_17, "gfx/KarosaLC7361024.png") 	{ TMP_CS_BUSSET (510) 	}
+			spriteset(LC7361024_18, "gfx/KarosaLC7361024.png") 	{ TMP_CS_BUSSET (540) 	}
+			spriteset(LC7361024_19, "gfx/KarosaLC7361024.png") 	{ TMP_CS_BUSSET (570) 	}
+			spriteset(LC7361024_20, "gfx/KarosaLC7361024.png") 	{ TMP_CS_BUSSET   (600) 	}
+			spriteset(LC7361024_21, "gfx/KarosaLC7361024.png") 	{ TMP_CS_BUSSET  (630) 	}
+			spriteset(LC7361024_22, "gfx/KarosaLC7361024.png") 	{ TMP_CS_BUSSET  (660) 	}
+			spriteset(LC7361024_23, "gfx/KarosaLC7361024.png") 	{ TMP_CS_BUSSET  (690) 	}
+			spriteset(LC7361024_24, "gfx/KarosaLC7361024.png") 	{ TMP_CS_BUSSET (720) 	}
+			spriteset(LC7361024_25, "gfx/KarosaLC7361024.png") 	{ TMP_CS_BUSSET (750) 	}
+			spriteset(LC7361024_26, "gfx/KarosaLC7361024.png") 	{ TMP_CS_BUSSET (780) 	}
+			spriteset(LC7361024_27, "gfx/KarosaLC7361024.png") 	{ TMP_CS_BUSSET (810) 	}
+			spriteset(LC7361024_28, "gfx/KarosaLC7361024.png") 	{ TMP_CS_BUSSET (840) 	}
+			spriteset(LC7361024_29, "gfx/KarosaLC7361024.png") 	{ TMP_CS_BUSSET (870) 	}
+			spriteset(LC7361024_30, "gfx/KarosaLC7361024.png") 	{ TMP_CS_BUSSET   (900) 	}
+			spriteset(LC7361024_31, "gfx/KarosaLC7361024.png") 	{ TMP_CS_BUSSET  (930) 	}
+			spriteset(LC7361024_32, "gfx/KarosaLC7361024.png") 	{ TMP_CS_BUSSET  (960) 	}
+			spriteset(LC7361024_33, "gfx/KarosaLC7361024.png") 	{ TMP_CS_BUSSET  (990) 	}
+			spriteset(LC7361024_34, "gfx/KarosaLC7361024.png") 	{ TMP_CS_BUSSET (1020) 	}
+
+	// C744
+			spriteset(spriteset_KarosaC744_purch, "gfx/KarosaC744.png") 	{ TMP_CS_BUSSET_p_ARTna(0)}
+			spriteset(spriteset_KarosaC744_0a, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ART    (0)}
+			spriteset(spriteset_KarosaC744_0b, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ARTb  (25)} //second part long as first
+			spriteset(spriteset_KarosaC744_1a, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ART   (50)}
+			spriteset(spriteset_KarosaC744_1b, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ARTb  (75)} //second part long as first
+			spriteset(spriteset_KarosaC744_2a, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ART  (100)}
+			spriteset(spriteset_KarosaC744_2b, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ARTb (125)} //second part long as first
+			spriteset(spriteset_KarosaC744_3a, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ART  (150)}
+			spriteset(spriteset_KarosaC744_3b, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ARTb (175)} //second part long as first
+			spriteset(spriteset_KarosaC744_4a, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ART  (200)}
+			spriteset(spriteset_KarosaC744_4b, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ARTb (225)} //second part long as first
+			spriteset(spriteset_KarosaC744_5a, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ART  (250)}
+			spriteset(spriteset_KarosaC744_5b, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ARTb (275)} //second part long as first
+			spriteset(spriteset_KarosaC744_6a, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ART  (300)}
+			spriteset(spriteset_KarosaC744_6b, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ARTb (325)} //second part long as first
+			spriteset(spriteset_KarosaC744_7a, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ART  (350)}
+			spriteset(spriteset_KarosaC744_7b, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ARTb (375)} //second part long as first
+			spriteset(spriteset_KarosaC744_8a, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ART  (400)}
+			spriteset(spriteset_KarosaC744_8b, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ARTb (425)} //second part long as first
+			spriteset(spriteset_KarosaC744_9a, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ART  (450)}
+			spriteset(spriteset_KarosaC744_9b, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ARTb (475)} //second part long as first
+			spriteset(spriteset_KarosaC744_10a, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ART  (500)}
+			spriteset(spriteset_KarosaC744_10b, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ARTb (525)} //second part long as first
+			spriteset(spriteset_KarosaC744_11a, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ART  (550)}
+			spriteset(spriteset_KarosaC744_11b, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ARTb (575)} //second part long as first
+			spriteset(spriteset_KarosaC744_12a, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ART  (600)}
+			spriteset(spriteset_KarosaC744_12b, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ARTb (625)} //second part long as first
+			spriteset(spriteset_KarosaC744_13a, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ART  (650)}
+			spriteset(spriteset_KarosaC744_13b, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ARTb (675)} //second part long as first
+			spriteset(spriteset_KarosaC744_14a, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ART  (700)}
+			spriteset(spriteset_KarosaC744_14b, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ARTb (725)} //second part long as first
+			spriteset(spriteset_KarosaC744_15a, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ART  (750)}
+			spriteset(spriteset_KarosaC744_15b, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ARTb (775)} //second part long as first
+			spriteset(spriteset_KarosaC744_16a, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ART  (800)}
+			spriteset(spriteset_KarosaC744_16b, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ARTb (825)} //second part long as first
+			spriteset(spriteset_KarosaC744_17a, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ART  (850)}
+			spriteset(spriteset_KarosaC744_17b, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ARTb (875)} //second part long as first
+			spriteset(spriteset_KarosaC744_18a, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ART  (900)}
+			spriteset(spriteset_KarosaC744_18b, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ARTb (925)} //second part long as first
+			spriteset(spriteset_KarosaC744_19a, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ART  (950)}
+			spriteset(spriteset_KarosaC744_19b, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ARTb (975)} //second part long as first
+			spriteset(spriteset_KarosaC744_20a, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ART  (1000)}
+			spriteset(spriteset_KarosaC744_20b, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ARTb (1025)} //second part long as first
+			spriteset(spriteset_KarosaC744_21a, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ART  (1050)}
+			spriteset(spriteset_KarosaC744_21b, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ARTb (1075)} //second part long as first
+			spriteset(spriteset_KarosaC744_22a, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ART  (1100)}
+			spriteset(spriteset_KarosaC744_22b, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ARTb (1125)} //second part long as first
+			spriteset(spriteset_KarosaC744_23a, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ART  (1150)}
+			spriteset(spriteset_KarosaC744_23b, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ARTb (1175)} //second part long as first
+			spriteset(spriteset_KarosaC744_24a, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ART  (1200)}
+			spriteset(spriteset_KarosaC744_24b, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ARTb (1225)} //second part long as first
+			spriteset(spriteset_KarosaC744_25a, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ART  (1250)}
+			spriteset(spriteset_KarosaC744_25b, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ARTb (1275)} //second part long as first
+			spriteset(spriteset_KarosaC744_26a, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ART  (1300)}
+			spriteset(spriteset_KarosaC744_26b, "gfx/KarosaC744.png") 		{ TMP_CS_BUSSET_ARTb (1325)} //second part long as first
+	// Renault FR1
+ 			spriteset(FR1_purch, "gfx/RenaultFR1.png") 	{ TMP_CS_BUSSET_p_ARTn(0)}
+ 			spriteset(Iliade_purch, "gfx/RenaultFR1.png") 	{ TMP_CS_BUSSET_p_ARTn(30)}
+			spriteset(FR1_0, "gfx/RenaultFR1.png") 	{ TMP_CS_BUSSET   (0) 	}
+			spriteset(FR1_1, "gfx/RenaultFR1.png") 	{ TMP_CS_BUSSET  (30) 	}
+			spriteset(FR1_2, "gfx/RenaultFR1.png") 	{ TMP_CS_BUSSET  (60) 	}
+			spriteset(FR1_3, "gfx/RenaultFR1.png") 	{ TMP_CS_BUSSET  (90) 	}
+			spriteset(FR1_4, "gfx/RenaultFR1.png") 	{ TMP_CS_BUSSET (120) 	}
+			spriteset(FR1_5, "gfx/RenaultFR1.png") 	{ TMP_CS_BUSSET (150) 	}
+			spriteset(FR1_6, "gfx/RenaultFR1.png") 	{ TMP_CS_BUSSET (180) 	}
+			spriteset(FR1_7, "gfx/RenaultFR1.png") 	{ TMP_CS_BUSSET (210) 	}
+			spriteset(FR1_8, "gfx/RenaultFR1.png") 	{ TMP_CS_BUSSET (240) 	}
+			spriteset(FR1_9, "gfx/RenaultFR1.png") 	{ TMP_CS_BUSSET (270) 	}
+			spriteset(FR1_10, "gfx/RenaultFR1.png") 	{ TMP_CS_BUSSET (300) 	}
+			spriteset(FR1_11, "gfx/RenaultFR1.png") 	{ TMP_CS_BUSSET  (330) 	}
+			spriteset(Iliade_0, "gfx/RenaultFR1.png") 	{ TMP_CS_BUSSET (360) 	}
+			spriteset(Iliade_1, "gfx/RenaultFR1.png") 	{ TMP_CS_BUSSET (390) 	}
+			spriteset(Iliade_2, "gfx/RenaultFR1.png") 	{ TMP_CS_BUSSET (420) 	}
+			spriteset(Iliade_3, "gfx/RenaultFR1.png") 	{ TMP_CS_BUSSET (450) 	}
+			spriteset(Iliade_4, "gfx/RenaultFR1.png") 	{ TMP_CS_BUSSET (480) 	}
+			spriteset(Iliade_5, "gfx/RenaultFR1.png") 	{ TMP_CS_BUSSET (510) 	}
+			spriteset(Iliade_6, "gfx/RenaultFR1.png") 	{ TMP_CS_BUSSET (540) 	}
+			spriteset(Iliade_7, "gfx/RenaultFR1.png") 	{ TMP_CS_BUSSET (570) 	}
+			spriteset(Iliade_8, "gfx/RenaultFR1.png") 	{ TMP_CS_BUSSET (600) 	}
+			spriteset(Iliade_9, "gfx/RenaultFR1.png") 	{ TMP_CS_BUSSET (630) 	}
+			spriteset(Iliade_10, "gfx/RenaultFR1.png") 	{ TMP_CS_BUSSET (660) 	}
+	// Oasa HD12
+ 			spriteset(spriteset_OasaHD12_purch, "gfx/OasaHD12.png") 	{ TMP_CS_BUSSET_p_ARTn(0)}
+			spriteset(OasaHD12_0, "gfx/OasaHD12.png") 	{ TMP_CS_BUSSET   (0) 	}
+			spriteset(OasaHD12_1, "gfx/OasaHD12.png") 	{ TMP_CS_BUSSET  (30) 	}
+			spriteset(OasaHD12_2, "gfx/OasaHD12.png") 	{ TMP_CS_BUSSET  (60) 	}
+			spriteset(OasaHD12_3, "gfx/OasaHD12.png") 	{ TMP_CS_BUSSET  (90) 	}
+			spriteset(OasaHD12_4, "gfx/OasaHD12.png") 	{ TMP_CS_BUSSET (120) 	}
+			spriteset(OasaHD12_5, "gfx/OasaHD12.png") 	{ TMP_CS_BUSSET (150) 	}
+			spriteset(OasaHD12_6, "gfx/OasaHD12.png") 	{ TMP_CS_BUSSET (180) 	}
+			spriteset(OasaHD12_7, "gfx/OasaHD12.png") 	{ TMP_CS_BUSSET (210) 	}
+			spriteset(OasaHD12_8, "gfx/OasaHD12.png") 	{ TMP_CS_BUSSET (240) 	}
+			spriteset(OasaHD12_9, "gfx/OasaHD12.png") 	{ TMP_CS_BUSSET (270) 	}
+			spriteset(OasaHD12_10, "gfx/OasaHD12.png") 	{ TMP_CS_BUSSET (300) 	}
+			spriteset(OasaHD12_11, "gfx/OasaHD12.png") 	{ TMP_CS_BUSSET  (330) 	}
+			spriteset(OasaHD12_12, "gfx/OasaHD12.png") 	{ TMP_CS_BUSSET  (360) 	}
+			spriteset(OasaHD12_13, "gfx/OasaHD12.png") 	{ TMP_CS_BUSSET  (390) 	}
+			spriteset(OasaHD12_14, "gfx/OasaHD12.png") 	{ TMP_CS_BUSSET (420) 	}
+	// Prima TL
+ 			spriteset(spriteset_PrimaTL_purch, "gfx/PrimaTL.png") 	{ TMP_CS_BUSSET_p_ARTn(0)}
+			spriteset(PrimaTL_0, "gfx/PrimaTL.png") 	{ TMP_CS_BUSSET   (0) 	}
+			spriteset(PrimaTL_1, "gfx/PrimaTL.png") 	{ TMP_CS_BUSSET  (30) 	}
+			spriteset(PrimaTL_2, "gfx/PrimaTL.png") 	{ TMP_CS_BUSSET  (60) 	}
+			spriteset(PrimaTL_3, "gfx/PrimaTL.png") 	{ TMP_CS_BUSSET  (90) 	}
+			spriteset(PrimaTL_4, "gfx/PrimaTL.png") 	{ TMP_CS_BUSSET (120) 	}
+			spriteset(PrimaTL_5, "gfx/PrimaTL.png") 	{ TMP_CS_BUSSET (150) 	}
+			spriteset(PrimaTL_6, "gfx/PrimaTL.png") 	{ TMP_CS_BUSSET (180) 	}
+			spriteset(PrimaTL_7, "gfx/PrimaTL.png") 	{ TMP_CS_BUSSET (210) 	}
+			spriteset(PrimaTL_8, "gfx/PrimaTL.png") 	{ TMP_CS_BUSSET (240) 	}
+			spriteset(PrimaTL_9, "gfx/PrimaTL.png") 	{ TMP_CS_BUSSET (270) 	}
+	// B741		
+			spriteset(spriteset_KarosaB741_purch, "gfx/KarosaB741.png") 	{ TMP_CS_BUSSET_p_ARTna(0)}
+			spriteset(spriteset_KarosaB741_0a, "gfx/KarosaB741.png") 		{ TMP_CS_BUSSET_ART    (0)}
+			spriteset(spriteset_KarosaB741_0b, "gfx/KarosaB741.png") 		{ TMP_CS_BUSSET_ARTb  (25)} //second part long as first
+			spriteset(spriteset_KarosaB741_1a, "gfx/KarosaB741.png") 		{ TMP_CS_BUSSET_ART   (50)}
+			spriteset(spriteset_KarosaB741_1b, "gfx/KarosaB741.png") 		{ TMP_CS_BUSSET_ARTb  (75)} //second part long as first
+			spriteset(spriteset_KarosaB741_2a, "gfx/KarosaB741.png") 		{ TMP_CS_BUSSET_ART  (100)}
+			spriteset(spriteset_KarosaB741_2b, "gfx/KarosaB741.png") 		{ TMP_CS_BUSSET_ARTb (125)} //second part long as first
+			spriteset(spriteset_KarosaB741_3a, "gfx/KarosaB741.png") 		{ TMP_CS_BUSSET_ART  (150)}
+			spriteset(spriteset_KarosaB741_3b, "gfx/KarosaB741.png") 		{ TMP_CS_BUSSET_ARTb (175)} //second part long as first
+			spriteset(spriteset_KarosaB741_4a, "gfx/KarosaB741.png") 		{ TMP_CS_BUSSET_ART  (200)}
+			spriteset(spriteset_KarosaB741_4b, "gfx/KarosaB741.png") 		{ TMP_CS_BUSSET_ARTb (225)} //second part long as first
+			spriteset(spriteset_KarosaB741_5a, "gfx/KarosaB741.png") 		{ TMP_CS_BUSSET_ART  (250)}
+			spriteset(spriteset_KarosaB741_5b, "gfx/KarosaB741.png") 		{ TMP_CS_BUSSET_ARTb (275)} //second part long as first
+			spriteset(spriteset_KarosaB741_6a, "gfx/KarosaB741.png") 		{ TMP_CS_BUSSET_ART  (300)}
+			spriteset(spriteset_KarosaB741_6b, "gfx/KarosaB741.png") 		{ TMP_CS_BUSSET_ARTb (325)} //second part long as first
+			spriteset(spriteset_KarosaB741_7a, "gfx/KarosaB741.png") 		{ TMP_CS_BUSSET_ART  (350)}
+			spriteset(spriteset_KarosaB741_7b, "gfx/KarosaB741.png") 		{ TMP_CS_BUSSET_ARTb (375)} //second part long as first
+			spriteset(spriteset_KarosaB741_8a, "gfx/KarosaB741.png") 		{ TMP_CS_BUSSET_ART  (400)}
+			spriteset(spriteset_KarosaB741_8b, "gfx/KarosaB741.png") 		{ TMP_CS_BUSSET_ARTb (425)} //second part long as first
+			spriteset(spriteset_KarosaB741_9a, "gfx/KarosaB741.png") 		{ TMP_CS_BUSSET_ART  (450)}
+			spriteset(spriteset_KarosaB741_9b, "gfx/KarosaB741.png") 		{ TMP_CS_BUSSET_ARTb (475)} //second part long as first
+			spriteset(spriteset_KarosaB741_10a, "gfx/KarosaB741.png") 		{ TMP_CS_BUSSET_ART  (500)}
+			spriteset(spriteset_KarosaB741_10b, "gfx/KarosaB741.png") 		{ TMP_CS_BUSSET_ARTb (525)} //second part long as first
+			spriteset(spriteset_KarosaB741_11a, "gfx/KarosaB741.png") 		{ TMP_CS_BUSSET_ART  (550)}
+			spriteset(spriteset_KarosaB741_11b, "gfx/KarosaB741.png") 		{ TMP_CS_BUSSET_ARTb (575)} //second part long as first
+			spriteset(spriteset_KarosaB741_12a, "gfx/KarosaB741.png") 		{ TMP_CS_BUSSET_ART  (600)}
+			spriteset(spriteset_KarosaB741_12b, "gfx/KarosaB741.png") 		{ TMP_CS_BUSSET_ARTb (625)} //second part long as first
+			spriteset(spriteset_KarosaB741_13a, "gfx/KarosaB741.png") 		{ TMP_CS_BUSSET_ART  (650)}
+			spriteset(spriteset_KarosaB741_13b, "gfx/KarosaB741.png") 		{ TMP_CS_BUSSET_ARTb (675)} //second part long as first
+    //IK 283
+			spriteset(spriteset_Ikarus28301_purch, "gfx/IK28301.png") 	{ TMP_CS_BUSSET_p_ARTna(0)}
+			spriteset(spriteset_Ikarus28301_0a, "gfx/IK28301.png") 		{ TMP_CS_BUSSET_ART4   (0)}
+			spriteset(spriteset_Ikarus28301_0b, "gfx/IK28301.png") 		{ TMP_CS_BUSSET_ARTb4  (25)} //second pART4long as first
+			spriteset(spriteset_Ikarus28301_1a, "gfx/IK28301.png") 		{ TMP_CS_BUSSET_ART4  (50)}
+			spriteset(spriteset_Ikarus28301_1b, "gfx/IK28301.png") 		{ TMP_CS_BUSSET_ARTb4  (75)} //second pART4long as first
+			spriteset(spriteset_Ikarus28301_2a, "gfx/IK28301.png") 		{ TMP_CS_BUSSET_ART4 (100)}
+			spriteset(spriteset_Ikarus28301_2b, "gfx/IK28301.png") 		{ TMP_CS_BUSSET_ARTb4 (125)} //second pART4long as first
+			spriteset(spriteset_Ikarus28301_3a, "gfx/IK28301.png") 		{ TMP_CS_BUSSET_ART4 (150)}
+			spriteset(spriteset_Ikarus28301_3b, "gfx/IK28301.png") 		{ TMP_CS_BUSSET_ARTb4 (175)} //second pART4long as first
+			spriteset(spriteset_Ikarus28301_4a, "gfx/IK28301.png") 		{ TMP_CS_BUSSET_ART4 (200)}
+			spriteset(spriteset_Ikarus28301_4b, "gfx/IK28301.png") 		{ TMP_CS_BUSSET_ARTb4 (225)} //second pART4long as first
+			spriteset(spriteset_Ikarus28301_5a, "gfx/IK28301.png") 		{ TMP_CS_BUSSET_ART4 (250)}
+			spriteset(spriteset_Ikarus28301_5b, "gfx/IK28301.png") 		{ TMP_CS_BUSSET_ARTb4 (275)} //second pART4long as first
+			spriteset(spriteset_Ikarus28301_6a, "gfx/IK28301.png") 		{ TMP_CS_BUSSET_ART4 (300)}
+			spriteset(spriteset_Ikarus28301_6b, "gfx/IK28301.png") 		{ TMP_CS_BUSSET_ARTb4 (325)} //second pART4long as first
+			spriteset(spriteset_Ikarus28301_7a, "gfx/IK28301.png") 		{ TMP_CS_BUSSET_ART4 (350)}
+			spriteset(spriteset_Ikarus28301_7b, "gfx/IK28301.png") 		{ TMP_CS_BUSSET_ARTb4 (375)} //second pART4long as first
+
+// **** SWITCHES *********************************************************************************
+
+ // LC735
+		random_switch(FEAT_ROADVEHS, SELF, sw_LC7350_1977) {
+										3:      LC7350_4;
+										9:      LC7350_0;
+																						}
+		random_switch(FEAT_ROADVEHS, SELF, sw_LC7350_1985) {
+										3:      LC7350_0;
+										4:      LC7350_4;
+										4:      LC7350_5;
+																						}
+		random_switch(FEAT_ROADVEHS, SELF, sw_LC7350_1986) {
+										5:      LC7350_0;
+										3:      LC7350_4;
+										3:      LC7350_5;
+																						}
+
+		switch(FEAT_ROADVEHS, SELF, sw_LC7350_yearbased, build_year) 	{
+										1977..1981:		sw_LC7350_1977;
+										1982..1984:     LC7350_0;
+										1985:      		sw_LC7350_1985;
+										1986:           sw_LC7350_1986;
+																		}
+
+		switch(FEAT_ROADVEHS, SELF, sw_LC73500_livery, cargo_subtype) {
+										0:      sw_LC7350_yearbased;
+										1:      LC7350_0;
+										2:      LC7350_1;
+										3:      LC7350_2;
+										4:      LC7350_3;
+										5:      LC7350_5;
+										6:      LC7350_4;
+										7:      LC7350_10;
+										8:      LC7350_11;
+										9:      LC7350_12;
+										10:     LC7350_13;
+										11:     LC7350_14;
+										12:     LC7350_15;
+										13:     LC7350_16;
+										14:     LC7350_17;
+										15:     LC7350_18;
+										16:     LC7350_19;
+										17:     LC7350_20;
+										18:     LC7350_21;
+										19:     LC7350_22;
+										20:     LC7350_23;
+										21:     LC7350_24;
+										22:     LC7350_25; 
+										23:     LC7350_6;
+										24:     LC7350_7;
+										25:     LC7350_8;
+										26:     LC7350_9;
+										27:     LC7350_26;
+										28:     LC7350_27;
+										29:     LC7350_30;
+										30:     LC7350_31;
+										31:     LC7350_32;
+										32:     LC7350_33;
+										33:     LC7350_34;
+										34:     LC7350_35;
+										35:     LC7350_36; 
+										36:     LC7350_37;
+										37:     LC7350_38;
+										38:     LC7350_28;
+										39:     LC7350_29;
+										40:     LC7350_39;
+										41:     LC7350_40;
+										42:     LC7350_41;
+										43:     LC7350_42;
+										44:     LC7350_43;
+										45:     LC7350_44;
+										46:     LC7350_45;
+										47:     LC7350_46;
+										48:     LC7350_47;
+										49:     LC7350_48;
+										50:     LC7350_49;
+																	  }
+		random_switch(FEAT_ROADVEHS, SELF, sw_LC7352_86) {
+										3:      LC7352_5;
+										9:      LC7352_9;
+																						}
+		random_switch(FEAT_ROADVEHS, SELF, sw_LC7352_87) {
+										3:      LC7352_3;
+										4:      LC7352_4;
+										1:      LC7352_5;
+										2:      LC7352_7;
+										1:      LC7352_9;
+										1:      LC7352_70;
+																						}
+		random_switch(FEAT_ROADVEHS, SELF, sw_LC7352_88) {
+										9:      LC7352_0;
+										3:      LC7352_7;
+																						}
+		random_switch(FEAT_ROADVEHS, SELF, sw_LC7352_89) {
+										9:      LC7352_2;
+										3:      LC7352_7;
+//										3:      LC7352_0;										
+																						}
+
+		switch(FEAT_ROADVEHS, SELF, sw_LC7352_yearbased, build_year) 	{
+										1986:		sw_LC7352_86;
+										1987:       sw_LC7352_87;
+										1988:      	sw_LC7352_88;
+										1989..1990: sw_LC7352_89;
+										1991..2100: 	LC7352_7;
+																		}
+
+		random_switch(FEAT_ROADVEHS, SELF, sw_LC73522_87) {
+										8:      LC7350_7;
+										2:      LC7350_9;
+										2:      LC7350_1;
+																						}
+
+		switch(FEAT_ROADVEHS, SELF, sw_LC73522_yearbased, build_year) 	{
+										1986:		LC7352_9;
+										1987:       sw_LC73522_87;
+																		}																		
+switch(FEAT_ROADVEHS, SELF, sw_LC73520_livery, cargo_subtype) {
+										0:      sw_LC7352_yearbased;
+										1:      LC7352_0;
+										2:      LC7352_1;
+										3:      LC7352_2;
+										4:      LC7352_3;
+										5:      LC7352_4;
+										6:      LC7352_5;
+										7:      LC7352_6;
+										8:      LC7352_7;
+										9:      LC7352_8;
+										10:     LC7352_9;
+										11:     LC7352_10;
+										12:     LC7352_11;
+										13:     LC7352_12;
+										14:     LC7352_13;
+										15:     LC7352_14;
+										16:     LC7352_15;
+										17:     LC7352_16;
+										18:     LC7352_17;
+										19:     LC7352_18;
+										20:     LC7352_19;
+										21:     LC7352_20;
+										22:     LC7352_21; 
+										23:     LC7352_22;
+										24:     LC7352_23;
+										25:     LC7352_24;
+										26:     LC7352_25;
+										27:     LC7352_26;
+										28:     LC7352_27;
+										29:     LC7352_28;
+										30:     LC7352_29;
+										31:     LC7352_30;
+										32:     LC7352_31;
+										33:     LC7352_32;
+										34:     LC7352_33;
+										35:     LC7352_34; 
+										36:     LC7352_35;
+										37:     LC7352_36;
+										38:     LC7352_37;
+										39:     LC7352_38;
+										40:     LC7352_39;
+										41:     LC7352_40;
+										42:     LC7352_41;
+										43:     LC7352_42;
+										44:     LC7352_43;
+										45:     LC7352_44;
+										46:     LC7352_45;
+										47:     LC7352_46;
+										48:     LC7352_47;
+										49:     LC7352_48;
+										50:     LC7352_49;
+										51:     LC7352_50;
+										52:		LC7352_51;
+										53:		LC7352_52;
+										54:		LC7352_53;
+										55:		LC7352_54;
+										56:		LC7352_55;
+										57:		LC7352_56;
+										58:		LC7352_57;
+										59:		LC7352_58;
+										60:		LC7352_59;
+										61:		LC7352_60;
+										62:		LC7352_61;
+										63:		LC7352_62;
+										64:		LC7352_63;
+										65:		LC7352_64;
+										66:		LC7352_65;
+										67:		LC7352_66;
+										68:		LC7352_67;
+										69:		LC7352_68;
+										70:		LC7352_69;
+																	  }
+switch(FEAT_ROADVEHS, SELF, sw_LC73522_livery, cargo_subtype) {
+										0:      sw_LC73522_yearbased;
+										1:      LC7352_0;
+										2:      LC7352_1;
+										3:      LC7352_2;
+										4:      LC7352_3;
+										5:      LC7352_4;
+										6:      LC7352_5;
+										7:      LC7352_6;
+										8:      LC7352_7;
+										9:      LC7352_8;
+										10:     LC7352_9;
+										11:     LC7352_10;
+										12:     LC7352_11;
+										13:     LC7352_12;
+										14:     LC7352_13;
+										15:     LC7352_14;
+										16:     LC7352_15;
+										17:     LC7352_16;
+										18:     LC7352_17;
+										19:     LC7352_18;
+										20:     LC7352_19;
+										21:     LC7352_20;
+										22:     LC7352_21; 
+										23:     LC7352_22;
+										24:     LC7352_23;
+										25:     LC7352_24;
+										26:     LC7352_25;
+										27:     LC7352_26;
+										28:     LC7352_27;
+										29:     LC7352_28;
+										30:     LC7352_29;
+										31:     LC7352_30;
+										32:     LC7352_31;
+										33:     LC7352_32;
+										34:     LC7352_33;
+										35:     LC7352_34; 
+										36:     LC7352_35;
+										37:     LC7352_36;
+										38:     LC7352_37;
+										39:     LC7352_38;
+										40:     LC7352_39;
+										41:     LC7352_40;
+										42:     LC7352_41;
+										43:     LC7352_42;
+										44:     LC7352_43;
+										45:     LC7352_44;
+										46:     LC7352_45;
+										47:     LC7352_46;
+										48:     LC7352_47;
+										49:     LC7352_48;
+										50:     LC7352_49;
+										51:     LC7352_50;
+										52:		LC7352_51;
+										53:		LC7352_52;
+										54:		LC7352_53;
+										55:		LC7352_54;
+										56:		LC7352_55;
+										57:		LC7352_56;
+										58:		LC7352_57;
+										59:		LC7352_58;
+										60:		LC7352_59;
+										61:		LC7352_60;
+										62:		LC7352_61;
+										63:		LC7352_62;
+										64:		LC7352_63;
+										65:		LC7352_64;
+										66:		LC7352_65;
+										67:		LC7352_66;
+										68:		LC7352_67;
+										69:		LC7352_68;
+										70:		LC7352_69;
+																	  }
+switch(FEAT_ROADVEHS, SELF, sw_LC73540_livery, cargo_subtype) {
+										0:      sw_LC7352_yearbased;
+										1:      LC7352_0;
+										2:      LC7352_1;
+										3:      LC7352_2;
+										4:      LC7352_3;
+										5:      LC7352_4;
+										6:      LC7352_5;
+										7:      LC7352_6;
+										8:      LC7352_7;
+										9:      LC7352_8;
+										10:     LC7352_9;
+										11:     LC7352_10;
+										12:     LC7352_11;
+										13:     LC7352_12;
+										14:     LC7352_13;
+										15:     LC7352_14;
+										16:     LC7352_15;
+										17:     LC7352_16;
+										18:     LC7352_17;
+										19:     LC7352_18;
+										20:     LC7352_19;
+										21:     LC7352_20;
+										22:     LC7352_21; 
+										23:     LC7352_22;
+										24:     LC7352_23;
+										25:     LC7352_24;
+										26:     LC7352_25;
+										27:     LC7352_26;
+										28:     LC7352_27;
+										29:     LC7352_28;
+										30:     LC7352_29;
+										31:     LC7352_30;
+										32:     LC7352_31;
+										33:     LC7352_32;
+										34:     LC7352_33;
+										35:     LC7352_34; 
+										36:     LC7352_35;
+										37:     LC7352_36;
+										38:     LC7352_37;
+										39:     LC7352_38;
+										40:     LC7352_39;
+										41:     LC7352_40;
+										42:     LC7352_41;
+										43:     LC7352_42;
+										44:     LC7352_43;
+										45:     LC7352_44;
+										46:     LC7352_45;
+										47:     LC7352_46;
+										48:     LC7352_47;
+										49:     LC7352_48;
+										50:     LC7352_49;
+										51:     LC7352_50;
+										52:		LC7352_51;
+										53:		LC7352_52;
+										54:		LC7352_53;
+										55:		LC7352_54;
+										56:		LC7352_55;
+										57:		LC7352_56;
+										58:		LC7352_57;
+										59:		LC7352_58;
+										60:		LC7352_59;
+										61:		LC7352_60;
+										62:		LC7352_61;
+										63:		LC7352_62;
+										64:		LC7352_63;
+										65:		LC7352_64;
+										66:		LC7352_65;
+										67:		LC7352_66;
+										68:		LC7352_67;
+										69:		LC7352_68;
+										70:		LC7352_69;
+																	  }
+switch(FEAT_ROADVEHS, SELF, sw_LC7351011_livery, cargo_subtype) {
+										0:      sw_LC7352_yearbased;
+										1:      LC7352_0;
+										2:      LC7352_1;
+										3:      LC7352_2;
+										4:      LC7352_3;
+										5:      LC7352_4;
+										6:      LC7352_5;
+										7:      LC7352_6;
+										8:      LC7352_7;
+										9:      LC7352_8;
+										10:     LC7352_9;
+										11:     LC7352_10;
+										12:     LC7352_11;
+										13:     LC7352_12;
+										14:     LC7352_13;
+										15:     LC7352_14;
+										16:     LC7352_15;
+										17:     LC7352_16;
+										18:     LC7352_17;
+										19:     LC7352_18;
+										20:     LC7352_19;
+										21:     LC7352_20;
+										22:     LC7352_21; 
+										23:     LC7352_22;
+										24:     LC7352_23;
+										25:     LC7352_24;
+										26:     LC7352_25;
+										27:     LC7352_26;
+										28:     LC7352_27;
+										29:     LC7352_28;
+										30:     LC7352_29;
+										31:     LC7352_30;
+										32:     LC7352_31;
+										33:     LC7352_32;
+										34:     LC7352_33;
+										35:     LC7352_34; 
+										36:     LC7352_35;
+										37:     LC7352_36;
+										38:     LC7352_37;
+										39:     LC7352_38;
+										40:     LC7352_39;
+										41:     LC7352_40;
+										42:     LC7352_41;
+										43:     LC7352_42;
+										44:     LC7352_43;
+										45:     LC7352_44;
+										46:     LC7352_45;
+										47:     LC7352_46;
+										48:     LC7352_47;
+										49:     LC7352_48;
+										50:     LC7352_49;
+										51:     LC7352_50;
+										52:		LC7352_51;
+										53:		LC7352_52;
+										54:		LC7352_53;
+										55:		LC7352_54;
+										56:		LC7352_55;
+										57:		LC7352_56;
+										58:		LC7352_57;
+										59:		LC7352_58;
+										60:		LC7352_59;
+										61:		LC7352_60;
+										62:		LC7352_61;
+										63:		LC7352_62;
+										64:		LC7352_63;
+										65:		LC7352_64;
+										66:		LC7352_65;
+										67:		LC7352_66;
+										68:		LC7352_67;
+										69:		LC7352_68;
+										70:		LC7352_69;
+																	  }
+
+
+
+
+		random_switch(FEAT_ROADVEHS, SELF, sw_LC735_prototype) {
+										6:      LC7350_51;
+										6:      sw_LC73500_livery;
+																						}
+		random_switch(FEAT_ROADVEHS, SELF, sw_LC7350_86) {
+										6:      sw_LC73500_livery;
+										4:      sw_LC73520_livery;
+										2:      sw_LC73522_livery;
+																						}
+		random_switch(FEAT_ROADVEHS, SELF, sw_LC735_87) {
+										9:      sw_LC73520_livery;
+										3:      sw_LC73522_livery;
+																						}
+		random_switch(FEAT_ROADVEHS, SELF, sw_LC735_88) {
+										6:      sw_LC73520_livery;
+										6:      sw_LC73540_livery;
+																						}
+																	  
+		switch(FEAT_ROADVEHS, SELF, sw_LC735MAIN_yearbased, build_year) {
+										1978..1981:      	sw_LC735_prototype;
+										1982..1985:    	    sw_LC73500_livery;
+										1986:           	sw_LC7350_86;
+										1987:      			sw_LC735_87;
+										1988:      			sw_LC735_88;
+										1989..1990:  		sw_LC73540_livery;
+										1991..2100:         sw_LC7351011_livery;
+																	}
+		random_switch(FEAT_ROADVEHS, SELF, sw_LC7350_86pow) {
+										6:      20;
+										4:      21;
+										2:      21;
+																	}																														  
+switch(FEAT_ROADVEHS, SELF, sw_LC735cost, build_year) {
+										1970..1980:      		192;
+										1981..1986:		      	190;
+										1987..1990:		      	192;									
+										1991:		 	     	198;
+										1992..1994:		      	204;
+										1995..2100:		      	208;
+										}
+// running_costs
+switch(FEAT_ROADVEHS, SELF, sw_LC735runcost, build_year) {
+										1970..1986:      		76;
+										1987..1992:		      	75;
+										1993..2100:		      	77;
+										}
+		switch(FEAT_ROADVEHS, SELF, sw_LC735_power, build_year) {
+										1978..1985:      	20;
+										1984..1986:    	    sw_LC7350_86pow;
+										1987..1989:  		21;
+										1990..2100:  		25;
+																	}																	  
+		switch(FEAT_ROADVEHS, SELF, sw_LC73500_TEXT, cargo_subtype) 					{
+										0: return string(STR_NAME_LC7350_1);
+										1: return string(STR_NAME_LC7350_2);
+										2: return string(STR_NAME_LC7350_3);	
+										3: return string(STR_NAME_LC7350_4);
+										4: return string(STR_NAME_LC7350_5);
+										5: return string(STR_NAME_LC7350_6);
+										6: return string(STR_NAME_LC7350_7);
+										7: return string(STR_NAME_LC7350_8);
+										8: return string(STR_NAME_LC7350_9);
+										9: return string(STR_NAME_LC7350_10);
+										10: return string(STR_NAME_LC7350_11);
+										11: return string(STR_NAME_LC7350_12);
+										12: return string(STR_NAME_LC7350_13);
+										13: return string(STR_NAME_LC7350_14);
+										14: return string(STR_NAME_LC7350_15);
+										15: return string(STR_NAME_LC7350_16);
+										16: return string(STR_NAME_LC7350_17);
+										17: return string(STR_NAME_LC7350_18);
+										18: return string(STR_NAME_LC7350_19);
+										19: return string(STR_NAME_LC7350_20);
+										20: return string(STR_NAME_LC7350_21);
+										21: return string(STR_NAME_LC7350_22);
+										22: return string(STR_NAME_LC7350_23);
+										23: return string(STR_NAME_LC7350_24);
+										24: return string(STR_NAME_LC7350_25);
+										25: return string(STR_NAME_LC7350_26);
+										26: return string(STR_NAME_LC7350_27);
+										27: return string(STR_NAME_LC7350_28);
+										28: return string(STR_NAME_LC7350_29);
+										29: return string(STR_NAME_LC7350_30);
+										30: return string(STR_NAME_LC7350_31);
+										31: return string(STR_NAME_LC7350_32);
+										32: return string(STR_NAME_LC7350_33);
+										33: return string(STR_NAME_LC7350_34);
+										34: return string(STR_NAME_LC7350_35);
+										35: return string(STR_NAME_LC7350_36);
+										36: return string(STR_NAME_LC7350_37);
+										37: return string(STR_NAME_LC7350_38);
+										38: return string(STR_NAME_LC7350_39);
+										39: return string(STR_NAME_LC7350_40);
+										40: return string(STR_NAME_LC7350_41);
+										41: return string(STR_NAME_LC7350_42);
+										42: return string(STR_NAME_LC7350_43);
+										43: return string(STR_NAME_LC7350_44);
+										44: return string(STR_NAME_LC7350_45);
+										45: return string(STR_NAME_LC7350_46);
+										46: return string(STR_NAME_LC7350_47);
+										47: return string(STR_NAME_LC7350_48);
+										48: return string(STR_NAME_LC7350_49);
+										49: return string(STR_NAME_LC7350_50);
+										50: return string(STR_NAME_LC7350_51);								
+										return CB_RESULT_NO_TEXT;
+										}
+		switch(FEAT_ROADVEHS, SELF, sw_LC73520_TEXT, cargo_subtype) 					{
+										0: return string(STR_NAME_LC7352_1);
+										1: return string(STR_NAME_LC7352_2);
+										2: return string(STR_NAME_LC7352_3);	
+										3: return string(STR_NAME_LC7352_4);
+										4: return string(STR_NAME_LC7352_5);
+										5: return string(STR_NAME_LC7352_6);
+										6: return string(STR_NAME_LC7352_7);
+										7: return string(STR_NAME_LC7352_8);
+										8: return string(STR_NAME_LC7352_9);
+										9: return string(STR_NAME_LC7352_10);
+										10: return string(STR_NAME_LC7352_11);
+										11: return string(STR_NAME_LC7352_12);
+										12: return string(STR_NAME_LC7352_13);
+										13: return string(STR_NAME_LC7352_14);
+										14: return string(STR_NAME_LC7352_15);
+										15: return string(STR_NAME_LC7352_16);
+										16: return string(STR_NAME_LC7352_17);
+										17: return string(STR_NAME_LC7352_18);
+										18: return string(STR_NAME_LC7352_19);
+										19: return string(STR_NAME_LC7352_20);
+										20: return string(STR_NAME_LC7352_21);
+										21: return string(STR_NAME_LC7352_22);
+										22: return string(STR_NAME_LC7352_23);
+										23: return string(STR_NAME_LC7352_24);
+										24: return string(STR_NAME_LC7352_25);
+										25: return string(STR_NAME_LC7352_26);
+										26: return string(STR_NAME_LC7352_27);
+										27: return string(STR_NAME_LC7352_28);
+										28: return string(STR_NAME_LC7352_29);
+										29: return string(STR_NAME_LC7352_30);
+										30: return string(STR_NAME_LC7352_31);
+										31: return string(STR_NAME_LC7352_32);
+										32: return string(STR_NAME_LC7352_33);
+										33: return string(STR_NAME_LC7352_34);
+										34: return string(STR_NAME_LC7352_35);
+										35: return string(STR_NAME_LC7352_36);
+										36: return string(STR_NAME_LC7352_37);
+										37: return string(STR_NAME_LC7352_38);
+										38: return string(STR_NAME_LC7352_39);
+										39: return string(STR_NAME_LC7352_40);
+										40: return string(STR_NAME_LC7352_41);
+										41: return string(STR_NAME_LC7352_42);
+										42: return string(STR_NAME_LC7352_43);
+										43: return string(STR_NAME_LC7352_44);
+										44: return string(STR_NAME_LC7352_45);
+										45: return string(STR_NAME_LC7352_46);
+										46: return string(STR_NAME_LC7352_47);
+										47: return string(STR_NAME_LC7352_48);
+										48: return string(STR_NAME_LC7352_49);
+										49: return string(STR_NAME_LC7352_50);
+										50: return string(STR_NAME_LC7352_51);
+										51: return string(STR_NAME_LC7352_52);
+										52: return string(STR_NAME_LC7352_53);
+										53: return string(STR_NAME_LC7352_54);
+										54: return string(STR_NAME_LC7352_55);
+										55: return string(STR_NAME_LC7352_56);
+										56: return string(STR_NAME_LC7352_57);
+										57: return string(STR_NAME_LC7352_58);
+										58: return string(STR_NAME_LC7352_59);
+										59: return string(STR_NAME_LC7352_60);
+										60: return string(STR_NAME_LC7352_61);
+										61: return string(STR_NAME_LC7352_62);
+										62: return string(STR_NAME_LC7352_63);
+										63: return string(STR_NAME_LC7352_64);
+										64: return string(STR_NAME_LC7352_65);
+										65: return string(STR_NAME_LC7352_66);
+										66: return string(STR_NAME_LC7352_67);
+										67: return string(STR_NAME_LC7352_68);
+										68: return string(STR_NAME_LC7352_69);										
+										return CB_RESULT_NO_TEXT;
+										}
+
+		switch(FEAT_ROADVEHS, SELF, sw_LC73522_TEXT, cargo_subtype) 					{										
+										0: return string(STR_NAME_LC7352_101);
+										1: return string(STR_NAME_LC7352_102);
+										2: return string(STR_NAME_LC7352_103);	
+										3: return string(STR_NAME_LC7352_104);
+										4: return string(STR_NAME_LC7352_105);
+										5: return string(STR_NAME_LC7352_106);
+										6: return string(STR_NAME_LC7352_107);
+										7: return string(STR_NAME_LC7352_108);
+										8: return string(STR_NAME_LC7352_109);
+										9: return string(STR_NAME_LC7352_110);
+										10: return string(STR_NAME_LC7352_111);
+										11: return string(STR_NAME_LC7352_112);
+										12: return string(STR_NAME_LC7352_113);
+										13: return string(STR_NAME_LC7352_114);
+										14: return string(STR_NAME_LC7352_115);
+										15: return string(STR_NAME_LC7352_116);
+										16: return string(STR_NAME_LC7352_117);
+										17: return string(STR_NAME_LC7352_118);
+										18: return string(STR_NAME_LC7352_119);
+										19: return string(STR_NAME_LC7352_120);
+										20: return string(STR_NAME_LC7352_121);
+										21: return string(STR_NAME_LC7352_122);
+										22: return string(STR_NAME_LC7352_123);
+										23: return string(STR_NAME_LC7352_124);
+										24: return string(STR_NAME_LC7352_125);
+										25: return string(STR_NAME_LC7352_126);
+										26: return string(STR_NAME_LC7352_127);
+										27: return string(STR_NAME_LC7352_128);
+										28: return string(STR_NAME_LC7352_129);
+										29: return string(STR_NAME_LC7352_130);
+										30: return string(STR_NAME_LC7352_131);
+										31: return string(STR_NAME_LC7352_132);
+										32: return string(STR_NAME_LC7352_133);
+										33: return string(STR_NAME_LC7352_134);
+										34: return string(STR_NAME_LC7352_135);
+										35: return string(STR_NAME_LC7352_136);
+										36: return string(STR_NAME_LC7352_137);
+										37: return string(STR_NAME_LC7352_138);
+										38: return string(STR_NAME_LC7352_139);
+										39: return string(STR_NAME_LC7352_140);
+										40: return string(STR_NAME_LC7352_141);
+										41: return string(STR_NAME_LC7352_142);
+										42: return string(STR_NAME_LC7352_143);
+										43: return string(STR_NAME_LC7352_144);
+										44: return string(STR_NAME_LC7352_145);
+										45: return string(STR_NAME_LC7352_146);
+										46: return string(STR_NAME_LC7352_147);
+										47: return string(STR_NAME_LC7352_148);
+										48: return string(STR_NAME_LC7352_149);
+										49: return string(STR_NAME_LC7352_150);
+										50: return string(STR_NAME_LC7352_151);
+										51: return string(STR_NAME_LC7352_152);
+										52: return string(STR_NAME_LC7352_153);
+										53: return string(STR_NAME_LC7352_154);
+										54: return string(STR_NAME_LC7352_155);
+										55: return string(STR_NAME_LC7352_156);
+										56: return string(STR_NAME_LC7352_157);
+										57: return string(STR_NAME_LC7352_158);
+										58: return string(STR_NAME_LC7352_159);
+										59: return string(STR_NAME_LC7352_160);
+										60: return string(STR_NAME_LC7352_161);
+										61: return string(STR_NAME_LC7352_162);
+										62: return string(STR_NAME_LC7352_163);
+										63: return string(STR_NAME_LC7352_164);
+										64: return string(STR_NAME_LC7352_165);
+										65: return string(STR_NAME_LC7352_166);
+										66: return string(STR_NAME_LC7352_167);
+										67: return string(STR_NAME_LC7352_168);
+										68: return string(STR_NAME_LC7352_169);
+										return CB_RESULT_NO_TEXT;
+										}
+		switch(FEAT_ROADVEHS, SELF, sw_LC73540_TEXT, cargo_subtype) 					{										
+										0: return string(STR_NAME_LC7352_201);
+										1: return string(STR_NAME_LC7352_202);
+										2: return string(STR_NAME_LC7352_203);	
+										3: return string(STR_NAME_LC7352_204);
+										4: return string(STR_NAME_LC7352_205);
+										5: return string(STR_NAME_LC7352_206);
+										6: return string(STR_NAME_LC7352_207);
+										7: return string(STR_NAME_LC7352_208);
+										8: return string(STR_NAME_LC7352_209);
+										9: return string(STR_NAME_LC7352_210);
+										10: return string(STR_NAME_LC7352_211);
+										11: return string(STR_NAME_LC7352_212);
+										12: return string(STR_NAME_LC7352_213);
+										13: return string(STR_NAME_LC7352_214);
+										14: return string(STR_NAME_LC7352_215);
+										15: return string(STR_NAME_LC7352_216);
+										16: return string(STR_NAME_LC7352_217);
+										17: return string(STR_NAME_LC7352_218);
+										18: return string(STR_NAME_LC7352_219);
+										19: return string(STR_NAME_LC7352_220);
+										20: return string(STR_NAME_LC7352_221);
+										21: return string(STR_NAME_LC7352_222);
+										22: return string(STR_NAME_LC7352_223);
+										23: return string(STR_NAME_LC7352_224);
+										24: return string(STR_NAME_LC7352_225);
+										25: return string(STR_NAME_LC7352_226);
+										26: return string(STR_NAME_LC7352_227);
+										27: return string(STR_NAME_LC7352_228);
+										28: return string(STR_NAME_LC7352_229);
+										29: return string(STR_NAME_LC7352_230);
+										30: return string(STR_NAME_LC7352_231);
+										31: return string(STR_NAME_LC7352_232);
+										32: return string(STR_NAME_LC7352_233);
+										33: return string(STR_NAME_LC7352_234);
+										34: return string(STR_NAME_LC7352_235);
+										35: return string(STR_NAME_LC7352_236);
+										36: return string(STR_NAME_LC7352_237);
+										37: return string(STR_NAME_LC7352_238);
+										38: return string(STR_NAME_LC7352_239);
+										39: return string(STR_NAME_LC7352_240);
+										40: return string(STR_NAME_LC7352_241);
+										41: return string(STR_NAME_LC7352_242);
+										42: return string(STR_NAME_LC7352_243);
+										43: return string(STR_NAME_LC7352_244);
+										44: return string(STR_NAME_LC7352_245);
+										45: return string(STR_NAME_LC7352_246);
+										46: return string(STR_NAME_LC7352_247);
+										47: return string(STR_NAME_LC7352_248);
+										48: return string(STR_NAME_LC7352_249);
+										49: return string(STR_NAME_LC7352_250);
+										50: return string(STR_NAME_LC7352_251);
+										51: return string(STR_NAME_LC7352_252);
+										52: return string(STR_NAME_LC7352_253);
+										53: return string(STR_NAME_LC7352_254);
+										54: return string(STR_NAME_LC7352_255);
+										55: return string(STR_NAME_LC7352_256);
+										56: return string(STR_NAME_LC7352_257);
+										57: return string(STR_NAME_LC7352_258);
+										58: return string(STR_NAME_LC7352_259);
+										59: return string(STR_NAME_LC7352_260);
+										60: return string(STR_NAME_LC7352_261);
+										61: return string(STR_NAME_LC7352_262);
+										62: return string(STR_NAME_LC7352_263);
+										63: return string(STR_NAME_LC7352_264);
+										64: return string(STR_NAME_LC7352_265);
+										65: return string(STR_NAME_LC7352_266);
+										66: return string(STR_NAME_LC7352_267);
+										67: return string(STR_NAME_LC7352_268);
+										68: return string(STR_NAME_LC7352_269);							
+										return CB_RESULT_NO_TEXT;
+										}										
+		switch(FEAT_ROADVEHS, SELF, sw_LC7351011_TEXT, cargo_subtype) 					{										
+										0: return string(STR_NAME_LC7352_301);
+										1: return string(STR_NAME_LC7352_302);
+										2: return string(STR_NAME_LC7352_303);	
+										3: return string(STR_NAME_LC7352_304);
+										4: return string(STR_NAME_LC7352_305);
+										5: return string(STR_NAME_LC7352_306);
+										6: return string(STR_NAME_LC7352_307);
+										7: return string(STR_NAME_LC7352_308);
+										8: return string(STR_NAME_LC7352_309);
+										9: return string(STR_NAME_LC7352_310);
+										10: return string(STR_NAME_LC7352_311);
+										11: return string(STR_NAME_LC7352_312);
+										12: return string(STR_NAME_LC7352_313);
+										13: return string(STR_NAME_LC7352_314);
+										14: return string(STR_NAME_LC7352_315);
+										15: return string(STR_NAME_LC7352_316);
+										16: return string(STR_NAME_LC7352_317);
+										17: return string(STR_NAME_LC7352_318);
+										18: return string(STR_NAME_LC7352_319);
+										19: return string(STR_NAME_LC7352_320);
+										20: return string(STR_NAME_LC7352_321);
+										21: return string(STR_NAME_LC7352_322);
+										22: return string(STR_NAME_LC7352_323);
+										23: return string(STR_NAME_LC7352_324);
+										24: return string(STR_NAME_LC7352_325);
+										25: return string(STR_NAME_LC7352_326);
+										26: return string(STR_NAME_LC7352_327);
+										27: return string(STR_NAME_LC7352_328);
+										28: return string(STR_NAME_LC7352_329);
+										29: return string(STR_NAME_LC7352_330);
+										30: return string(STR_NAME_LC7352_331);
+										31: return string(STR_NAME_LC7352_332);
+										32: return string(STR_NAME_LC7352_333);
+										33: return string(STR_NAME_LC7352_334);
+										34: return string(STR_NAME_LC7352_335);
+										35: return string(STR_NAME_LC7352_336);
+										36: return string(STR_NAME_LC7352_337);
+										37: return string(STR_NAME_LC7352_338);
+										38: return string(STR_NAME_LC7352_339);
+										39: return string(STR_NAME_LC7352_340);
+										40: return string(STR_NAME_LC7352_341);
+										41: return string(STR_NAME_LC7352_342);
+										42: return string(STR_NAME_LC7352_343);
+										43: return string(STR_NAME_LC7352_344);
+										44: return string(STR_NAME_LC7352_345);
+										45: return string(STR_NAME_LC7352_346);
+										46: return string(STR_NAME_LC7352_347);
+										47: return string(STR_NAME_LC7352_348);
+										48: return string(STR_NAME_LC7352_349);
+										49: return string(STR_NAME_LC7352_350);
+										50: return string(STR_NAME_LC7352_351);
+										51: return string(STR_NAME_LC7352_352);
+										52: return string(STR_NAME_LC7352_353);
+										53: return string(STR_NAME_LC7352_354);
+										54: return string(STR_NAME_LC7352_355);
+										55: return string(STR_NAME_LC7352_356);
+										56: return string(STR_NAME_LC7352_357);
+										57: return string(STR_NAME_LC7352_358);
+										58: return string(STR_NAME_LC7352_359);
+										59: return string(STR_NAME_LC7352_360);
+										60: return string(STR_NAME_LC7352_361);
+										61: return string(STR_NAME_LC7352_362);
+										62: return string(STR_NAME_LC7352_363);
+										63: return string(STR_NAME_LC7352_364);
+										64: return string(STR_NAME_LC7352_365);
+										65: return string(STR_NAME_LC7352_366);
+										66: return string(STR_NAME_LC7352_367);
+										67: return string(STR_NAME_LC7352_368);
+										68: return string(STR_NAME_LC7352_369);
+										return CB_RESULT_NO_TEXT;
+										}	
+										
+		random_switch(FEAT_ROADVEHS, SELF, sw_LC735_prototype_TEXT) {
+										6:      return string(STR_NAME_C7350);
+										6:      sw_LC73500_TEXT;
+																						}
+		random_switch(FEAT_ROADVEHS, SELF, sw_LC735_86_TEXT) {
+										6:      sw_LC73500_TEXT;
+										4:      sw_LC73520_TEXT;
+										2:      sw_LC73522_TEXT;
+																						}
+		random_switch(FEAT_ROADVEHS, SELF, sw_LC735_87_TEXT) {
+										9:      sw_LC73520_TEXT;
+										3:      sw_LC73522_TEXT;
+																						}
+		random_switch(FEAT_ROADVEHS, SELF, sw_LC735_88_TEXT) {
+										6:      sw_LC73520_TEXT;
+										6:      sw_LC73540_TEXT;
+																						}
+
+		switch(FEAT_ROADVEHS, SELF, sw_LC735MAIN_TEXT, build_year) {
+										1978..1981:      	sw_LC735_prototype_TEXT;
+										1982..1985:    	    sw_LC73500_TEXT;
+										1986:           	sw_LC735_86_TEXT;
+										1987:      			sw_LC735_87_TEXT;
+										1988:      			sw_LC735_88_TEXT;
+										1989..1990:  		sw_LC73540_TEXT;
+										1991..2100:         sw_LC7351011_TEXT;
+																	}
+
+  // LC736
+		switch(FEAT_ROADVEHS, SELF, sw_LC7360_yearbased, build_year) 	{
+										1980..1984:     LC7360_7;
+										1985:      		LC7360_0;
+										1986:           LC7360_1;
+																		}
+
+		switch(FEAT_ROADVEHS, SELF, sw_LC73600_livery, cargo_subtype) {
+										0:      sw_LC7360_yearbased;
+										1:      LC7360_0;
+										2:      LC7360_1;
+										3:      LC7360_2;
+										4:      LC7360_3;
+										5:      LC7360_4;
+										6:      LC7360_5;
+										7:      LC7360_6;
+										8:      LC7360_7;
+										9:      LC7360_8;
+										10:      LC7360_9;
+										11:      LC7360_10;
+										12:      LC7360_11;
+										13:      LC7360_12;
+										14:      LC7360_13;
+										15:      LC7360_14;
+										16:      LC7360_15;
+										17:      LC7360_16;
+										18:      LC7360_17;
+										19:      LC7360_18;
+										20:      LC7360_19;
+										21:      LC7360_20;
+										22:      LC7360_21;
+										23:      LC7360_22;
+										24:      LC7360_23;
+										25:      LC7360_24;
+										26:      LC7360_25;
+										27:      LC7360_26;
+										28:      LC7360_27;
+										29:      LC7360_28;
+										30:      LC7360_29;
+										31:      LC7360_30;
+										32:      LC7360_31;
+										33:      LC7360_32;
+										34:      LC7360_33;
+										35:      LC7360_34;
+										36:      LC7360_35;
+									}
+		switch(FEAT_ROADVEHS, SELF, sw_LC73602_livery, cargo_subtype) {
+										0:      LC7360_4;
+										1:      LC7360_0;
+										2:      LC7360_1;
+										3:      LC7360_2;
+										4:      LC7360_3;
+										5:      LC7360_4;
+										6:      LC7360_5;
+										7:      LC7360_6;
+										8:      LC7360_7;
+										9:      LC7360_8;
+										10:      LC7360_9;
+										11:      LC7360_10;
+										12:      LC7360_11;
+										13:      LC7360_12;
+										14:      LC7360_13;
+										15:      LC7360_14;
+										16:      LC7360_15;
+										17:      LC7360_16;
+										18:      LC7360_17;
+										19:      LC7360_18;
+										20:      LC7360_19;
+										21:      LC7360_20;
+										22:      LC7360_21;
+										23:      LC7360_22;
+										24:      LC7360_23;
+										25:      LC7360_24;
+										26:      LC7360_25;
+										27:      LC7360_26;
+										28:      LC7360_27;
+										29:      LC7360_28;
+										30:      LC7360_29;
+										31:      LC7360_30;
+										32:      LC7360_31;
+										33:      LC7360_32;
+										34:      LC7360_33;
+										35:      LC7360_34;
+										36:      LC7360_35;
+									}
+		random_switch(FEAT_ROADVEHS, SELF, sw_LC7362_87ch) {
+										7:     LC7362_1;
+										2:      LC7362_60;
+										2:      LC7362_5;
+										1: 		LC7362_61;
+																						}
+		random_switch(FEAT_ROADVEHS, SELF, sw_LC7362_88ch) {
+										10:     LC7362_1;
+										2:      LC7362_5;
+																						}
+		switch(FEAT_ROADVEHS, SELF, sw_LC7362_yearbased, build_year) 	{
+										1987:           sw_LC7362_87ch;
+										1988:      		sw_LC7362_88ch;
+																		}
+
+		switch(FEAT_ROADVEHS, SELF, sw_LC73620_livery, cargo_subtype) {
+										0:      sw_LC7362_yearbased;
+										1:      LC7362_0;
+										2:      LC7362_1;
+										3:      LC7362_2;
+										4:      LC7362_3;
+										5:      LC7362_4;
+										6:      LC7362_5;
+										7:      LC7362_6;
+										8:      LC7362_7;
+										9:      LC7362_8;
+										10:      LC7362_9;
+										11:      LC7362_10;
+										12:      LC7362_11;
+										13:      LC7362_12;
+										14:      LC7362_13;
+										15:      LC7362_14;
+										16:      LC7362_15;
+										17:      LC7362_16;
+										18:      LC7362_17;
+										19:      LC7362_18;
+										20:      LC7362_19;
+										21:      LC7362_20;
+										22:      LC7362_21;
+										23:      LC7362_22;
+										24:      LC7362_23;
+										25:      LC7362_24;
+										26:      LC7362_25;
+										27:      LC7362_26;
+										28:      LC7362_27;
+										29:      LC7362_28;
+										30:      LC7362_29;
+										31:      LC7362_30;
+										32:      LC7362_31;
+										33:      LC7362_32;
+										34:      LC7362_33;
+										35:      LC7362_34;
+										36:      LC7362_35;
+										37:      LC7362_36;
+										38:      LC7362_37;
+										39:      LC7362_38;
+										40:      LC7362_39;
+										41:      LC7362_40;
+										42:      LC7362_41;
+										43:      LC7362_42;
+										44:      LC7362_43;
+										45:      LC7362_44;
+										46:      LC7362_45;
+										47:      LC7362_46;
+										48:      LC7362_47;
+										49:      LC7362_48;
+										50:      LC7362_49;
+										51:      LC7362_50;
+										52:      LC7362_51;
+										53:      LC7362_52;
+										54:      LC7362_53;
+										55:      LC7362_54;
+										56:      LC7362_55;
+										57:      LC7362_56;
+										58:      LC7362_57;
+										59:      LC7362_58;
+										60:      LC7362_59;
+									}
+		switch(FEAT_ROADVEHS, SELF, sw_LC73621_livery, cargo_subtype) {
+										0:      LC7362_2;
+										1:      LC7362_0;
+										2:      LC7362_1;
+										3:      LC7362_2;
+										4:      LC7362_3;
+										5:      LC7362_4;
+										6:      LC7362_5;
+										7:      LC7362_6;
+										8:      LC7362_7;
+										9:      LC7362_8;
+										10:      LC7362_9;
+										11:      LC7362_10;
+										12:      LC7362_11;
+										13:      LC7362_12;
+										14:      LC7362_13;
+										15:      LC7362_14;
+										16:      LC7362_15;
+										17:      LC7362_16;
+										18:      LC7362_17;
+										19:      LC7362_18;
+										20:      LC7362_19;
+										21:      LC7362_20;
+										22:      LC7362_21;
+										23:      LC7362_22;
+										24:      LC7362_23;
+										25:      LC7362_24;
+										26:      LC7362_25;
+										27:      LC7362_26;
+										28:      LC7362_27;
+										29:      LC7362_28;
+										30:      LC7362_29;
+										31:      LC7362_30;
+										32:      LC7362_31;
+										33:      LC7362_32;
+										34:      LC7362_33;
+										35:      LC7362_34;
+										36:      LC7362_35;
+										37:      LC7362_36;
+										38:      LC7362_37;
+										39:      LC7362_38;
+										40:      LC7362_39;
+										41:      LC7362_40;
+										42:      LC7362_41;
+										43:      LC7362_42;
+										44:      LC7362_43;
+										45:      LC7362_44;
+										46:      LC7362_45;
+										47:      LC7362_46;
+										48:      LC7362_47;
+										49:      LC7362_48;
+										50:      LC7362_49;
+										51:      LC7362_50;
+										52:      LC7362_51;
+										53:      LC7362_52;
+										54:      LC7362_53;
+										55:      LC7362_54;
+										56:      LC7362_55;
+										57:      LC7362_56;
+										58:      LC7362_57;
+										59:      LC7362_58;
+										60:      LC7362_59;
+									}
+		random_switch(FEAT_ROADVEHS, SELF, sw_LC7362_89ch) {
+										10:     LC7362_0;
+										2:      LC7362_5;
+																						}
+		random_switch(FEAT_ROADVEHS, SELF, sw_LC7362_90ch) {
+										10:     LC7362_0;
+										2:      LC7362_5;
+																						}
+		switch(FEAT_ROADVEHS, SELF, sw_LC7364_yearbased, build_year) 	{
+										1989:           sw_LC7362_89ch;
+										1990:      		sw_LC7362_90ch;
+																		}
+		switch(FEAT_ROADVEHS, SELF, sw_LC73640_livery, cargo_subtype) {
+										0:      sw_LC7364_yearbased;
+										1:      LC7362_0;
+										2:      LC7362_1;
+										3:      LC7362_2;
+										4:      LC7362_3;
+										5:      LC7362_4;
+										6:      LC7362_5;
+										7:      LC7362_6;
+										8:      LC7362_7;
+										9:      LC7362_8;
+										10:      LC7362_9;
+										11:      LC7362_10;
+										12:      LC7362_11;
+										13:      LC7362_12;
+										14:      LC7362_13;
+										15:      LC7362_14;
+										16:      LC7362_15;
+										17:      LC7362_16;
+										18:      LC7362_17;
+										19:      LC7362_18;
+										20:      LC7362_19;
+										21:      LC7362_20;
+										22:      LC7362_21;
+										23:      LC7362_22;
+										24:      LC7362_23;
+										25:      LC7362_24;
+										26:      LC7362_25;
+										27:      LC7362_26;
+										28:      LC7362_27;
+										29:      LC7362_28;
+										30:      LC7362_29;
+										31:      LC7362_30;
+										32:      LC7362_31;
+										33:      LC7362_32;
+										34:      LC7362_33;
+										35:      LC7362_34;
+										36:      LC7362_35;
+										37:      LC7362_36;
+										38:      LC7362_37;
+										39:      LC7362_38;
+										40:      LC7362_39;
+										41:      LC7362_40;
+										42:      LC7362_41;
+										43:      LC7362_42;
+										44:      LC7362_43;
+										45:      LC7362_44;
+										46:      LC7362_45;
+										47:      LC7362_46;
+										48:      LC7362_47;
+										49:      LC7362_48;
+										50:      LC7362_49;
+										51:      LC7362_50;
+										52:      LC7362_51;
+										53:      LC7362_52;
+										54:      LC7362_53;
+										55:      LC7362_54;
+										56:      LC7362_55;
+										57:      LC7362_56;
+										58:      LC7362_57;
+										59:      LC7362_58;
+										60:      LC7362_59;
+									}
+		switch(FEAT_ROADVEHS, SELF, sw_LC73641_livery, cargo_subtype) {
+										0:      LC7362_2;
+										1:      LC7362_0;
+										2:      LC7362_1;
+										3:      LC7362_2;
+										4:      LC7362_3;
+										5:      LC7362_4;
+										6:      LC7362_5;
+										7:      LC7362_6;
+										8:      LC7362_7;
+										9:      LC7362_8;
+										10:      LC7362_9;
+										11:      LC7362_10;
+										12:      LC7362_11;
+										13:      LC7362_12;
+										14:      LC7362_13;
+										15:      LC7362_14;
+										16:      LC7362_15;
+										17:      LC7362_16;
+										18:      LC7362_17;
+										19:      LC7362_18;
+										20:      LC7362_19;
+										21:      LC7362_20;
+										22:      LC7362_21;
+										23:      LC7362_22;
+										24:      LC7362_23;
+										25:      LC7362_24;
+										26:      LC7362_25;
+										27:      LC7362_26;
+										28:      LC7362_27;
+										29:      LC7362_28;
+										30:      LC7362_29;
+										31:      LC7362_30;
+										32:      LC7362_31;
+										33:      LC7362_32;
+										34:      LC7362_33;
+										35:      LC7362_34;
+										36:      LC7362_35;
+										37:      LC7362_36;
+										38:      LC7362_37;
+										39:      LC7362_38;
+										40:      LC7362_39;
+										41:      LC7362_40;
+										42:      LC7362_41;
+										43:      LC7362_42;
+										44:      LC7362_43;
+										45:      LC7362_44;
+										46:      LC7362_45;
+										47:      LC7362_46;
+										48:      LC7362_47;
+										49:      LC7362_48;
+										50:      LC7362_49;
+										51:      LC7362_50;
+										52:      LC7362_51;
+										53:      LC7362_52;
+										54:      LC7362_53;
+										55:      LC7362_54;
+										56:      LC7362_55;
+										57:      LC7362_56;
+										58:      LC7362_57;
+										59:      LC7362_58;
+										60:      LC7362_59;
+									}
+		switch(FEAT_ROADVEHS, SELF, sw_LC7361014_livery, cargo_subtype) {
+										0:      LC7362_5;
+										1:      LC7362_5;
+										2:      LC7362_6;
+										3:      LC7362_7;
+										4:      LC7362_8;
+										5:      LC7362_9;
+										6:      LC7362_10;
+										7:      LC7362_11;
+										8:      LC7362_12;
+										9:      LC7362_21;
+										10:      LC7362_22;
+										11:      LC7362_23;
+										12:      LC7362_24;
+										13:      LC7362_25;
+										14:      LC7362_26;
+										15:      LC7362_29;
+										16:      LC7362_30;
+										17:      LC7362_35;
+										18:      LC7362_36;
+										19:      LC7362_37;
+										20:      LC7362_38;
+										21:      LC7362_39;
+										22:      LC7362_40;
+										23:      LC7362_41;
+										24:      LC7362_42;
+										25:      LC7362_43;
+										26:      LC7362_44;
+										27:      LC7362_45;
+										28:      LC7362_46;
+										29:      LC7362_47;
+										30:      LC7362_48;
+										31:      LC7362_49;
+										32:      LC7362_50;
+										33:      LC7362_51;
+										34:      LC7362_52;
+										35:      LC7362_53;
+										36:      LC7362_54;
+										37:      LC7362_55;
+										38:      LC7362_56;
+										39:      LC7362_57;
+										40:      LC7362_58;
+										41:      LC7362_59;
+									}
+		switch(FEAT_ROADVEHS, SELF, sw_LC7361014s_livery, cargo_subtype) {
+										0:      LC7361014_0;
+										1:      LC7361014_0;
+										2:      LC7361014_1;
+										3:      LC7361014_2;
+										4:      LC7361014_3;
+										5:      LC7361014_4;
+										6:      LC7361014_5;
+										7:      LC7361014_6;
+										8:      LC7361014_7;
+										9:      LC7361014_8;
+										10:      LC7361014_9;
+										11:      LC7361014_10;
+										12:      LC7361014_11;
+										13:      LC7361014_12;
+										14:      LC7361014_13;
+										15:      LC7361014_14;
+										16:      LC7361014_15;
+										17:      LC7361014_16;
+										18:      LC7361014_17;
+										19:      LC7361014_18;
+										20:      LC7361014_19;
+										21:      LC7361014_20;
+										22:      LC7361014_21;
+										23:      LC7361014_22;
+										24:      LC7361014_23;
+										25:      LC7361014_24;
+										26:      LC7361014_25;
+										27:      LC7361014_26;
+										28:      LC7361014_27;
+										29:      LC7361014_28;
+										30:      LC7361014_29;
+										31:      LC7361014_30;
+										32:      LC7361014_31;
+										33:      LC7361014_32;
+										34:      LC7361014_33;
+										35:      LC7361014_34;
+										36:      LC7361014_35;
+										37:      LC7361014_36;
+										38:      LC7361014_37;
+										39:      LC7361014_38;
+										40:      LC7361014_39;
+										41:      LC7361014_40;
+										42:      LC7361014_41;
+										43:      LC7361014_42;
+										44:      LC7361014_43;
+									}
+		switch(FEAT_ROADVEHS, SELF, sw_LC7361022k_yearbased, build_year) 	{
+										1992:           LC7361022K_9;
+										1993:      		LC7361022K_2;
+										1994:      		LC7361022K_2;
+																		}
+
+		switch(FEAT_ROADVEHS, SELF, sw_LC7361022k_livery, cargo_subtype) {
+										0:      sw_LC7361022k_yearbased;
+										1:      LC7361022K_0;
+										2:      LC7361022K_1;
+										3:      LC7361022K_2;
+										4:      LC7361022K_3;
+										5:      LC7361022K_4;
+										6:      LC7361022K_5;
+										7:      LC7361022K_6;
+										8:      LC7361022K_7;
+										9:      LC7361022K_8;
+										10:      LC7361022K_9;
+										11:      LC7361022K_10;
+										12:      LC7361022K_11;
+										13:      LC7361022K_12;
+										14:      LC7361022K_13;
+										15:      LC7361022K_14;
+										16:      LC7361022K_15;
+										17:      LC7361022K_16;
+										18:      LC7361022K_17;
+										19:      LC7361022K_18;
+										20:      LC7361022K_19;
+										21:      LC7361022K_20;
+										22:      LC7361022K_21;
+										23:      LC7361022K_22;
+										24:      LC7361022K_23;
+										25:      LC7361022K_24;
+										26:      LC7361022K_25;
+										27:      LC7361022K_26;
+										28:      LC7361022K_27;
+										29:      LC7361022K_28;
+										30:      LC7361022K_29;
+										31:      LC7361022K_30;
+										32:      LC7361022K_31;
+										33:      LC7361022K_32;
+										34:      LC7361022K_33;
+										35:      LC7361022K_34;
+//										36:      LC7361022K_35;
+									}
+		switch(FEAT_ROADVEHS, SELF, sw_LC7361024_livery, cargo_subtype) {
+										0:      LC7361024_0;
+										1:      LC7361024_0;
+										2:      LC7361024_1;
+										3:      LC7361024_2;
+										4:      LC7361024_3;
+										5:      LC7361024_4;
+										6:      LC7361024_5;
+										7:      LC7361024_6;
+										8:      LC7361024_7;
+										9:      LC7361024_8;
+										10:      LC7361024_9;
+										11:      LC7361024_10;
+										12:      LC7361024_11;
+										13:      LC7361024_12;
+										14:      LC7361024_13;
+										15:      LC7361024_14;
+										16:      LC7361024_15;
+										17:      LC7361024_16;
+										18:      LC7361024_17;
+										19:      LC7361024_18;
+										20:      LC7361024_19;
+										21:      LC7361024_20;
+										22:      LC7361024_21;
+										23:      LC7361024_22;
+										24:      LC7361024_23;
+										25:      LC7361024_24;
+										26:      LC7361024_25;
+										27:      LC7361024_26;
+										28:      LC7361024_27;
+										29:      LC7361024_28;
+										30:      LC7361024_29;
+										31:      LC7361024_30;
+										32:      LC7361024_31;
+										33:      LC7361024_32;
+										34:      LC7361024_33;
+										35:      LC7361024_34;
+//										36:      LC7361024_35;
+									}
+		switch(FEAT_ROADVEHS, SELF, sw_LC7361022w_livery, cargo_subtype) {
+										0:      LC7361022W_4;
+										1:      LC7361022W_0;
+										2:      LC7361022W_1;
+										3:      LC7361022W_2;
+										4:      LC7361022W_3;
+										5:      LC7361022W_4;
+										6:      LC7361022W_5;
+										7:      LC7361022W_6;
+										8:      LC7361022W_7;
+										9:      LC7361022W_8;
+										10:      LC7361022W_9;
+										11:      LC7361022W_10;
+										12:      LC7361022W_11;
+										13:      LC7361022W_12;
+										14:      LC7361022W_13;
+										15:      LC7361022W_14;
+										16:      LC7361022W_15;
+										17:      LC7361022W_16;
+										18:      LC7361022W_17;
+										19:      LC7361022W_18;
+										20:      LC7361022W_19;
+										21:      LC7361022W_20;
+										22:      LC7361022W_21;
+										23:      LC7361022W_22;
+										24:      LC7361022W_23;
+										25:      LC7361022W_24;
+										26:      LC7361022W_25;
+										27:      LC7361022W_26;
+										28:      LC7361022W_27;
+										29:      LC7361022W_28;
+										30:      LC7361022W_29;
+										31:      LC7361022W_30;
+										32:      LC7361022W_31;
+										33:      LC7361022W_32;
+										34:      LC7361022W_33;
+										35:      LC7361022W_34;
+//										36:      LC7361022W_35;
+									}
+
+
+		random_switch(FEAT_ROADVEHS, SELF, sw_LC736_prototype) {
+										1:      LC7360_20;
+										1:      LC7360_21;
+										1:      LC7360_20;
+										9:      sw_LC73600_livery;
+																						}
+		random_switch(FEAT_ROADVEHS, SELF, sw_LC73600and02) {
+										10:      sw_LC73600_livery;
+										2:      sw_LC73602_livery;
+																						}
+		random_switch(FEAT_ROADVEHS, SELF, sw_LC736_87) {
+										10:      sw_LC73620_livery;
+										2:      sw_LC73621_livery;
+																						}
+		random_switch(FEAT_ROADVEHS, SELF, sw_LC736_88) {
+										9:      sw_LC73620_livery;
+										2:      sw_LC73621_livery;
+										1:		LC7362_62;
+																						}
+		random_switch(FEAT_ROADVEHS, SELF, sw_LC736_89) {
+										9:      sw_LC73640_livery;
+										3:      sw_LC73641_livery;
+																						}
+		random_switch(FEAT_ROADVEHS, SELF, sw_LC736_90) {
+										9:      sw_LC73640_livery;
+										2:      sw_LC73641_livery;
+										1:		LC7362_63;										
+																						}
+		random_switch(FEAT_ROADVEHS, SELF, sw_LC7361014) {
+										9:      sw_LC7361014_livery;
+										3:      sw_LC7361014s_livery;
+																						}
+		random_switch(FEAT_ROADVEHS, SELF, sw_LC7361022and24) {
+										6:      sw_LC7361022k_livery;
+										6:      sw_LC7361024_livery;
+																						}
+																  
+		switch(FEAT_ROADVEHS, SELF, sw_LC736MAIN_yearbased, build_year) {
+										1978..1983:      	sw_LC736_prototype;
+										1984..1986:    	    sw_LC73600and02;
+										1987:  		        sw_LC736_87;
+										1988:  		        sw_LC736_88;
+										1989:		  		sw_LC736_89;
+										1990:		  		sw_LC736_90;
+										1991:         		sw_LC7361014;
+										1992..1994:			sw_LC7361022and24;
+										1995..2100:			sw_LC7361022w_livery;
+																	}
+
+		switch(FEAT_ROADVEHS, SELF, sw_LC736_purch, build_year) {
+										1980..1984:			LC7360_purch5;
+										1985:	    	  	LC7360_purch1;
+										1986: 		   	    LC7360_purch2;
+										1987..1988:	        LC7360_purch3;
+										1989..1990:	        LC7360_purch4;
+										1991:		  		LC7360_purch5;
+										1992..1994:	  		LC7360_purch6;
+										1995..2100:    		LC7360_purch7;
+																	}
+switch(FEAT_ROADVEHS, SELF, sw_LC736cost, build_year) {
+										1970..1980:      		202;
+										1981..1990:		      	200;
+										1991:		  	    	208;									
+										1992:		  	    	212;
+										1993..1994:		      	216;										
+										1995..1996:		      	220;
+										1997..2100:		      	224;
+										}
+// running_costs
+switch(FEAT_ROADVEHS, SELF, sw_LC736runcost, build_year) {
+										1970..1986:      		78;
+										1987..1990:		      	77;
+										1991..2100:		      	78;
+										}
+		switch(FEAT_ROADVEHS, SELF, sw_LC736_power, build_year) {
+										1978..1983:      	25;
+										1984..1986:    	    20;
+										1987..1988:  		21;
+										1989..2100:  		25;
+																	}
+
+		switch(FEAT_ROADVEHS, SELF, sw_LC73600_TEXT, cargo_subtype) 					{
+										0: return string(STR_NAME_LC7360_1);
+										1: return string(STR_NAME_LC7360_3);
+										2: return string(STR_NAME_LC7360_4);
+										3: return string(STR_NAME_LC7360_5);
+										4: return string(STR_NAME_LC7360_6);
+										5: return string(STR_NAME_LC7360_7);
+										6: return string(STR_NAME_LC7360_8);
+										7: return string(STR_NAME_LC7360_9);
+										8: return string(STR_NAME_LC7360_10);
+										9: return string(STR_NAME_LC7360_11);
+										10: return string(STR_NAME_LC7360_12);
+										11: return string(STR_NAME_LC7360_13);
+										12: return string(STR_NAME_LC7360_14);
+										13: return string(STR_NAME_LC7360_15);
+										14: return string(STR_NAME_LC7360_16);
+										15: return string(STR_NAME_LC7360_17);
+										16: return string(STR_NAME_LC7360_18);
+										17: return string(STR_NAME_LC7360_19);
+										18: return string(STR_NAME_LC7360_20);
+										19: return string(STR_NAME_LC7360_21);
+										20: return string(STR_NAME_LC7360_22);
+										21: return string(STR_NAME_LC7360_23);
+										22: return string(STR_NAME_LC7360_24);
+										23: return string(STR_NAME_LC7360_25);
+										24: return string(STR_NAME_LC7360_26);
+										25: return string(STR_NAME_LC7360_27);
+										26: return string(STR_NAME_LC7360_28);
+										27: return string(STR_NAME_LC7360_29);
+										28: return string(STR_NAME_LC7360_30);
+										29: return string(STR_NAME_LC7360_31);
+										30: return string(STR_NAME_LC7360_32);
+										31: return string(STR_NAME_LC7360_33);
+										32: return string(STR_NAME_LC7360_34);
+										33: return string(STR_NAME_LC7360_35);
+										34: return string(STR_NAME_LC7360_36);
+										35: return string(STR_NAME_LC7360_37);
+										36: return string(STR_NAME_LC7360_38);
+
+
+																	}
+		switch(FEAT_ROADVEHS, SELF, sw_LC73602_TEXT, cargo_subtype) 					{										
+										0: return string(STR_NAME_LC7360_101);
+										1: return string(STR_NAME_LC7360_105);
+										2: return string(STR_NAME_LC7360_106);	
+										3: return string(STR_NAME_LC7360_107);
+										4: return string(STR_NAME_LC7360_108);
+										5: return string(STR_NAME_LC7360_109);
+										6: return string(STR_NAME_LC7360_110);
+										7: return string(STR_NAME_LC7360_111);
+										8: return string(STR_NAME_LC7360_112);
+										9: return string(STR_NAME_LC7360_113);
+										10: return string(STR_NAME_LC7360_114);
+										11: return string(STR_NAME_LC7360_115);
+										12: return string(STR_NAME_LC7360_116);
+										13: return string(STR_NAME_LC7360_117);
+										14: return string(STR_NAME_LC7360_118);
+										15: return string(STR_NAME_LC7360_119);
+										16: return string(STR_NAME_LC7360_120);
+										17: return string(STR_NAME_LC7360_121);
+										18: return string(STR_NAME_LC7360_122);
+										19: return string(STR_NAME_LC7360_123);
+										20: return string(STR_NAME_LC7360_124);
+										21: return string(STR_NAME_LC7360_125);
+										22: return string(STR_NAME_LC7360_126);
+										23: return string(STR_NAME_LC7360_127);
+										24: return string(STR_NAME_LC7360_128);
+										25: return string(STR_NAME_LC7360_129);
+										26: return string(STR_NAME_LC7360_130);
+										27: return string(STR_NAME_LC7360_131);
+										28: return string(STR_NAME_LC7360_132);
+										29: return string(STR_NAME_LC7360_133);
+										30: return string(STR_NAME_LC7360_134);
+										31: return string(STR_NAME_LC7360_135);
+										32: return string(STR_NAME_LC7360_136);
+										33: return string(STR_NAME_LC7360_137);
+										34: return string(STR_NAME_LC7360_138);
+																	}
+		switch(FEAT_ROADVEHS, SELF, sw_LC73620_TEXT, cargo_subtype) 					{										
+										0:  return string(STR_NAME_LC7362_201);
+										1:  return string(STR_NAME_LC7362_203);
+										2:  return string(STR_NAME_LC7362_204);
+										3:  return string(STR_NAME_LC7362_205);
+										4:  return string(STR_NAME_LC7362_206);
+										5:  return string(STR_NAME_LC7362_207);
+										6:  return string(STR_NAME_LC7362_208);
+										7:  return string(STR_NAME_LC7362_209);
+										8:  return string(STR_NAME_LC7362_210);
+										9:  return string(STR_NAME_LC7362_211);
+										10:  return string(STR_NAME_LC7362_212);
+										11:  return string(STR_NAME_LC7362_213);
+										12:  return string(STR_NAME_LC7362_214);
+										13:  return string(STR_NAME_LC7362_215);
+										14:  return string(STR_NAME_LC7362_216);
+										15:  return string(STR_NAME_LC7362_217);
+										16:  return string(STR_NAME_LC7362_218);
+										17:  return string(STR_NAME_LC7362_219);
+										18:  return string(STR_NAME_LC7362_220);
+										19:  return string(STR_NAME_LC7362_221);
+										20:  return string(STR_NAME_LC7362_222);
+										21:  return string(STR_NAME_LC7362_223);
+										22:  return string(STR_NAME_LC7362_224);
+										23:  return string(STR_NAME_LC7362_225);
+										24:  return string(STR_NAME_LC7362_226);
+										25:  return string(STR_NAME_LC7362_227);
+										26:  return string(STR_NAME_LC7362_228);
+										27:  return string(STR_NAME_LC7362_229);
+										28:  return string(STR_NAME_LC7362_230);
+										29:  return string(STR_NAME_LC7362_231);
+										30:  return string(STR_NAME_LC7362_232);
+										31:  return string(STR_NAME_LC7362_233);
+										32:  return string(STR_NAME_LC7362_234);
+										33:  return string(STR_NAME_LC7362_235);
+										34:  return string(STR_NAME_LC7362_236);
+										35:  return string(STR_NAME_LC7362_237);
+										36:  return string(STR_NAME_LC7362_238);
+										37:  return string(STR_NAME_LC7362_239);
+										38:  return string(STR_NAME_LC7362_240);
+										39:  return string(STR_NAME_LC7362_241);
+										40:  return string(STR_NAME_LC7362_242);
+										41:  return string(STR_NAME_LC7362_243);
+										42:  return string(STR_NAME_LC7362_244);
+										43:  return string(STR_NAME_LC7362_245);
+										44:  return string(STR_NAME_LC7362_246);
+										45:  return string(STR_NAME_LC7362_247);
+										46:  return string(STR_NAME_LC7362_248);
+										47:  return string(STR_NAME_LC7362_249);
+										48:  return string(STR_NAME_LC7362_250);
+										49:  return string(STR_NAME_LC7362_251);
+										50:  return string(STR_NAME_LC7362_252);
+										51:  return string(STR_NAME_LC7362_253);
+										52:  return string(STR_NAME_LC7362_254);
+										53:  return string(STR_NAME_LC7362_255);
+										54:  return string(STR_NAME_LC7362_256);
+										55:  return string(STR_NAME_LC7362_257);
+										56:  return string(STR_NAME_LC7362_258);
+										57:  return string(STR_NAME_LC7362_259);
+										58:  return string(STR_NAME_LC7362_260);
+										59:  return string(STR_NAME_LC7362_261);
+										60:  return string(STR_NAME_LC7362_262);
+																						}
+		switch(FEAT_ROADVEHS, SELF, sw_LC73621_TEXT, cargo_subtype) 					{
+										0:  return string(STR_NAME_LC7362_301);
+										1:  return string(STR_NAME_LC7362_303);
+										2:  return string(STR_NAME_LC7362_304);
+										3:  return string(STR_NAME_LC7362_305);
+										4:  return string(STR_NAME_LC7362_306);
+										5:  return string(STR_NAME_LC7362_307);
+										6:  return string(STR_NAME_LC7362_308);
+										7:  return string(STR_NAME_LC7362_309);
+										8:  return string(STR_NAME_LC7362_310);
+										9:  return string(STR_NAME_LC7362_311);
+										10:  return string(STR_NAME_LC7362_312);
+										11:  return string(STR_NAME_LC7362_313);
+										12:  return string(STR_NAME_LC7362_314);
+										13:  return string(STR_NAME_LC7362_315);
+										14:  return string(STR_NAME_LC7362_316);
+										15:  return string(STR_NAME_LC7362_317);
+										16:  return string(STR_NAME_LC7362_318);
+										17:  return string(STR_NAME_LC7362_319);
+										18:  return string(STR_NAME_LC7362_320);
+										19:  return string(STR_NAME_LC7362_321);
+										20:  return string(STR_NAME_LC7362_322);
+										21:  return string(STR_NAME_LC7362_323);
+										22:  return string(STR_NAME_LC7362_324);
+										23:  return string(STR_NAME_LC7362_325);
+										24:  return string(STR_NAME_LC7362_326);
+										25:  return string(STR_NAME_LC7362_327);
+										26:  return string(STR_NAME_LC7362_328);
+										27:  return string(STR_NAME_LC7362_329);
+										28:  return string(STR_NAME_LC7362_330);
+										29:  return string(STR_NAME_LC7362_331);
+										30:  return string(STR_NAME_LC7362_332);
+										31:  return string(STR_NAME_LC7362_333);
+										32:  return string(STR_NAME_LC7362_334);
+										33:  return string(STR_NAME_LC7362_335);
+										34:  return string(STR_NAME_LC7362_336);
+										35:  return string(STR_NAME_LC7362_337);
+										36:  return string(STR_NAME_LC7362_338);
+										37:  return string(STR_NAME_LC7362_339);
+										38:  return string(STR_NAME_LC7362_340);
+										39:  return string(STR_NAME_LC7362_341);
+										40:  return string(STR_NAME_LC7362_342);
+										41:  return string(STR_NAME_LC7362_343);
+										42:  return string(STR_NAME_LC7362_344);
+										43:  return string(STR_NAME_LC7362_345);
+										44:  return string(STR_NAME_LC7362_346);
+										45:  return string(STR_NAME_LC7362_347);
+										46:  return string(STR_NAME_LC7362_348);
+										47:  return string(STR_NAME_LC7362_349);
+										48:  return string(STR_NAME_LC7362_350);
+										49:  return string(STR_NAME_LC7362_351);
+										50:  return string(STR_NAME_LC7362_352);
+										51:  return string(STR_NAME_LC7362_353);
+										52:  return string(STR_NAME_LC7362_354);
+										53:  return string(STR_NAME_LC7362_355);
+										54:  return string(STR_NAME_LC7362_356);
+										55:  return string(STR_NAME_LC7362_357);
+										56:  return string(STR_NAME_LC7362_358);
+										57:  return string(STR_NAME_LC7362_359);
+										58:  return string(STR_NAME_LC7362_360);
+										59:  return string(STR_NAME_LC7362_361);
+										60:  return string(STR_NAME_LC7362_362);
+																						}
+		switch(FEAT_ROADVEHS, SELF, sw_LC73640_TEXT, cargo_subtype) 					{										
+										0:  return string(STR_NAME_LC7362_401);
+										1:  return string(STR_NAME_LC7362_403);
+										2:  return string(STR_NAME_LC7362_404);
+										3:  return string(STR_NAME_LC7362_405);
+										4:  return string(STR_NAME_LC7362_406);
+										5:  return string(STR_NAME_LC7362_407);
+										6:  return string(STR_NAME_LC7362_408);
+										7:  return string(STR_NAME_LC7362_409);
+										8:  return string(STR_NAME_LC7362_410);
+										9:  return string(STR_NAME_LC7362_411);
+										10:  return string(STR_NAME_LC7362_412);
+										11:  return string(STR_NAME_LC7362_413);
+										12:  return string(STR_NAME_LC7362_414);
+										13:  return string(STR_NAME_LC7362_415);
+										14:  return string(STR_NAME_LC7362_416);
+										15:  return string(STR_NAME_LC7362_417);
+										16:  return string(STR_NAME_LC7362_418);
+										17:  return string(STR_NAME_LC7362_419);
+										18:  return string(STR_NAME_LC7362_420);
+										19:  return string(STR_NAME_LC7362_421);
+										20:  return string(STR_NAME_LC7362_422);
+										21:  return string(STR_NAME_LC7362_423);
+										22:  return string(STR_NAME_LC7362_424);
+										23:  return string(STR_NAME_LC7362_425);
+										24:  return string(STR_NAME_LC7362_426);
+										25:  return string(STR_NAME_LC7362_427);
+										26:  return string(STR_NAME_LC7362_428);
+										27:  return string(STR_NAME_LC7362_429);
+										28:  return string(STR_NAME_LC7362_430);
+										29:  return string(STR_NAME_LC7362_431);
+										30:  return string(STR_NAME_LC7362_432);
+										31:  return string(STR_NAME_LC7362_433);
+										32:  return string(STR_NAME_LC7362_434);
+										33:  return string(STR_NAME_LC7362_435);
+										34:  return string(STR_NAME_LC7362_436);
+										35:  return string(STR_NAME_LC7362_437);
+										36:  return string(STR_NAME_LC7362_438);
+										37:  return string(STR_NAME_LC7362_439);
+										38:  return string(STR_NAME_LC7362_440);
+										39:  return string(STR_NAME_LC7362_441);
+										40:  return string(STR_NAME_LC7362_442);
+										41:  return string(STR_NAME_LC7362_443);
+										42:  return string(STR_NAME_LC7362_444);
+										43:  return string(STR_NAME_LC7362_445);
+										44:  return string(STR_NAME_LC7362_446);
+										45:  return string(STR_NAME_LC7362_447);
+										46:  return string(STR_NAME_LC7362_448);
+										47:  return string(STR_NAME_LC7362_449);
+										48:  return string(STR_NAME_LC7362_450);
+										49:  return string(STR_NAME_LC7362_451);
+										50:  return string(STR_NAME_LC7362_452);
+										51:  return string(STR_NAME_LC7362_453);
+										52:  return string(STR_NAME_LC7362_454);
+										53:  return string(STR_NAME_LC7362_455);
+										54:  return string(STR_NAME_LC7362_456);
+										55:  return string(STR_NAME_LC7362_457);
+										56:  return string(STR_NAME_LC7362_458);
+										57:  return string(STR_NAME_LC7362_459);
+										58:  return string(STR_NAME_LC7362_460);
+										59:  return string(STR_NAME_LC7362_461);
+										60:  return string(STR_NAME_LC7362_462);
+
+
+																						}
+
+		switch(FEAT_ROADVEHS, SELF, sw_LC73641_TEXT, cargo_subtype) 					{
+										0:  return string(STR_NAME_LC7362_501);
+										1:  return string(STR_NAME_LC7362_503);
+										2:  return string(STR_NAME_LC7362_504);
+										3:  return string(STR_NAME_LC7362_505);
+										4:  return string(STR_NAME_LC7362_506);
+										5:  return string(STR_NAME_LC7362_507);
+										6:  return string(STR_NAME_LC7362_508);
+										7:  return string(STR_NAME_LC7362_509);
+										8:  return string(STR_NAME_LC7362_510);
+										9:  return string(STR_NAME_LC7362_511);
+										10:  return string(STR_NAME_LC7362_512);
+										11:  return string(STR_NAME_LC7362_513);
+										12:  return string(STR_NAME_LC7362_514);
+										13:  return string(STR_NAME_LC7362_515);
+										14:  return string(STR_NAME_LC7362_516);
+										15:  return string(STR_NAME_LC7362_517);
+										16:  return string(STR_NAME_LC7362_518);
+										17:  return string(STR_NAME_LC7362_519);
+										18:  return string(STR_NAME_LC7362_520);
+										19:  return string(STR_NAME_LC7362_521);
+										20:  return string(STR_NAME_LC7362_522);
+										21:  return string(STR_NAME_LC7362_523);
+										22:  return string(STR_NAME_LC7362_524);
+										23:  return string(STR_NAME_LC7362_525);
+										24:  return string(STR_NAME_LC7362_526);
+										25:  return string(STR_NAME_LC7362_527);
+										26:  return string(STR_NAME_LC7362_528);
+										27:  return string(STR_NAME_LC7362_529);
+										28:  return string(STR_NAME_LC7362_530);
+										29:  return string(STR_NAME_LC7362_531);
+										30:  return string(STR_NAME_LC7362_532);
+										31:  return string(STR_NAME_LC7362_533);
+										32:  return string(STR_NAME_LC7362_534);
+										33:  return string(STR_NAME_LC7362_535);
+										34:  return string(STR_NAME_LC7362_536);
+										35:  return string(STR_NAME_LC7362_537);
+										36:  return string(STR_NAME_LC7362_538);
+										37:  return string(STR_NAME_LC7362_539);
+										38:  return string(STR_NAME_LC7362_540);
+										39:  return string(STR_NAME_LC7362_541);
+										40:  return string(STR_NAME_LC7362_542);
+										41:  return string(STR_NAME_LC7362_543);
+										42:  return string(STR_NAME_LC7362_544);
+										43:  return string(STR_NAME_LC7362_545);
+										44:  return string(STR_NAME_LC7362_546);
+										45:  return string(STR_NAME_LC7362_547);
+										46:  return string(STR_NAME_LC7362_548);
+										47:  return string(STR_NAME_LC7362_549);
+										48:  return string(STR_NAME_LC7362_550);
+										49:  return string(STR_NAME_LC7362_551);
+										50:  return string(STR_NAME_LC7362_552);
+										51:  return string(STR_NAME_LC7362_553);
+										52:  return string(STR_NAME_LC7362_554);
+										53:  return string(STR_NAME_LC7362_555);
+										54:  return string(STR_NAME_LC7362_556);
+										55:  return string(STR_NAME_LC7362_557);
+										56:  return string(STR_NAME_LC7362_558);
+										57:  return string(STR_NAME_LC7362_559);
+										58:  return string(STR_NAME_LC7362_560);
+										59:  return string(STR_NAME_LC7362_561);
+										60:  return string(STR_NAME_LC7362_562);
+																						}
+		switch(FEAT_ROADVEHS, SELF, sw_LC7361014_TEXT, cargo_subtype) 					{
+										0: return string(STR_NAME_LC7362_601);
+										1: return string(STR_NAME_LC7362_608);
+										2: return string(STR_NAME_LC7362_609);
+										3: return string(STR_NAME_LC7362_610);
+										4: return string(STR_NAME_LC7362_611);
+										5: return string(STR_NAME_LC7362_612);
+										6: return string(STR_NAME_LC7362_613);
+										7: return string(STR_NAME_LC7362_614);
+										8: return string(STR_NAME_LC7362_615);
+										9: return string(STR_NAME_LC7362_624);
+										10: return string(STR_NAME_LC7362_625);
+										11: return string(STR_NAME_LC7362_626);
+										12: return string(STR_NAME_LC7362_627);
+										13: return string(STR_NAME_LC7362_628);
+										14: return string(STR_NAME_LC7362_629);
+										15: return string(STR_NAME_LC7362_632);
+										16: return string(STR_NAME_LC7362_633);
+										17: return string(STR_NAME_LC7362_638);
+										18: return string(STR_NAME_LC7362_639);
+										19: return string(STR_NAME_LC7362_640);
+										20: return string(STR_NAME_LC7362_641);
+										21: return string(STR_NAME_LC7362_642);
+										22: return string(STR_NAME_LC7362_643);
+										23: return string(STR_NAME_LC7362_644);
+										24: return string(STR_NAME_LC7362_645);
+										25: return string(STR_NAME_LC7362_646);
+										26: return string(STR_NAME_LC7362_647);
+										27: return string(STR_NAME_LC7362_648);
+										28: return string(STR_NAME_LC7362_649);
+										29: return string(STR_NAME_LC7362_650);
+										30: return string(STR_NAME_LC7362_651);
+										31: return string(STR_NAME_LC7362_652);
+										32: return string(STR_NAME_LC7362_653);
+										33: return string(STR_NAME_LC7362_654);
+										34: return string(STR_NAME_LC7362_655);
+										35: return string(STR_NAME_LC7362_656);
+										36: return string(STR_NAME_LC7362_657);
+										37: return string(STR_NAME_LC7362_658);
+										38: return string(STR_NAME_LC7362_659);
+										39: return string(STR_NAME_LC7362_660);
+										40: return string(STR_NAME_LC7362_661);
+										41: return string(STR_NAME_LC7362_662);
+
+																						}
+		switch(FEAT_ROADVEHS, SELF, sw_LC7361014s_TEXT, cargo_subtype) 					{
+										0: return string(STR_NAME_LC7362_601);
+										1: return string(STR_NAME_LC7362_608);
+										2: return string(STR_NAME_LC7362_609);
+										3: return string(STR_NAME_LC7362_610);
+										4: return string(STR_NAME_LC7362_611);
+										5: return string(STR_NAME_LC7362_612);
+										6: return string(STR_NAME_LC7362_613);
+										7: return string(STR_NAME_LC7362_614);
+										8: return string(STR_NAME_LC7362_615);
+										9: return string(STR_NAME_LC7362_624);
+										10: return string(STR_NAME_LC7362_625);
+										11: return string(STR_NAME_LC7362_626);
+										12: return string(STR_NAME_LC7362_627);
+										13: return string(STR_NAME_LC7362_628);
+										14: return string(STR_NAME_LC7362_629);
+										15: return string(STR_NAME_LC7362_631);
+										16: return string(STR_NAME_LC7362_632);
+										17: return string(STR_NAME_LC7362_633);
+										18: return string(STR_NAME_LC7362_634);
+										19: return string(STR_NAME_LC7362_635);
+										20: return string(STR_NAME_LC7362_638);
+										21: return string(STR_NAME_LC7362_639);
+										22: return string(STR_NAME_LC7362_640);
+										23: return string(STR_NAME_LC7362_641);
+										24: return string(STR_NAME_LC7362_642);
+										25: return string(STR_NAME_LC7362_643);
+										26: return string(STR_NAME_LC7362_644);
+										27: return string(STR_NAME_LC7362_645);
+										28: return string(STR_NAME_LC7362_646);
+										29: return string(STR_NAME_LC7362_647);
+										30: return string(STR_NAME_LC7362_648);
+										31: return string(STR_NAME_LC7362_649);
+										32: return string(STR_NAME_LC7362_650);
+										33: return string(STR_NAME_LC7362_651);
+										34: return string(STR_NAME_LC7362_652);
+										35: return string(STR_NAME_LC7362_653);
+										36: return string(STR_NAME_LC7362_654);
+										37: return string(STR_NAME_LC7362_655);
+										38: return string(STR_NAME_LC7362_656);
+										39: return string(STR_NAME_LC7362_657);
+										40: return string(STR_NAME_LC7362_658);
+										41: return string(STR_NAME_LC7362_659);
+										42: return string(STR_NAME_LC7362_660);
+										43: return string(STR_NAME_LC7362_661);
+										44: return string(STR_NAME_LC7362_662);
+																						}
+
+		switch(FEAT_ROADVEHS, SELF, sw_LC7361022k_TEXT, cargo_subtype) 					{
+										0: return string(STR_NAME_LC7362_701);
+										1: return string(STR_NAME_LC7362_702);
+										2: return string(STR_NAME_LC7362_703);
+										3: return string(STR_NAME_LC7362_704);
+										4: return string(STR_NAME_LC7362_705);
+										5: return string(STR_NAME_LC7362_706);
+										6: return string(STR_NAME_LC7362_707);
+										7: return string(STR_NAME_LC7362_708);
+										8: return string(STR_NAME_LC7362_709);
+										9: return string(STR_NAME_LC7362_710);
+										10: return string(STR_NAME_LC7362_711);
+										11: return string(STR_NAME_LC7362_712);
+										12: return string(STR_NAME_LC7362_713);
+										13: return string(STR_NAME_LC7362_714);
+										14: return string(STR_NAME_LC7362_715);
+										15: return string(STR_NAME_LC7362_716);
+										16: return string(STR_NAME_LC7362_717);
+										17: return string(STR_NAME_LC7362_718);
+										18: return string(STR_NAME_LC7362_719);
+										19: return string(STR_NAME_LC7362_720);
+										20: return string(STR_NAME_LC7362_721);
+										21: return string(STR_NAME_LC7362_722);
+										22: return string(STR_NAME_LC7362_723);
+										23: return string(STR_NAME_LC7362_724);
+										24: return string(STR_NAME_LC7362_725);
+										25: return string(STR_NAME_LC7362_726);
+										26: return string(STR_NAME_LC7362_727);
+										27: return string(STR_NAME_LC7362_728);
+										28: return string(STR_NAME_LC7362_729);
+										29: return string(STR_NAME_LC7362_730);
+										30: return string(STR_NAME_LC7362_731);
+										31: return string(STR_NAME_LC7362_732);
+										32: return string(STR_NAME_LC7362_733);
+										33: return string(STR_NAME_LC7362_734);
+										34: return string(STR_NAME_LC7362_735);
+										35: return string(STR_NAME_LC7362_736);
+																						}
+		switch(FEAT_ROADVEHS, SELF, sw_LC7361022w_TEXT, cargo_subtype) 					{
+										0: return string(STR_NAME_LC7362_701);
+										1: return string(STR_NAME_LC7362_702);
+										2: return string(STR_NAME_LC7362_703);
+										3: return string(STR_NAME_LC7362_704);
+										4: return string(STR_NAME_LC7362_705);
+										5: return string(STR_NAME_LC7362_706);
+										6: return string(STR_NAME_LC7362_707);
+										7: return string(STR_NAME_LC7362_708);
+										8: return string(STR_NAME_LC7362_709);
+										9: return string(STR_NAME_LC7362_710);
+										10: return string(STR_NAME_LC7362_711);
+										11: return string(STR_NAME_LC7362_712);
+										12: return string(STR_NAME_LC7362_713);
+										13: return string(STR_NAME_LC7362_714);
+										14: return string(STR_NAME_LC7362_715);
+										15: return string(STR_NAME_LC7362_716);
+										16: return string(STR_NAME_LC7362_717);
+										17: return string(STR_NAME_LC7362_718);
+										18: return string(STR_NAME_LC7362_719);
+										19: return string(STR_NAME_LC7362_720);
+										20: return string(STR_NAME_LC7362_721);
+										21: return string(STR_NAME_LC7362_722);
+										22: return string(STR_NAME_LC7362_723);
+										23: return string(STR_NAME_LC7362_724);
+										24: return string(STR_NAME_LC7362_725);
+										25: return string(STR_NAME_LC7362_726);
+										26: return string(STR_NAME_LC7362_727);
+										27: return string(STR_NAME_LC7362_728);
+										28: return string(STR_NAME_LC7362_729);
+										29: return string(STR_NAME_LC7362_730);
+										30: return string(STR_NAME_LC7362_731);
+										31: return string(STR_NAME_LC7362_732);
+										32: return string(STR_NAME_LC7362_733);
+										33: return string(STR_NAME_LC7362_734);
+										34: return string(STR_NAME_LC7362_735);
+										35: return string(STR_NAME_LC7362_736);
+																						}
+		switch(FEAT_ROADVEHS, SELF, sw_LC7361024_TEXT, cargo_subtype) 					{
+										0: return string(STR_NAME_LC7362_801);
+										1: return string(STR_NAME_LC7362_802);
+										2: return string(STR_NAME_LC7362_803);
+										3: return string(STR_NAME_LC7362_804);
+										4: return string(STR_NAME_LC7362_805);
+										5: return string(STR_NAME_LC7362_806);
+										6: return string(STR_NAME_LC7362_807);
+										7: return string(STR_NAME_LC7362_808);
+										8: return string(STR_NAME_LC7362_809);
+										9: return string(STR_NAME_LC7362_810);
+										10: return string(STR_NAME_LC7362_811);
+										11: return string(STR_NAME_LC7362_812);
+										12: return string(STR_NAME_LC7362_813);
+										13: return string(STR_NAME_LC7362_814);
+										14: return string(STR_NAME_LC7362_815);
+										15: return string(STR_NAME_LC7362_816);
+										16: return string(STR_NAME_LC7362_817);
+										17: return string(STR_NAME_LC7362_818);
+										18: return string(STR_NAME_LC7362_819);
+										19: return string(STR_NAME_LC7362_820);
+										20: return string(STR_NAME_LC7362_821);
+										21: return string(STR_NAME_LC7362_822);
+										22: return string(STR_NAME_LC7362_823);
+										23: return string(STR_NAME_LC7362_824);
+										24: return string(STR_NAME_LC7362_825);
+										25: return string(STR_NAME_LC7362_826);
+										26: return string(STR_NAME_LC7362_827);
+										27: return string(STR_NAME_LC7362_828);
+										28: return string(STR_NAME_LC7362_829);
+										29: return string(STR_NAME_LC7362_830);
+										30: return string(STR_NAME_LC7362_831);
+										31: return string(STR_NAME_LC7362_832);
+										32: return string(STR_NAME_LC7362_833);
+										33: return string(STR_NAME_LC7362_834);
+										34: return string(STR_NAME_LC7362_835);
+										35: return string(STR_NAME_LC7362_836);
+																						}
+
+
+		random_switch(FEAT_ROADVEHS, SELF, sw_LC736_prototype_TEXT) {
+										1:      return string(STR_NAME_LC7360_52);
+										1:      return string(STR_NAME_LC7360_53);
+										1:      return string(STR_NAME_LC7360_54);
+										9:      sw_LC73600_TEXT;
+																						}
+		random_switch(FEAT_ROADVEHS, SELF, sw_LC73600and02_TEXT) {
+										10:      sw_LC73600_TEXT;
+										2:      sw_LC73602_TEXT;
+																						}
+		random_switch(FEAT_ROADVEHS, SELF, sw_LC736_87_TEXT) {
+										10:      sw_LC73620_TEXT;
+										2:      sw_LC73621_TEXT;
+																						}
+		random_switch(FEAT_ROADVEHS, SELF, sw_LC736_88_TEXT) {
+										9:      sw_LC73620_TEXT;
+										2:      sw_LC73621_TEXT;
+										1:		return string(STR_NAME_LC7362_298);
+																						}
+		random_switch(FEAT_ROADVEHS, SELF, sw_LC736_89_TEXT) {
+										9:      sw_LC73640_TEXT;
+										3:      sw_LC73641_TEXT;
+																						}
+		random_switch(FEAT_ROADVEHS, SELF, sw_LC736_90_TEXT) {
+										9:      sw_LC73640_TEXT;
+										2:      sw_LC73641_TEXT;
+										1:		return string(STR_NAME_LC7362_299);										
+																						}
+		random_switch(FEAT_ROADVEHS, SELF, sw_LC7361014k_TEXT) {
+										9:      sw_LC7361014_TEXT;
+										3:      sw_LC7361014s_TEXT;
+																						}
+		random_switch(FEAT_ROADVEHS, SELF, sw_LC7361022and24_TEXT) {
+										6:      sw_LC7361022k_TEXT;
+										6:      sw_LC7361024_TEXT;
+																						}
+																  
+		switch(FEAT_ROADVEHS, SELF, sw_LC736MAIN_yearbased_TEXT, build_year) {
+										1978..1983:      	sw_LC736_prototype_TEXT;
+										1984..1986:    	    sw_LC73600and02_TEXT;
+										1987:  		        sw_LC736_87_TEXT;
+										1988:  		        sw_LC736_88_TEXT;
+										1989:		  		sw_LC736_89_TEXT;
+										1990:		  		sw_LC736_90_TEXT;
+										1991:         		sw_LC7361014k_TEXT;
+										1992..1994:			sw_LC7361022and24_TEXT;
+										1995..2100:			sw_LC7361022w_TEXT;
+																	}
+// C744
+		  switch (FEAT_ROADVEHS, SELF, switch_spriteset_KarosaC744_0, position_in_consist) { 
+									1 : spriteset_KarosaC744_0b; 
+									spriteset_KarosaC744_0a; 
+																					 } 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_KarosaC744_1, position_in_consist) { 
+									1 : spriteset_KarosaC744_1b; 
+									spriteset_KarosaC744_1a; 
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_KarosaC744_2, position_in_consist) { 
+									1 : spriteset_KarosaC744_2b; 
+									spriteset_KarosaC744_2a; 
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_KarosaC744_3, position_in_consist) { 
+									1 : spriteset_KarosaC744_3b; 
+									spriteset_KarosaC744_3a; 
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_KarosaC744_4, position_in_consist) { 
+									1 : spriteset_KarosaC744_4b; 
+									spriteset_KarosaC744_4a; 
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_KarosaC744_5, position_in_consist) { 
+									1 : spriteset_KarosaC744_5b; 
+									spriteset_KarosaC744_5a; 
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_KarosaC744_6, position_in_consist) { 
+									1 : spriteset_KarosaC744_6b; 
+									spriteset_KarosaC744_6a;
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_KarosaC744_7, position_in_consist) { 
+									1 : spriteset_KarosaC744_7b; 
+									spriteset_KarosaC744_7a; 
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_KarosaC744_8, position_in_consist) { 
+									1 : spriteset_KarosaC744_8b; 
+									spriteset_KarosaC744_8a;  
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_KarosaC744_9, position_in_consist) { 
+									1 : spriteset_KarosaC744_9b; 
+									spriteset_KarosaC744_9a; 
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_KarosaC744_10, position_in_consist) { 
+									1 : spriteset_KarosaC744_10b; 
+									spriteset_KarosaC744_10a;  
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_KarosaC744_11, position_in_consist) { 
+									1 : spriteset_KarosaC744_11b; 
+									spriteset_KarosaC744_11a;
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_KarosaC744_12, position_in_consist) { 
+									1 : spriteset_KarosaC744_12b; 
+									spriteset_KarosaC744_12a; 
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_KarosaC744_13, position_in_consist) { 
+									1 : spriteset_KarosaC744_13b; 
+									spriteset_KarosaC744_13a; 
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_KarosaC744_14, position_in_consist) { 
+									1 : spriteset_KarosaC744_14b; 
+									spriteset_KarosaC744_14a;
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_KarosaC744_15, position_in_consist) { 
+									1 : spriteset_KarosaC744_15b; 
+									spriteset_KarosaC744_15a; 
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_KarosaC744_16, position_in_consist) { 
+									1 : spriteset_KarosaC744_16b; 
+									spriteset_KarosaC744_16a; 
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_KarosaC744_17, position_in_consist) { 
+									1 : spriteset_KarosaC744_17b; 
+									spriteset_KarosaC744_17a; 
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_KarosaC744_18, position_in_consist) { 
+									1 : spriteset_KarosaC744_18b; 
+									spriteset_KarosaC744_18a; 
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_KarosaC744_19, position_in_consist) { 
+									1 : spriteset_KarosaC744_19b; 
+									spriteset_KarosaC744_19a; 
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_KarosaC744_20, position_in_consist) { 
+									1 : spriteset_KarosaC744_20b; 
+									spriteset_KarosaC744_20a; 
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_KarosaC744_21, position_in_consist) { 
+									1 : spriteset_KarosaC744_21b; 
+									spriteset_KarosaC744_21a; 
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_KarosaC744_22, position_in_consist) { 
+									1 : spriteset_KarosaC744_22b; 
+									spriteset_KarosaC744_22a; 
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_KarosaC744_23, position_in_consist) { 
+									1 : spriteset_KarosaC744_23b; 
+									spriteset_KarosaC744_23a; 
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_KarosaC744_24, position_in_consist) { 
+									1 : spriteset_KarosaC744_24b; 
+									spriteset_KarosaC744_24a; 
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_KarosaC744_25, position_in_consist) { 
+									1 : spriteset_KarosaC744_25b; 
+									spriteset_KarosaC744_25a; 
+							}
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_KarosaC744_proto, position_in_consist) { 
+									1 : spriteset_KarosaC744_26b; 
+									spriteset_KarosaC744_26a; 
+							}
+  								switch(FEAT_ROADVEHS, SELF, sw_KarosaC74420_livery, cargo_subtype) {
+									0 : switch_spriteset_KarosaC744_0;
+									1 : switch_spriteset_KarosaC744_1;
+									2 : switch_spriteset_KarosaC744_2;
+									3 : switch_spriteset_KarosaC744_3;
+									4 : switch_spriteset_KarosaC744_4;
+									5 : switch_spriteset_KarosaC744_5;
+									6 : switch_spriteset_KarosaC744_6;
+									7 : switch_spriteset_KarosaC744_7;
+									8 : switch_spriteset_KarosaC744_8;
+									9 : switch_spriteset_KarosaC744_9;
+									10 : switch_spriteset_KarosaC744_10;
+									11 : switch_spriteset_KarosaC744_11;
+									12 : switch_spriteset_KarosaC744_12;
+									13 : switch_spriteset_KarosaC744_13;
+									14 : switch_spriteset_KarosaC744_14;
+									15 : switch_spriteset_KarosaC744_15;
+									16 : switch_spriteset_KarosaC744_16;
+									17 : switch_spriteset_KarosaC744_17;
+									18 : switch_spriteset_KarosaC744_18;
+									19 : switch_spriteset_KarosaC744_19;
+									20 : switch_spriteset_KarosaC744_20;
+									21 : switch_spriteset_KarosaC744_21;
+									22 : switch_spriteset_KarosaC744_22;
+									23 : switch_spriteset_KarosaC744_23;
+									24 : switch_spriteset_KarosaC744_24;
+									25 : switch_spriteset_KarosaC744_25;
+								}
+
+  								switch(FEAT_ROADVEHS, SELF, sw_KarosaC74424_livery, cargo_subtype) {
+									0 : switch_spriteset_KarosaC744_0;
+									1 : switch_spriteset_KarosaC744_1;
+									2 : switch_spriteset_KarosaC744_2;
+									3 : switch_spriteset_KarosaC744_3;
+									4 : switch_spriteset_KarosaC744_4;
+									5 : switch_spriteset_KarosaC744_5;
+									6 : switch_spriteset_KarosaC744_6;
+									7 : switch_spriteset_KarosaC744_7;
+									8 : switch_spriteset_KarosaC744_8;
+									9 : switch_spriteset_KarosaC744_9;
+									10 : switch_spriteset_KarosaC744_10;
+									11 : switch_spriteset_KarosaC744_11;
+									12 : switch_spriteset_KarosaC744_12;
+									13 : switch_spriteset_KarosaC744_13;
+									14 : switch_spriteset_KarosaC744_14;
+									15 : switch_spriteset_KarosaC744_15;
+									16 : switch_spriteset_KarosaC744_16;
+									17 : switch_spriteset_KarosaC744_17;
+									18 : switch_spriteset_KarosaC744_18;
+									19 : switch_spriteset_KarosaC744_19;
+									20 : switch_spriteset_KarosaC744_20;
+									21 : switch_spriteset_KarosaC744_21;
+									22 : switch_spriteset_KarosaC744_22;
+									23 : switch_spriteset_KarosaC744_23;
+									24 : switch_spriteset_KarosaC744_24;
+									25 : switch_spriteset_KarosaC744_25;
+								}
+		random_switch(FEAT_ROADVEHS, SELF, sw_KarosaC744_87) {
+										11:     	sw_KarosaC74420_livery;
+										1:      	switch_spriteset_KarosaC744_proto;
+									}		
+		random_switch(FEAT_ROADVEHS, SELF, sw_KarosaC744_89) {
+										2:     	sw_KarosaC74420_livery;
+										10:      sw_KarosaC74424_livery;
+									}	
+		random_switch(FEAT_ROADVEHS, SELF, sw_KarosaC744_90) {
+										8:     	sw_KarosaC74420_livery;
+										4:      sw_KarosaC74424_livery;
+									}	
+		switch(FEAT_ROADVEHS, SELF, sw_KarosaC744_yearbased, build_year) {
+										1985..1987:      	sw_KarosaC744_87;
+										1988:			    sw_KarosaC74420_livery;	
+										1989:				sw_KarosaC744_89;	
+										1990:				sw_KarosaC744_90;
+										1991..2100:			sw_KarosaC74420_livery;												
+															}
+		 switch(FEAT_ROADVEHS, SELF, sw_KarosaC744_length, position_in_consist ) {
+									0: return 7;
+									1: return 4;
+									}
+		  
+		 switch (FEAT_ROADVEHS, SELF, switch_KarosaC744_articulated, extra_callback_info1) { 
+									1: return ITEM_KarosaC744;
+									return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+								 } 
+								 
+		// capacity
+			switch(FEAT_ROADVEHS, SELF, sw_KarosaC744_capacity, position_in_consist ) {
+									1: 0;
+									return 130;									 
+										}								 
+// power Karosa C744
+		random_switch(FEAT_ROADVEHS, SELF, sw_KarosaC744_87pw) {
+										11:     	25;
+										1:      	23;
+									}
+		switch(FEAT_ROADVEHS, SELF, sw_KarosaC744_yearbased_power, build_year) {
+										1985..1987:      	sw_KarosaC744_87pw;
+										1978..2100:			25;																				
+															}
+  								switch(FEAT_ROADVEHS, SELF, sw_KarosaC74420_livery_TEXT, cargo_subtype) {
+									0 : return string(STR_NAME_KarosaC744_1);
+									1 : return string(STR_NAME_KarosaC744_2);
+									2 : return string(STR_NAME_KarosaC744_3);
+									3 : return string(STR_NAME_KarosaC744_4);
+									4 : return string(STR_NAME_KarosaC744_5);
+									5 : return string(STR_NAME_KarosaC744_6);
+									6 : return string(STR_NAME_KarosaC744_7);
+									7 : return string(STR_NAME_KarosaC744_8);
+									8 : return string(STR_NAME_KarosaC744_9);
+									9 : return string(STR_NAME_KarosaC744_10);
+									10 : return string(STR_NAME_KarosaC744_11);
+									11 : return string(STR_NAME_KarosaC744_12);
+									12 : return string(STR_NAME_KarosaC744_13);
+									13 : return string(STR_NAME_KarosaC744_14);
+									14 : return string(STR_NAME_KarosaC744_15);
+									15 : return string(STR_NAME_KarosaC744_16);
+									16 : return string(STR_NAME_KarosaC744_17);
+									17 : return string(STR_NAME_KarosaC744_18);
+									18 : return string(STR_NAME_KarosaC744_19);
+									19 : return string(STR_NAME_KarosaC744_20);
+									20 : return string(STR_NAME_KarosaC744_21);
+									21 : return string(STR_NAME_KarosaC744_22);
+									22 : return string(STR_NAME_KarosaC744_23);
+									23 : return string(STR_NAME_KarosaC744_24);
+									24 : return string(STR_NAME_KarosaC744_25);
+									25 : return string(STR_NAME_KarosaC744_26);
+								}
+  								switch(FEAT_ROADVEHS, SELF, sw_KarosaC74424_livery_TEXT, cargo_subtype) {
+									0 : return string(STR_NAME_KarosaC744_101);
+									1 : return string(STR_NAME_KarosaC744_102);
+									2 : return string(STR_NAME_KarosaC744_103);
+									3 : return string(STR_NAME_KarosaC744_104);
+									4 : return string(STR_NAME_KarosaC744_105);
+									5 : return string(STR_NAME_KarosaC744_106);
+									6 : return string(STR_NAME_KarosaC744_107);
+									7 : return string(STR_NAME_KarosaC744_108);
+									8 : return string(STR_NAME_KarosaC744_109);
+									9 : return string(STR_NAME_KarosaC744_110);
+									10 : return string(STR_NAME_KarosaC744_111);
+									11 : return string(STR_NAME_KarosaC744_112);
+									12 : return string(STR_NAME_KarosaC744_113);
+									13 : return string(STR_NAME_KarosaC744_114);
+									14 : return string(STR_NAME_KarosaC744_115);
+									15 : return string(STR_NAME_KarosaC744_116);
+									16 : return string(STR_NAME_KarosaC744_117);
+									17 : return string(STR_NAME_KarosaC744_118);
+									18 : return string(STR_NAME_KarosaC744_119);
+									19 : return string(STR_NAME_KarosaC744_120);
+									20 : return string(STR_NAME_KarosaC744_121);
+									21 : return string(STR_NAME_KarosaC744_122);
+									22 : return string(STR_NAME_KarosaC744_123);
+									23 : return string(STR_NAME_KarosaC744_124);
+									24 : return string(STR_NAME_KarosaC744_125);
+									25 : return string(STR_NAME_KarosaC744_126);
+								}
+		random_switch(FEAT_ROADVEHS, SELF, sw_KarosaC744_87_TEXT) {
+										11:     	sw_KarosaC74420_livery_TEXT;
+										1:      	return string(STR_NAME_KarosaC744_100);
+									}		
+		random_switch(FEAT_ROADVEHS, SELF, sw_KarosaC744_89_TEXT) {
+										2:     	sw_KarosaC74420_livery_TEXT;
+										10:      sw_KarosaC74424_livery_TEXT;
+									}	
+		random_switch(FEAT_ROADVEHS, SELF, sw_KarosaC744_90_TEXT) {
+										8:     	sw_KarosaC74420_livery_TEXT;
+										4:      sw_KarosaC74424_livery_TEXT;
+									}	
+		switch(FEAT_ROADVEHS, SELF, sw_KarosaC744_yearbased_TEXT, build_year) {
+										1985..1987:      	sw_KarosaC744_87_TEXT;
+										1988:			    sw_KarosaC74420_livery_TEXT;	
+										1989:				sw_KarosaC744_89_TEXT;	
+										1990:				sw_KarosaC744_90_TEXT;
+										1991..2100:			sw_KarosaC74420_livery_TEXT;												
+															}
+// Renault FR1
+		random_switch(FEAT_ROADVEHS, SELF, sw_FR1_production_livery) {
+										5:     	FR1_0;
+										2:      FR1_1;
+										1:     	FR1_3;
+										1:      FR1_4;	
+										1:      FR1_5;
+										1:     	FR1_6;
+										1:      FR1_7;
+										}										
+  								switch(FEAT_ROADVEHS, SELF, sw_FR1_original, cargo_subtype) {
+										0:		sw_FR1_production_livery;
+										1:	FR1_0;
+										2:	FR1_1;
+										3:	FR1_2;
+										4:	FR1_3;
+										5:	FR1_4;
+										6:	FR1_5;
+										7:	FR1_6;
+										8:	FR1_7;
+										9:	FR1_8;
+										10:	FR1_9;
+										11:	FR1_10;
+										12:	FR1_11;
+										}
+		random_switch(FEAT_ROADVEHS, SELF, sw_Iliade_production_livery) {
+										7:     	Iliade_0;
+										3:      Iliade_1;
+										1:     	Iliade_5;
+										1:      Iliade_6;
+									}	
+  								switch(FEAT_ROADVEHS, SELF, sw_FR1_facelift, cargo_subtype) {
+										0:	sw_Iliade_production_livery;
+										1:	Iliade_0;
+										2:	Iliade_1;
+										3:	Iliade_2;
+										4:	Iliade_3;
+										5:	Iliade_4;
+										6:	Iliade_5;
+										7:	Iliade_6;
+										8:	Iliade_7;
+										9:	Iliade_8;
+										10:	Iliade_9;
+										11:	Iliade_10;
+										}
+		random_switch(FEAT_ROADVEHS, SELF, sw_FR1_mixed) {
+										6:     	sw_FR1_original;
+										6:      sw_FR1_facelift;
+									}	
+switch(FEAT_ROADVEHS, SELF, sw_FR1_Yearbased_cargo_subtype, build_year) {
+										1988..1995:      		sw_FR1_original;
+										1996..1997:		      	sw_FR1_mixed;
+										1998..2100:		      	sw_FR1_facelift;
+										}
+switch(FEAT_ROADVEHS, SELF, sw_RenaultFR1_purch, build_year) {
+										1988..1996:      		FR1_purch;
+										1997..2100:		      	Iliade_purch;
+										}// power
+		random_switch(FEAT_ROADVEHS, SELF, sw_FR1_powermixed) {
+										6:     	34;
+										6:      36;
+									}	
+switch(FEAT_ROADVEHS, SELF, sw_FR1_Yearbased_power, build_year) {
+										1988..1995:      		33;
+										1996..1997:		      	sw_FR1_powermixed;
+										1998..2100:		      	36;
+										}	
+// cost_factor
+switch(FEAT_ROADVEHS, SELF, sw_FR1cost, build_year) {
+										1988..1996:      		255;
+										1997..2100:		      	250;
+										}
+// running_costs
+switch(FEAT_ROADVEHS, SELF, sw_FR1runcost, build_year) {
+										1988..1996:      		84;
+										1997..2100:		      	86;
+										}
+// texts
+  								switch(FEAT_ROADVEHS, SELF, sw_FR1_original_TEXT, cargo_subtype) {
+										0: return string(STR_NAME_FR1_99);
+										1: return string(STR_NAME_FR1_1);
+										2: return string(STR_NAME_FR1_2);
+										3: return string(STR_NAME_FR1_3);
+										4: return string(STR_NAME_FR1_4);
+										5: return string(STR_NAME_FR1_5);
+										6: return string(STR_NAME_FR1_6);
+										7: return string(STR_NAME_FR1_7);
+										8: return string(STR_NAME_FR1_8);
+										9: return string(STR_NAME_FR1_9);
+										10: return string(STR_NAME_FR1_10);
+										11: return string(STR_NAME_FR1_11);
+										12: return string(STR_NAME_FR1_12);
+										}
+  								switch(FEAT_ROADVEHS, SELF, sw_FR1_facelift_TEXT, cargo_subtype) {
+										0: return string(STR_NAME_Iliade_99);
+										1: return string(STR_NAME_Iliade_1);
+										2: return string(STR_NAME_Iliade_2);
+										3: return string(STR_NAME_Iliade_3);
+										4: return string(STR_NAME_Iliade_4);
+										5: return string(STR_NAME_Iliade_5);
+										6: return string(STR_NAME_Iliade_6);
+										7: return string(STR_NAME_Iliade_7);
+										8: return string(STR_NAME_Iliade_8);
+										9: return string(STR_NAME_Iliade_9);
+										10: return string(STR_NAME_Iliade_10);
+										11: return string(STR_NAME_Iliade_11);
+										}
+  								switch(FEAT_ROADVEHS, SELF, sw_FR1_Irisbus_TEXT, cargo_subtype) {
+										0: return string(STR_NAME_Iliade_199);
+										1: return string(STR_NAME_Iliade_101);
+										2: return string(STR_NAME_Iliade_102);
+										3: return string(STR_NAME_Iliade_103);
+										4: return string(STR_NAME_Iliade_104);
+										5: return string(STR_NAME_Iliade_105);
+										6: return string(STR_NAME_Iliade_106);
+										7: return string(STR_NAME_Iliade_107);
+										8: return string(STR_NAME_Iliade_108);
+										9: return string(STR_NAME_Iliade_109);
+										10: return string(STR_NAME_Iliade_110);
+										11: return string(STR_NAME_Iliade_111);
+										}
+		random_switch(FEAT_ROADVEHS, SELF, sw_FR1_mixed_TEXT) {
+										6:     	sw_FR1_original_TEXT;
+										6:      sw_FR1_facelift_TEXT;
+									}	
+switch(FEAT_ROADVEHS, SELF, sw_FR1_Yearbased_cargo_subtype_TEXT, build_year) {
+										1988..1995:      		sw_FR1_original_TEXT;
+										1996..1997:		      	sw_FR1_mixed_TEXT;
+										1998..2002:		      	sw_FR1_facelift_TEXT;
+										2003..2100:		      	sw_FR1_Irisbus_TEXT;
+										}
+
+switch(FEAT_ROADVEHS, SELF, sw_sw_FR1Addinfo, build_year) {
+										1988..1996:      		return string(STR_NAME_AI_FR1_0);
+										1997..2002:		      	return string(STR_NAME_AI_FR1_1);
+										2003..2100:		      	return string(STR_NAME_AI_FR1_2);
+										}
+
+// Oasa HD12
+		random_switch(FEAT_ROADVEHS, SELF, sw_OasaHD12_1991) {
+										2:     	OasaHD12_0;
+										1:      OasaHD12_1;
+										1:     	OasaHD12_2;
+										1:      OasaHD12_3;
+										2:      OasaHD12_4;
+										1:     	OasaHD12_5;
+										1:      OasaHD12_6;
+										1:      OasaHD12_7;
+										1:     	OasaHD12_13;
+										1:      OasaHD12_14;
+									}	
+		random_switch(FEAT_ROADVEHS, SELF, sw_OasaHD12_1992) {
+										2:     	OasaHD12_0;
+										1:      OasaHD12_8;
+										1:     	OasaHD12_9;
+										1:      OasaHD12_10;
+										1:      OasaHD12_11;
+										1:      OasaHD12_12;										
+										1:     	OasaHD12_4;
+										1:      OasaHD12_6;
+										1:      OasaHD12_7;
+										1:     	OasaHD12_13;
+										1:      OasaHD12_14;
+									}	
+		switch(FEAT_ROADVEHS, SELF, sw_OasaHD12_production_livery, build_year) {
+										1986..1991:      		sw_OasaHD12_1991;
+										1992..2100:		      	sw_OasaHD12_1992;
+										}
+  		switch(FEAT_ROADVEHS, SELF, sw_OasaHD12, cargo_subtype) {
+										0:	sw_OasaHD12_production_livery;
+										1:	OasaHD12_0;
+										2:	OasaHD12_1;
+										3:	OasaHD12_2;
+										4:	OasaHD12_3;
+										5:	OasaHD12_4;
+										6:	OasaHD12_5;
+										7:	OasaHD12_6;
+										8:	OasaHD12_7;
+										9:	OasaHD12_8;
+										10:	OasaHD12_9;
+										11:	OasaHD12_10;
+										12:	OasaHD12_11;
+										13:	OasaHD12_12;
+										14:	OasaHD12_13;
+										15:	OasaHD12_14;
+										}
+// texts
+  								switch(FEAT_ROADVEHS, SELF, sw_OasaHD12_original_TEXT, cargo_subtype) {
+										0: return string(STR_NAME_OasaHD12_99);
+										1: return string(STR_NAME_OasaHD12_1);
+										2: return string(STR_NAME_OasaHD12_2);
+										3: return string(STR_NAME_OasaHD12_3);
+										4: return string(STR_NAME_OasaHD12_4);
+										5: return string(STR_NAME_OasaHD12_5);
+										6: return string(STR_NAME_OasaHD12_6);
+										7: return string(STR_NAME_OasaHD12_7);
+										8: return string(STR_NAME_OasaHD12_8);
+										9: return string(STR_NAME_OasaHD12_9);
+										10: return string(STR_NAME_OasaHD12_10);
+										11: return string(STR_NAME_OasaHD12_11);
+										12: return string(STR_NAME_OasaHD12_12);
+										13: return string(STR_NAME_OasaHD12_13);
+										14: return string(STR_NAME_OasaHD12_14);
+										15: return string(STR_NAME_OasaHD12_15);
+										}
+
+// Prima TL
+		random_switch(FEAT_ROADVEHS, SELF, sw_PrimaTL_production_livery) {
+										3:	PrimaTL_0;
+										1:	PrimaTL_1;
+										1:	PrimaTL_2;
+										1:	PrimaTL_3;
+										1:	PrimaTL_4;
+										1:	PrimaTL_5;
+										1:	PrimaTL_6;
+										1:	PrimaTL_7;
+										1:	PrimaTL_8;
+										1:	PrimaTL_9;
+									}	
+  		switch(FEAT_ROADVEHS, SELF, sw_PrimaTL, cargo_subtype) {
+										0:	sw_PrimaTL_production_livery;
+										1:	PrimaTL_0;
+										2:	PrimaTL_1;
+										3:	PrimaTL_2;
+										4:	PrimaTL_3;
+										5:	PrimaTL_4;
+										6:	PrimaTL_5;
+										7:	PrimaTL_6;
+										8:	PrimaTL_7;
+										9:	PrimaTL_8;
+										10:	PrimaTL_9;
+										}
+  		switch(FEAT_ROADVEHS, SELF, sw_PrimaTL_TEXT, cargo_subtype) {
+										0: return string(STR_NAME_PrimaTL_99);
+										1: return string(STR_NAME_PrimaTL_1);
+										2: return string(STR_NAME_PrimaTL_2);
+										3: return string(STR_NAME_PrimaTL_3);
+										4: return string(STR_NAME_PrimaTL_4);
+										5: return string(STR_NAME_PrimaTL_5);
+										6: return string(STR_NAME_PrimaTL_6);
+										7: return string(STR_NAME_PrimaTL_7);
+										8: return string(STR_NAME_PrimaTL_8);
+										9: return string(STR_NAME_PrimaTL_9);
+										10: return string(STR_NAME_PrimaTL_10);
+										}
+ // Karosa B741
+
+		  switch (FEAT_ROADVEHS, SELF, switch_spriteset_KarosaB741_0, position_in_consist) { 
+									1 : spriteset_KarosaB741_0b; 
+									spriteset_KarosaB741_0a;   
+																					 } 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_KarosaB741_1, position_in_consist) { 
+									1 : spriteset_KarosaB741_1b; 
+									spriteset_KarosaB741_1a;  
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_KarosaB741_2, position_in_consist) { 
+									1 : spriteset_KarosaB741_2b; 
+									spriteset_KarosaB741_2a; 
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_KarosaB741_3, position_in_consist) { 		 
+									1 : spriteset_KarosaB741_3b; 
+									spriteset_KarosaB741_3a; 
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_KarosaB741_4, position_in_consist) { 
+									1 : spriteset_KarosaB741_4b; 
+									spriteset_KarosaB741_4a; 
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_KarosaB741_5, position_in_consist) { 
+									1 : spriteset_KarosaB741_5b; 
+									spriteset_KarosaB741_5a;   
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_KarosaB741_6, position_in_consist) { 
+									1 : spriteset_KarosaB741_6b; 
+									spriteset_KarosaB741_6a; 
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_KarosaB741_7, position_in_consist) { 
+									1 : spriteset_KarosaB741_7b; 
+									spriteset_KarosaB741_7a; 
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_KarosaB741_8, position_in_consist) { 
+									1 : spriteset_KarosaB741_8b; 
+									spriteset_KarosaB741_8a; 
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_KarosaB741_9, position_in_consist) { 
+									1 : spriteset_KarosaB741_9b; 
+									spriteset_KarosaB741_9a; 
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_KarosaB741_10, position_in_consist) { 
+									1 : spriteset_KarosaB741_10b; 
+									spriteset_KarosaB741_10a;   
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_KarosaB741_11, position_in_consist) { 
+									1 : spriteset_KarosaB741_11b; 
+									spriteset_KarosaB741_11a; 
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_KarosaB741_12, position_in_consist) { 
+									1 : spriteset_KarosaB741_12b; 
+									spriteset_KarosaB741_12a; 
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_KarosaB741_13, position_in_consist) { 
+									1 : spriteset_KarosaB741_13b; 
+									spriteset_KarosaB741_13a; 
+							}
+ 
+  								switch(FEAT_ROADVEHS, SELF, sw_KarosaB7411908_livery, cargo_subtype) {
+									0 : switch_spriteset_KarosaB741_0;
+									1 : switch_spriteset_KarosaB741_1;
+									2 : switch_spriteset_KarosaB741_2;
+									3 : switch_spriteset_KarosaB741_3;
+									4 : switch_spriteset_KarosaB741_4;
+									5 : switch_spriteset_KarosaB741_5;
+									6 : switch_spriteset_KarosaB741_6;
+									7 : switch_spriteset_KarosaB741_7;
+									8 : switch_spriteset_KarosaB741_8;
+									9 : switch_spriteset_KarosaB741_9;
+									10 : switch_spriteset_KarosaB741_10;
+									11 : switch_spriteset_KarosaB741_11;
+									12 : switch_spriteset_KarosaB741_12;
+									13 : switch_spriteset_KarosaB741_13;
+
+								return CB_FAILED; 
+								}
+  								switch(FEAT_ROADVEHS, SELF, sw_KarosaB7411922_livery, cargo_subtype) {
+									0 : switch_spriteset_KarosaB741_0;
+									1 : switch_spriteset_KarosaB741_1;
+									2 : switch_spriteset_KarosaB741_2;
+									3 : switch_spriteset_KarosaB741_3;
+									4 : switch_spriteset_KarosaB741_4;
+									5 : switch_spriteset_KarosaB741_5;
+									6 : switch_spriteset_KarosaB741_6;
+									7 : switch_spriteset_KarosaB741_7;
+									8 : switch_spriteset_KarosaB741_8;
+									9 : switch_spriteset_KarosaB741_9;
+									10 : switch_spriteset_KarosaB741_10;
+									11 : switch_spriteset_KarosaB741_11;
+									12 : switch_spriteset_KarosaB741_12;
+									13 : switch_spriteset_KarosaB741_13;
+
+								return CB_FAILED; 
+								}
+
+		switch(FEAT_ROADVEHS, SELF, sw_KarosaB741_yearbased, build_year) {
+										1989..1994:      	sw_KarosaB7411908_livery;
+										1995..2100:			sw_KarosaB7411922_livery;												
+															}
+		 switch(FEAT_ROADVEHS, SELF, sw_KarosaB741_length, position_in_consist ) {
+									0: return 7;
+									1: return 4;
+									}
+		  
+		 switch (FEAT_ROADVEHS, SELF, switch_KarosaB741_articulated, extra_callback_info1) { 
+									1: return ITEM_KarosaB741;
+									return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+								 } 
+		// capacity
+			switch(FEAT_ROADVEHS, SELF, sw_KarosaB741_capacity, position_in_consist ) {
+									1: 0;
+									return 150;									 
+										}									 
+switch(FEAT_ROADVEHS, SELF, sw_B741cost, build_year) {
+										1981..1990:		      	218;
+										1991:		      		218;
+										1992..1993:		      	221;									
+										1994..1996:		      	224;
+										1997..2100:		      	226;											
+										}								 
+// power Karosa B741
+		switch(FEAT_ROADVEHS, SELF, sw_Karosa741_yearbased_power, build_year) {
+										1989..1994:      	26;
+										1995..2100:			24;																				
+															}
+// text Karosa B741
+
+
+  								switch(FEAT_ROADVEHS, SELF, sw_KarosaB7411908_livery_TEXT, cargo_subtype) {
+									0 : return string(STR_NAME_KarosaB741_1);
+									1 : return string(STR_NAME_KarosaB741_2);
+									2 : return string(STR_NAME_KarosaB741_3);
+									3 : return string(STR_NAME_KarosaB741_4);
+									4 : return string(STR_NAME_KarosaB741_5);
+									5 : return string(STR_NAME_KarosaB741_6);
+									6 : return string(STR_NAME_KarosaB741_7);
+									7 : return string(STR_NAME_KarosaB741_8);
+									8 : return string(STR_NAME_KarosaB741_9);
+									9 : return string(STR_NAME_KarosaB741_10);
+									10 : return string(STR_NAME_KarosaB741_11);
+									11 : return string(STR_NAME_KarosaB741_12);
+									12 : return string(STR_NAME_KarosaB741_13);
+									13 : return string(STR_NAME_KarosaB741_14);
+								return CB_FAILED; 
+								}
+ 								switch(FEAT_ROADVEHS, SELF, sw_KarosaB7411922_livery_TEXT, cargo_subtype) {
+									0 : return string(STR_NAME_KarosaB741_101);
+									1 : return string(STR_NAME_KarosaB741_102);
+									2 : return string(STR_NAME_KarosaB741_103);
+									3 : return string(STR_NAME_KarosaB741_104);
+									4 : return string(STR_NAME_KarosaB741_105);
+									5 : return string(STR_NAME_KarosaB741_106);
+									6 : return string(STR_NAME_KarosaB741_107);
+									7 : return string(STR_NAME_KarosaB741_108);
+									8 : return string(STR_NAME_KarosaB741_109);
+									9 : return string(STR_NAME_KarosaB741_110);
+									10 : return string(STR_NAME_KarosaB741_111);
+									11 : return string(STR_NAME_KarosaB741_112);
+									12 : return string(STR_NAME_KarosaB741_113);
+									13 : return string(STR_NAME_KarosaB741_114);
+								return CB_FAILED; 
+								}
+
+
+		switch(FEAT_ROADVEHS, SELF, sw_KarosaB741_yearbased_TEXT, build_year) {
+										1989..1994:      	sw_KarosaB7411908_livery_TEXT;
+										1995..2100:			sw_KarosaB7411922_livery_TEXT;												
+															}
+ 
+ //IK 283
+ 		  switch (FEAT_ROADVEHS, SELF, switch_spriteset_Ikarus28301_0, position_in_consist) { 
+									1 : spriteset_Ikarus28301_0b; 
+									spriteset_Ikarus28301_0a;  
+																					 } 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_Ikarus28301_1, position_in_consist) { 
+									1 : spriteset_Ikarus28301_1b; 
+									spriteset_Ikarus28301_1a; 
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_Ikarus28301_2, position_in_consist) { 
+									1 : spriteset_Ikarus28301_2b; 
+									spriteset_Ikarus28301_2a; 
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_Ikarus28301_3, position_in_consist) { 
+									1 : spriteset_Ikarus28301_3b; 
+									spriteset_Ikarus28301_3a; 
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_Ikarus28301_4, position_in_consist) { 
+									1 : spriteset_Ikarus28301_4b; 
+									spriteset_Ikarus28301_4a; 
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_Ikarus28301_5, position_in_consist) { 
+									1 : spriteset_Ikarus28301_5b; 
+									spriteset_Ikarus28301_5a; 
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_Ikarus28301_6, position_in_consist) { 
+									1 : spriteset_Ikarus28301_6b; 
+									spriteset_Ikarus28301_6a; 
+							} 
+		switch (FEAT_ROADVEHS, SELF, switch_spriteset_Ikarus28301_7, position_in_consist) { 
+ 									1 : spriteset_Ikarus28301_7b; 
+									spriteset_Ikarus28301_7a;
+							} 
+
+		random_switch(FEAT_ROADVEHS, PARENT, sw_Ikarus28301_1990) 	{
+										1:      switch_spriteset_Ikarus28301_5;
+										11:     switch_spriteset_Ikarus28301_0;
+										}
+
+		switch(FEAT_ROADVEHS, SELF, sw_Ikarus28301_yearbased, build_year) {
+										1988..1990:      	sw_Ikarus28301_1990;
+										1991..2100:			switch_spriteset_Ikarus28301_0;											
+															}
+ 								switch(FEAT_ROADVEHS, SELF, sw_Ikarus28301_livery, cargo_subtype) {
+									0 : sw_Ikarus28301_yearbased;
+									1 : switch_spriteset_Ikarus28301_0;
+									2 : switch_spriteset_Ikarus28301_1;
+									3 : switch_spriteset_Ikarus28301_2;
+									4 : switch_spriteset_Ikarus28301_3;
+									5 : switch_spriteset_Ikarus28301_4;
+									6 : switch_spriteset_Ikarus28301_6;
+									7 : switch_spriteset_Ikarus28301_7;
+								return CB_FAILED; 
+							} 
+
+		 switch(FEAT_ROADVEHS, SELF, sw_Ikarus283_length, position_in_consist ) {
+									0: return 7;
+									1: return 5;
+									}
+		// capacity
+			switch(FEAT_ROADVEHS, SELF, sw_Ikarus283_capacity, position_in_consist ) {
+									1: 0;
+									return 204;									 
+										}			  
+		 switch (FEAT_ROADVEHS, SELF, switch_Ikarus283_articulated, extra_callback_info1) { 
+									1: return ITEM_Ikarus283;
+									return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+								 } 
+
+
+		random_switch(FEAT_ROADVEHS, SELF, sw_Ikarus28301_1990_TXT) 	{
+										1:      return string(STR_NAME_Ikarus28301_99);
+										11:     return string(STR_NAME_Ikarus28301_1);
+										}
+
+		switch(FEAT_ROADVEHS, SELF, sw_Ikarus28301_yearbased_TXT, build_year) {
+										1988..1990:      	sw_Ikarus28301_1990_TXT;
+										1991..2100:			return string(STR_NAME_Ikarus28301_1);									
+															}
+ 								switch(FEAT_ROADVEHS, SELF, sw_Ikarus28301_livery_TXT, cargo_subtype) {
+									0 : sw_Ikarus28301_yearbased_TXT;
+									1 : return string(STR_NAME_Ikarus28301_2);
+									2 : return string(STR_NAME_Ikarus28301_3);
+									3 : return string(STR_NAME_Ikarus28301_4);
+									4 : return string(STR_NAME_Ikarus28301_5);
+									5 : return string(STR_NAME_Ikarus28301_6);
+									6 : return string(STR_NAME_Ikarus28301_7);
+									7 : return string(STR_NAME_Ikarus28301_8);
+								return CB_FAILED; 
+							} 
+							
+// **** ITEMS **********************************************************************************
+
+  // LC735
+		item (FEAT_ROADVEHS, ITEM_LC735) {
+									property {
+										    name: string(STR_NAME_LC7350_0);
+										    climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+										    introduction_date: date(1983,01,01);
+										    model_life: 19;
+											retire_early: 5;
+										    vehicle_life: 22;
+										    reliability_decay: 18;
+											cargo_age_period: 240;
+										    refittable_cargo_classes:    bitmask(CC_PASSENGERS);
+										    loading_speed: 6;								   
+										    cost_factor: 190;								   
+										    running_cost_factor: 76;								   
+										    sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+										    speed: 99 km/h;								   
+										    misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+										    power: 201 hp;								   
+										    running_cost_base: RUNNING_COST_ROADVEH;								   
+										    cargo_capacity: 44;					   			   
+										    weight: 11 ton;								   
+										    sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }
+
+									graphics {
+											cargo_subtype_text: sw_LC735MAIN_TEXT;
+											default: sw_LC735MAIN_yearbased;
+											purchase: LC7350_purch; 
+											power: sw_LC735_power;
+											length: 8;
+										    cost_factor: sw_LC735cost;								   
+										    running_cost_factor: sw_LC735runcost;
+											additional_text:        return string(STR_NAME_AI_LC735_0);
+											  }
+											 }
+  // LC736
+		item (FEAT_ROADVEHS, ITEM_LC736) {
+									property {
+										    name: string(STR_NAME_LC736_0_0);
+										    climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+										    introduction_date: date(1983,01,01);
+										    model_life: 24;
+											retire_early: 5;
+										    vehicle_life: 22;
+										    reliability_decay: 18;
+											cargo_age_period: 270;
+										    refittable_cargo_classes:    bitmask(CC_PASSENGERS);
+										    loading_speed: 6;								   
+										    cost_factor: 200;								   
+										    running_cost_factor: 78;								   
+										    sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+										    speed: 109 km/h;								   
+										    misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+										    power: 202 hp;								   
+										    running_cost_base: RUNNING_COST_ROADVEH;								   
+										    cargo_capacity: 44;					   			   
+										    weight: 11 ton;								   
+										    sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }
+									graphics {
+											cargo_subtype_text: sw_LC736MAIN_yearbased_TEXT;
+											default: sw_LC736MAIN_yearbased;
+											purchase:	   	sw_LC736_purch;
+//											additional_text: return string(STR_NAME_LC7360_TEXT);
+											power: sw_LC736_power;
+											length: 8;
+										    cost_factor: sw_LC736cost;								   
+										    running_cost_factor: sw_LC736runcost;
+											additional_text:        return string(STR_NAME_AI_LC736_0);
+											 }
+											}
+  // Karosa C744
+		item (FEAT_ROADVEHS, ITEM_KarosaC744) {
+									property {
+											name: string(STR_NAME_KarosaC744_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1987,01,01);
+											model_life: 16;
+											retire_early: 5;
+											vehicle_life: 18;
+											reliability_decay: 20;
+											cargo_age_period: 210;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 12;								   
+											cost_factor: 216;								   
+											running_cost_factor: 88;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 85 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 258 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 130;					   			   
+											weight: 14 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }		
+									graphics {
+											cargo_subtype_text: return sw_KarosaC744_yearbased_TEXT;
+											default: sw_KarosaC744_yearbased;
+											purchase:	spriteset_KarosaC744_purch;
+											power: sw_KarosaC744_yearbased_power;
+											articulated_part:	switch_KarosaC744_articulated;
+											length: sw_KarosaC744_length;
+											cargo_capacity: sw_KarosaC744_capacity;
+											purchase_cargo_capacity: 65;
+											additional_text:        return string(STR_NAME_AI_C744_0);
+											 }
+											}
+  // Renault FR1
+  		item (FEAT_ROADVEHS, ITEM_RenaultFR1) {
+									property {
+										    name: string(STR_NAME_FR1_0);
+										    climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+										    introduction_date: date(1988,01,01);
+	//									    model_life: 30;
+	//										retire_early: 5;
+											model_life: VEHICLE_NEVER_EXPIRES;
+										    vehicle_life: 20;
+										    reliability_decay: 18;
+											cargo_age_period: 330;
+										    refittable_cargo_classes:    bitmask(CC_PASSENGERS);
+										    loading_speed: 6;								   
+										    cost_factor: 255;								   
+										    running_cost_factor: 84;								   
+										    sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+										    speed: 109 km/h;								   
+										    misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+										    power: 380 hp;								   
+										    running_cost_base: RUNNING_COST_ROADVEH;								   
+										    cargo_capacity: 45;					   			   
+										    weight: 11 ton;								   
+										    sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }
+									graphics {
+											purchase:	sw_RenaultFR1_purch;   	
+  											cargo_subtype_text: sw_FR1_Yearbased_cargo_subtype_TEXT;
+ 											default: sw_FR1_Yearbased_cargo_subtype;
+											power: sw_FR1_Yearbased_power;
+											length: 8;
+										    cost_factor: sw_FR1cost;								   
+										    running_cost_factor: sw_FR1runcost;
+//											additional_text:     sw_FR1Addinfo;
+											additional_text:        return string(STR_NAME_AI_FR1_0);
+											 }
+											} 
+  // Prima TL
+  		item (FEAT_ROADVEHS, ITEM_PrimaTL) {
+									property {
+										    name: string(STR_NAME_PrimaTL_0);
+										    climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+										    introduction_date: date(1990,01,01);
+										    model_life: 16;
+											retire_early: 5;
+										    vehicle_life: 20;
+										    reliability_decay: 18;
+											cargo_age_period: 270;
+										    refittable_cargo_classes:    bitmask(CC_PASSENGERS);
+										    loading_speed: 5;								   
+										    cost_factor: 204;								   
+										    running_cost_factor: 86;								   
+										    sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+										    speed: 109 km/h;								   
+										    misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+										    power: 210 hp;								   
+										    running_cost_base: RUNNING_COST_ROADVEH;								   
+										    cargo_capacity: 42;					   			   
+										    weight: 11 ton;								   
+										    sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }
+									graphics {
+											cargo_subtype_text: sw_PrimaTL_TEXT;
+											default: sw_PrimaTL;
+											purchase:	spriteset_PrimaTL_purch;
+											length: 8;
+											additional_text:        return string(STR_NAME_AI_PrimaTL_0);
+											 }
+											}
+										 
+  // Oasa HD12
+  		item (FEAT_ROADVEHS, ITEM_OasaHD12) {
+									property {
+										    name: string(STR_NAME_OasaHD12_0);
+										    climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+										    introduction_date: date(1991,01,01);
+										    model_life: 15;
+											retire_early: 5;
+										    vehicle_life: 25;
+										    reliability_decay: 20;
+											cargo_age_period: 280;
+										    refittable_cargo_classes:    bitmask(CC_PASSENGERS);
+										    loading_speed: 6;								   
+										    cost_factor: 210;								   
+										    running_cost_factor: 83;								   
+										    sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+										    speed: 109 km/h;								   
+										    misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+										    power: 300 hp;								   
+										    running_cost_base: RUNNING_COST_ROADVEH;								   
+										    cargo_capacity: 44;					   			   
+										    weight: 11 ton;								   
+										    sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }
+									graphics {
+											cargo_subtype_text: sw_OasaHD12_original_TEXT;
+											default: sw_OasaHD12;
+											purchase:	spriteset_OasaHD12_purch;
+											length: 8;
+											additional_text:        return string(STR_NAME_AI_OASA901_0);
+											 }
+											}  
+    // Karosa B741
+		item (FEAT_ROADVEHS, ITEM_KarosaB741) {
+									property {
+											name: string(STR_NAME_KarosaB741_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1991,01,01);
+											model_life: 16;
+											retire_early: 5;
+											vehicle_life: 25;
+											reliability_decay: 19;
+											cargo_age_period: 155;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 18;								   
+											cost_factor: 218;								   
+											running_cost_factor: 95;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 69 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 258 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 150;					   			   
+											weight: 14 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }
+									graphics {
+											cargo_subtype_text: return sw_KarosaB741_yearbased_TEXT;
+											default: sw_KarosaB741_yearbased;
+											purchase:	spriteset_KarosaB741_purch;
+											power: sw_Karosa741_yearbased_power;
+											articulated_part:	switch_KarosaB741_articulated;
+											length: sw_KarosaB741_length;
+											cargo_capacity: sw_KarosaB741_capacity;
+											purchase_cargo_capacity: 150;
+										    cost_factor: sw_B741cost;								   
+											additional_text:        return string(STR_NAME_AI_B741_0);
+											 }
+											}
+  
+  
+   // IK 283
+		item (FEAT_ROADVEHS, ITEM_Ikarus283) {
+									property {
+											name: string(STR_NAME_Ikarus28301_0);
+											climates_available: bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+											introduction_date: date(1990,01,01);
+											model_life: 15;
+											retire_early: 6;
+											vehicle_life: 17;
+											reliability_decay: 18;
+											cargo_age_period: 130;
+											refittable_cargo_classes: bitmask(CC_PASSENGERS);
+											loading_speed: 16;								   
+											cost_factor: 212;								   
+											running_cost_factor: 90;								   
+											sprite_id: SPRITE_ID_NEW_ROADVEH;							   
+											speed: 62 km/h;								   
+											misc_flags: bitmask(ROADVEH_FLAG_2CC);								   
+											power: 220 hp;								   
+											running_cost_base: RUNNING_COST_ROADVEH;								   
+											cargo_capacity: 204;					   			   
+											weight: 14 ton;								   
+											sound_effect: SOUND_BUS_START_PULL_AWAY;								   
+											 }
+									graphics {
+											cargo_subtype_text: return sw_Ikarus28301_livery_TXT;
+											default: sw_Ikarus28301_livery;
+											purchase:	spriteset_Ikarus28301_purch;
+											articulated_part:	switch_Ikarus283_articulated;
+											length: sw_Ikarus283_length;
+											cargo_capacity: sw_Ikarus283_capacity;
+											purchase_cargo_capacity: 102;											
+											additional_text:        return string(STR_NAME_AI_IK283_0);
+											 }
+											}
+
+
+
+
